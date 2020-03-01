@@ -1,0 +1,55 @@
+.forms_share{
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-content: center;
+}
+
+.form-container{
+    width: 320px;
+    margin:auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.share-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.share-title{
+    h3{
+        text-transform: uppercase;
+        font-family: 'open sans';
+        font-weight: 500;
+        font-size: 18px;
+    }
+}
+
+.share-button{
+    .button{
+        // img{
+        //     width: 16px;
+        //     height: 18px;
+        // }
+    }
+}
+.button{
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+}
+
+.arrow-down{
+    background-image: url(../images/arrow-down.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    
+}
+
+.create-card-button{
+    text-align: center;
+    margin: auto;
+}

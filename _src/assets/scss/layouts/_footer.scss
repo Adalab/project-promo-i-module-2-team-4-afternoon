@@ -1,9 +1,30 @@
 .page{
     &_footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 110px;
+
+            @include mediaSize(tablet){
+                height: 60px;
+                flex-direction: row;
+                justify-content: space-between;
+            }
         .footer-copyright{
+            margin:auto;
             color: $footer-body;
             font-size: 14px;
             font-family:'open sans';
+        }
+
+        .footer-logo-container{
+            margin:auto;
+                img{
+                    width:103px;
+                    height: 40px;
+                }
+
         }
     }
 }
