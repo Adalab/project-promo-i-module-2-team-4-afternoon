@@ -258,6 +258,8 @@ textarea {
 
 .form {
   font-family: "Open Sans";
+  background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), color-stop(9%, #ffffff));
+  background: linear-gradient(to bottom, #f5f5f5, #ffffff 9%);
 }
 
 .form .far {
