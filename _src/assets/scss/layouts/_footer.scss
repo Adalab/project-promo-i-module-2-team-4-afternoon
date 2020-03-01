@@ -1,0 +1,9 @@
+.page{
+    &_footer{
+        .footer-copyright{
+            color: $footer-body;
+            font-size: 14px;
+            font-family:'open sans';
+        }
+    }
+}
