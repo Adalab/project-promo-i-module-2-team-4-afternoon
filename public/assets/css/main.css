@@ -279,6 +279,7 @@ textarea {
 }
 
 .form .form__closed {
+  margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -300,6 +301,10 @@ textarea {
 
 .form .form__fill label {
   color: #114e4e;
+}
+
+.form .form__fill label span {
+  color: #54585a;
 }
 
 .form .form__fill ::-webkit-input-placeholder {
@@ -336,6 +341,16 @@ textarea {
   line-height: 20px;
 }
 
+.form .form__fill .profile--picture__upload {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
 .form .form__fill .form__fill--btn {
   width: 140px;
   height: 30px;
@@ -343,6 +358,19 @@ textarea {
   color: white;
   font-family: "Open Sans";
   font-size: 14px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 18px;
+}
+
+.form .form__fill .thumbnail {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #a2deaf;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-left: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

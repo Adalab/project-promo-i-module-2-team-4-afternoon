@@ -20,6 +20,7 @@
     }
 
     .form__closed {
+        margin-top: 10px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -36,6 +37,10 @@
 
         label {
             color: $formText;
+
+            span {
+                color: $primaryColor;
+            }
         }
     
         ::placeholder {
@@ -55,6 +60,11 @@
             line-height: 20px;
         }
 
+        .profile--picture__upload {
+            display: flex;
+            flex-direction: row;
+        }
+
         .form__fill--btn {
             width: 140px;
             height: 30px;
@@ -62,6 +72,17 @@
             color: white;
             font-family: $mainText;
             font-size: 14px;
+            border-radius: 3px;
+            box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.20);
+            margin-bottom: 18px;
+        }
+
+        .thumbnail {
+            width: 30px;
+            height: 30px;
+            border: 1px solid $borderColor;
+            box-sizing: border-box;
+            margin-left: 20px;
         }
     }
 }
