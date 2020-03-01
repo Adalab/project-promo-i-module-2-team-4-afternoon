@@ -1,0 +1,67 @@
+.form {
+    font-family: $mainText;
+
+    .far {
+        color: $secondaryColor;
+        margin-right: 5px;
+    }
+
+    .form__arrow {
+        color: $primaryColor;
+    }
+
+    .form__title {
+        font-family: $formTitle;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 18px;
+        color: $primaryColor;
+        margin-bottom: 20px;
+    }
+
+    .form__closed {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .form__sections {
+        border-bottom: 1px solid #d8d8d8;
+    }
+
+// Section fill 
+
+    .form__fill {
+
+        label {
+            color: $formText;
+        }
+    
+        ::placeholder {
+            color: $placeholderText;
+        }
+    
+        input {
+            border: 1px solid $borderColor;
+            margin: 5px 0 20px 0;
+            height: 30px;
+        }
+
+        .form__open {
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .form__fill--btn {
+            width: 140px;
+            height: 30px;
+            background-color: $secondaryColor;
+            color: white;
+            font-family: $mainText;
+            font-size: 14px;
+        }
+    }
+}
