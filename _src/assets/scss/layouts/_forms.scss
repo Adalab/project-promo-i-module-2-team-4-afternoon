@@ -110,6 +110,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-top: 10px;
 }
 
 .share-title{
@@ -120,6 +121,7 @@
         font-size: 18px;
             i{
                 color:$secondaryColor;
+                margin-right: 10px;
             }
     }
 
@@ -133,6 +135,10 @@
     padding: 7px;
     padding-left: 9px;
     padding-right: 9px;
+}
+
+.arrow-down{
+    background-color: white;
 }
 
 
@@ -163,6 +169,7 @@
                 color: white;
                     i{
                         color:white;
+                        margin-right: 10px;
                     }
                 
             }
@@ -201,10 +208,18 @@
         margin-left: auto;
         margin-right: auto;
         border: 0;
+        font-family: $mainText;
+        font-size: 14px;
+            .fab{
+                margin-right: 5px;
+
+            }
         
 
     }
 }
+
+
 
 
 
