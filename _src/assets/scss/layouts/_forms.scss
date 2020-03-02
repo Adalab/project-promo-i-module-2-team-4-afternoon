@@ -50,8 +50,53 @@ body {
         }
         .paletteChoices {
             grid-column: 2/3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            .colorBox {
+                width: 30px;
+                height: 25px;
+                border: 0.5px solid pink;
+                display: inline-block;
+
+                &.paletteOne.one1 {
+                    background-color: $formText;
+                }
+
+                &.paletteOne.one2 {
+                    background-color: #438792;
+                }
+
+                &.paletteOne.one3 {
+                    background-color: $borderColor;
+                }
+
+                &.paletteTwo.two1 {
+                    background-color: #420101;
+                }
+
+                &.paletteTwo.two2 {
+                    background-color: #bd1010;
+                }
+
+                &.paletteTwo.two3 {
+                    background-color: $secondaryColor;
+                }
+                
+                &.paletteThree.three1 {
+                    background-color: #3e5b65;
+                }
+
+                &.paletteThree.three2 {
+                    background-color: #eab052;
+                }
+
+                &.paletteThree.three3 {
+                    background-color: #a0c0cf;
+                }
+            }
         } 
-        }
 
     }
 
