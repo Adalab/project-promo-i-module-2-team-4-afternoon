@@ -343,7 +343,7 @@ textarea {
   line-height: 20px;
 }
 
-.form .form__fill .profile--picture__upload {
+.form .form__fill .photo__upload {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -353,7 +353,7 @@ textarea {
   flex-direction: row;
 }
 
-.form .form__fill .form__fill--btn {
+.form .form__fill .photo__upload--btn {
   width: 140px;
   height: 30px;
   background-color: #e17334;

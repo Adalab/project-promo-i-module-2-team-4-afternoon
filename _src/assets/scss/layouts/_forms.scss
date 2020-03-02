@@ -61,12 +61,12 @@
             line-height: 20px;
         }
 
-        .profile--picture__upload {
+        .photo__upload {
             display: flex;
             flex-direction: row;
         }
 
-        .form__fill--btn {
+        .photo__upload--btn {
             width: 140px;
             height: 30px;
             background-color: $secondaryColor;
