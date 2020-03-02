@@ -3,7 +3,7 @@
   width: 100%;
   height: auto;
   margin: auto;
-  @media (min-width: $tablet) {
+  @include forTablet {
     height: 963px;
     display: flex;
     justify-content: center;
@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    @media (min-width: $tablet) {
+    @include forTablet {
     padding-top: 0;
   }
   }
@@ -26,7 +26,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      @media (min-width: $tablet) {
+      @include forTablet {
         margin-top: 150px;
         display: flex;
         flex-direction: column;
@@ -38,7 +38,7 @@
       width: 250px;
       height: 63px;
       margin-bottom: 20px;
-      @media (min-width: $tablet) {
+      @include forTablet {
         width: 419px;
         height: 105px;
     }
@@ -48,7 +48,7 @@
       font-family: $landingTitle;
       font-weight: 900;
       color: $secondaryColor;
-      @media (min-width: $tablet) {
+      @include forTablet {
         margin-bottom: 0;
         font-size: 24px;
     }
@@ -59,7 +59,7 @@
       color: $formText;
       text-align: center;
       margin-bottom: 20px;
-      @media (min-width: $tablet) {
+      @include forTablet {
         margin-top: 0;
         font-size: 16px;
         width: 330px;
@@ -74,7 +74,7 @@
       width: 268px;
       justify-content: space-around;
       margin-bottom: 30px;
-      @media (min-width: $tablet) {
+      @include forTablet {
         width: 325px;
         height: 70px;
     }
@@ -105,13 +105,13 @@
       font-family: $mainText;
       color:$primaryColor;
       margin-top: 0;
-      @media (min-width: $tablet) {
+      @include forTablet {
         font-size: 16px;
         text-align: center;
     }
     }
     .button-container {
-       @media (min-width: $tablet) {
+      @include forTablet {
          position: relative;
          top: 150px;
     }

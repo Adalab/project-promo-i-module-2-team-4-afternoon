@@ -5,7 +5,7 @@
     background: white;
     display: flex;
     justify-content: center;
-    @media (min-width: $tablet) {
+    @include forTablet {
     justify-content: flex-start;
     margin-left: 40px;
 }
