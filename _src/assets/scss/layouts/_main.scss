@@ -71,19 +71,40 @@
       border: solid 2px;
       border-color: rgba(225,115,52,0.21);
       border-radius: 4px;
-      width: 100%;
+      width: 268px;
       justify-content: space-around;
-      padding: 10px;
       margin-bottom: 30px;
       @media (min-width: 768px) {
         width: 325px;
         height: 70px;
     }
+    .design-icon {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #e17334;
+    }
+    .fill-icon {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #e17334;
+    }
+    .share-icon {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #e17334;
+    }
     }
     .icon1, .icon2, .icon3 {
       font-size: 12.8px;
       font-family: "Open Sans";
-      color: #114e4e;
+      color:#54585a;
+      margin-top: 0;
       @media (min-width: 768px) {
         font-size: 16px;
         text-align: center;
@@ -105,6 +126,7 @@
       width: 129px;
       height: 42px;
       margin-bottom: 30px;
+      border-style: solid;
     }
     
   
