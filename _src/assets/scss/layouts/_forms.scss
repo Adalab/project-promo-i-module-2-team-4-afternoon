@@ -1,0 +1,103 @@
+body {
+    font-size: 16px;
+}
+.form {
+    font-family: $mainText;
+    background: linear-gradient(to bottom, #f5f5f5, #ffffff 9%);
+
+    .far {
+        color: $secondaryColor;
+        margin-right: 5px;
+    }
+
+    .form__arrow {
+        color: $primaryColor;
+    }
+
+    .form__title {
+        font-family: $formTitle;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 18px;
+        color: $primaryColor;
+        margin-bottom: 20px;
+    }
+
+    .form__closed {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .form__sections {
+        border-bottom: 1px solid #d8d8d8;
+    }
+
+//Section design
+
+    .form__design {
+        & h2{
+            text-transform: uppercase;
+            font-size: 0.875rem;
+        }
+
+
+    }
+
+// Section fill 
+
+    .form__fill {
+
+        label {
+            color: $formText;
+
+            span {
+                color: $primaryColor;
+            }
+        }
+    
+        ::placeholder {
+            color: $placeholderText;
+        }
+    
+        input {
+            border: 1px solid $borderColor;
+            margin: 5px 0 20px 0;
+            height: 30px;
+        }
+
+        .form__open {
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .profile--picture__upload {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .form__fill--btn {
+            width: 140px;
+            height: 30px;
+            background-color: $secondaryColor;
+            color: white;
+            font-family: $mainText;
+            font-size: 14px;
+            border-radius: 3px;
+            box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.20);
+            margin-bottom: 18px;
+        }
+
+        .thumbnail {
+            width: 30px;
+            height: 30px;
+            border: 1px solid $borderColor;
+            box-sizing: border-box;
+            margin-left: 20px;
+        }
+    }
+}
