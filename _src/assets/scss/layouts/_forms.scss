@@ -37,12 +37,21 @@ body {
 
 //Section design
 
-    .form__design {
-        & h2{
+    .palettesContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+        & h3{
             text-transform: uppercase;
+            padding: 0;
+            padding-left: 1.3125rem;
             font-size: 0.875rem;
+            grid-column: 1/2;
         }
-
+        .paletteChoices {
+            grid-column: 2/3;
+        } 
+        }
 
     }
 
