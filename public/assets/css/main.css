@@ -140,6 +140,26 @@
   border-style: solid;
 }
 
+.awesome-image-container {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.awesome-image {
+  width: 201px;
+  height: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 @media (min-width: 768px) {
   .page_main {
     height: 963px;
@@ -204,6 +224,13 @@
   .button-container {
     position: relative;
     top: 150px;
+  }
+
+  .awesome-image-container {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    margin-left: 40px;
   }
 }
 
