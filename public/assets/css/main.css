@@ -1,4 +1,14 @@
-.page_main {
+@charset "UTF-8";/* Icons
+diseña: <i class="far fa-object-ungroup"></i>
+rellena: <i class="far fa-keyboard"></i>
+comparte: <i class="fas fa-share-alt"></i>
+arrowup: <i class="fas fa-chevron-up"></i>
+phone: <i class="fas fa-mobile-alt"></i>
+email: <i class="far fa-envelope"></i>
+linkedin: <i class="fab fa-linkedin-in"></i>
+github: <i class="fab fa-github-alt"></i>
+reset: <i class="far fa-trash-alt"></i>
+*/.page_main {
   background: #f5f5f5;
   width: 100%;
   height: auto;
@@ -140,7 +150,7 @@
   border-style: solid;
 }
 
-.awesome-image-container {
+.header-image-container {
   width: 100%;
   height: auto;
   margin: auto;
@@ -153,14 +163,14 @@
   justify-content: center;
 }
 
-.awesome-image {
+.header-awesome-image {
   width: 201px;
   height: 50px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
-@media (min-width: 768px) {
+@media all and (min-width: 768px) {
   .page_main {
     height: 963px;
     display: -webkit-box;
@@ -226,7 +236,7 @@
     top: 150px;
   }
 
-  .awesome-image-container {
+  .header-image-container {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
