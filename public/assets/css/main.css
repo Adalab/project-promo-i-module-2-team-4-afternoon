@@ -414,6 +414,10 @@ textarea {
   font-size: 18px;
 }
 
+.share-title h3 i {
+  color: #e17334;
+}
+
 .button {
   border-radius: 50%;
   border: 0;
