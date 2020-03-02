@@ -378,7 +378,11 @@ textarea {
 }
 
 .share-container {
-  border-bottom: solid 1px #6b6b6b;
+  border-bottom: solid 1px #D8D8D8;
+}
+
+.created-container {
+  border-bottom: solid 1px #D8D8D8;
 }
 
 .form-container {
@@ -405,7 +409,7 @@ textarea {
 
 .share-title h3 {
   text-transform: uppercase;
-  font-family: 'open sans';
+  font-family: "Open Sans";
   font-weight: 500;
   font-size: 18px;
 }
@@ -438,8 +442,14 @@ textarea {
 
 .create-card-button-container .create-card-button a {
   text-transform: uppercase;
-  font-family: 'open sans';
+  font-family: "Open Sans";
   font-weight: 500;
+  text-decoration: none;
+  color: white;
+}
+
+.create-card-button-container .create-card-button a i {
+  color: white;
 }
 
 .created-container {
@@ -455,7 +465,7 @@ textarea {
   padding-top: 20px;
   font-size: 18px;
   color: #54585a;
-  font-family: 'open sans';
+  font-family: "Open Sans";
 }
 
 .created-container a {
@@ -474,16 +484,6 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   border: 0;
-}
-
-.line-container {
-  width: 280px;
-  border-top: solid 1px #6b6b6b;
-  height: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 .page_footer {
@@ -505,8 +505,9 @@ textarea {
 
 .page_footer .footer-copyright {
   margin: auto;
+  color: #6b6b6b;
   font-size: 14px;
-  font-family: 'open sans';
+  font-family: "Open Sans";
 }
 
 .page_footer .footer-logo-container {
@@ -516,6 +517,19 @@ textarea {
 .page_footer .footer-logo-container img {
   width: 103px;
   height: 40px;
+}
+
+@media all and (min-width: 768px) {
+  .page_footer {
+    height: 60px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

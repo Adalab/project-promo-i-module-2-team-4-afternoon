@@ -90,16 +90,13 @@
 
 // Section share
 
-.forms_share{
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-content: center;
-    
-}
 
 .share-container{
-    border-bottom: solid 1px #6b6b6b;
+    border-bottom: solid 1px $borderLineColor;
+}
+
+.created-container{
+    border-bottom: solid 1px $borderLineColor;
 }
 
 .form-container{
@@ -118,7 +115,7 @@
 .share-title{
     h3{
         text-transform: uppercase;
-        font-family: 'open sans';
+        font-family: $mainText;
         font-weight: 500;
         font-size: 18px;
     }
@@ -151,14 +148,20 @@
     .create-card-button{
         width: 200px;
         height: 50px;
-        background-color: #e17334;
+        background-color: $secondaryColor;
         color: white;
         border-radius: 12px;
 
             a{
                 text-transform: uppercase;
-                font-family: 'open sans';
+                font-family: $mainText;
                 font-weight: 500;
+                text-decoration: none;
+                color: white;
+                    i{
+                        color:white;
+                    }
+                
             }
     }
 }
@@ -169,21 +172,19 @@
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
+    
     padding-bottom: 30px;
     p{
         padding-top: 20px;
         font-size: 18px;
-        color: #54585a;
-        font-family: 'open sans';
+        color: $primaryColor;
+        font-family: $mainText;
         
     }
 
     a{
         display: block;
-        color:#e17334;
+        color:$secondaryColor;
         padding-bottom: 10px;
         padding-top: 5px;
     }
@@ -202,15 +203,5 @@
     }
 }
 
-.line-container{
-    width: 280px;
-    border-top:solid 1px #6b6b6b;
-    height: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    margin-bottom: 0;
 
-}
 
-//

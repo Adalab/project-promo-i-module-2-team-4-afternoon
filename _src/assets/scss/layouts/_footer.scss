@@ -6,16 +6,16 @@
         align-items: center;
         height: 110px;
 
-            // @include mediaSize(tablet){
-            //     height: 60px;
-            //     flex-direction: row;
-            //     justify-content: space-between;
-            // }
+            @include forTablet{
+                height: 60px;
+                flex-direction: row;
+                justify-content: space-between;
+            }
         .footer-copyright{
             margin:auto;
-            // color: $footer-body;
+            color: $footerColor;
             font-size: 14px;
-            font-family:'open sans';
+            font-family:$mainText;
         }
 
         .footer-logo-container{
