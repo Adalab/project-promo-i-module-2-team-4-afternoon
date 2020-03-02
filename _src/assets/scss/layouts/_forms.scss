@@ -87,3 +87,130 @@
         }
     }
 }
+
+// Section share
+
+.forms_share{
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-content: center;
+    
+}
+
+.share-container{
+    border-bottom: solid 1px #6b6b6b;
+}
+
+.form-container{
+    width: 280px;
+    margin:auto;
+    padding:0;
+}
+
+.share-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.share-title{
+    h3{
+        text-transform: uppercase;
+        font-family: 'open sans';
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    
+}
+
+
+.button{
+    border-radius: 50%;
+    border: 0;
+    padding: 7px;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+
+
+.create-card-button-container{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    // display: none;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+
+    .create-card-button{
+        width: 200px;
+        height: 50px;
+        background-color: #e17334;
+        color: white;
+        border-radius: 12px;
+
+            a{
+                text-transform: uppercase;
+                font-family: 'open sans';
+                font-weight: 500;
+            }
+    }
+}
+
+.created-container{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    padding-bottom: 30px;
+    p{
+        padding-top: 20px;
+        font-size: 18px;
+        color: #54585a;
+        font-family: 'open sans';
+        
+    }
+
+    a{
+        display: block;
+        color:#e17334;
+        padding-bottom: 10px;
+        padding-top: 5px;
+    }
+
+    .share-twitter-button{
+        background-color: #00a0f5;
+        color: white;
+        border-radius: 3px;
+        width: 180px;
+        height: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 0;
+        
+
+    }
+}
+
+.line-container{
+    width: 280px;
+    border-top:solid 1px #6b6b6b;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+//
