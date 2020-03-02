@@ -1,0 +1,46 @@
+<section class="form">
+
+    <form action="" method="POST" id="form__card">
+
+        <!-- Design section -->
+        <section class="form__sections form__design"></section>
+
+        <!-- Fill section -->
+        <section class="form__sections form__fill">
+            <div class="form__closed">
+                <h2 class="form__title"><i class="far fa-keyboard"></i></i>Rellena</h2>
+                <div class="form__arrow"><i class="fas fa-chevron-up"></i></div>
+            </div>
+
+            <div class="form__open">
+                <label for="name">Nombre completo <span>*</span></label>
+                <input type="text" id="name" name="name" placeholder="Ej. Sally Jill" required>
+
+                <label for="job">Profesión <span>*</span></label>
+                <input type="text" id="job" name="job" placeholder="Ej: Front-end unicorn" required>
+
+                <label for="photo">Imagen de perfil <span>*</span></label>
+                <input type="file" id="photo" name="photo" required>
+                <div class="photo__upload">
+                    <button class="photo__upload--btn">Añadir imagen</button>
+                    <div class="thumbnail"></div>
+                </div>
+
+                <label for="email">Email <span>*</span></label>
+                <input type="email" id="email" name="email" placeholder="Ej: sally-hill@gmail.com" required>
+
+                <label for="phone">Teléfono</label>
+                <input type="tel" id="phone" name="phone" placeholder="Ej: 555-55-55-55">
+
+                <label for="linkedin">LinkedIn</label>
+                <input type="text" id="linkedin" name="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" required>
+
+                <label for="github">GitHub</label>
+                <input type="text" id="github" name="github" placeholder="Ej: @sally-hill" required>
+            </div>
+        </section>
+
+        <!-- Share section -->
+        <section class="form__sections form__share"></section>
+    </form>
+</section>
