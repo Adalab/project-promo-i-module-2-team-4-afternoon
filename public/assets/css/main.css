@@ -257,6 +257,8 @@ linkedin: <i class="fab fa-linkedin-in"></i>
 github: <i class="fab fa-github-alt"></i>
 reset: <i class="far fa-trash-alt"></i>
 */body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 16px;
 }
 
@@ -320,6 +322,9 @@ reset: <i class="far fa-trash-alt"></i>
 
 .form .palettesContainer .paletteChoices {
   grid-column: 2/3;
+}
+
+.form .palettesContainer .paletteChoices .paletteOne {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -332,10 +337,16 @@ reset: <i class="far fa-trash-alt"></i>
   justify-content: center;
 }
 
+.form .palettesContainer .paletteChoices .paletteOne .inPaletteOne {
+  margin-right: 10px;
+}
+
 .form .palettesContainer .paletteChoices .colorBox {
   width: 30px;
   height: 25px;
-  border: 0.5px solid pink;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: -4px;
   display: inline-block;
 }
 
