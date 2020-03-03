@@ -56,11 +56,13 @@ body {
             grid-template-rows: 25px 20px 25px 20px 25px;
             justify-content: end;
       
-        
             .radio_button {
+                justify-self: center;
+                align-self: center;
+            }
+            .rb_one {
                 grid-column: 1/2;
             }
-        
 
             .palOne_colOne {
                 grid-column: 2/3;
@@ -77,7 +79,7 @@ body {
                 background-color: $borderColor;
             }
 
-            .radio_button_two {
+            .rb_two {
                 grid-row: 3;
                 grid-column: 1/2;
             }
@@ -100,7 +102,7 @@ body {
                 background-color: $palete2Color3;
             }
 
-            .radio_button_tree {
+            .rb_three {
                 grid-row: 5;
                 grid-column: 1/2;
             }

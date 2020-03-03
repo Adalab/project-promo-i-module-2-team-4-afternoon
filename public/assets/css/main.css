@@ -331,6 +331,12 @@ reset: <i class="far fa-trash-alt"></i>
 }
 
 .form .palettesContainer .paletteChoices .radio_button {
+  justify-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.form .palettesContainer .paletteChoices .rb_one {
   grid-column: 1/2;
 }
 
@@ -349,7 +355,7 @@ reset: <i class="far fa-trash-alt"></i>
   background-color: #a2deaf;
 }
 
-.form .palettesContainer .paletteChoices .radio_button_two {
+.form .palettesContainer .paletteChoices .rb_two {
   grid-row: 3;
   grid-column: 1/2;
 }
@@ -372,7 +378,7 @@ reset: <i class="far fa-trash-alt"></i>
   background-color: #E95626;
 }
 
-.form .palettesContainer .paletteChoices .radio_button_tree {
+.form .palettesContainer .paletteChoices .rb_three {
   grid-row: 5;
   grid-column: 1/2;
 }
