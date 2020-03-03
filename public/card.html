@@ -1,0 +1,143 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Awesome Profile Cards</title>
+    <link rel="icon" href="./assets/images/favicon.png"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:900|Montserrat:400,700|Open+Sans:400,600&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    crossorigin="anonymous" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+</head>
+<body>
+    <div class="page">
+        <header class="page__header">Header</header>
+        <section class="page__preview">
+            <div class="preview__container">
+                <button class="preview__resetButton"> <i class="far fa-trash-alt"></i> reset</button>
+                <div class="preview__cardcontainer">
+                    <div class="preview__profileInfo">
+                        <p class="preview__profileInfo--name">Nombre Apellido</p>
+                        <p class="preview__profileInfo--job">Front-End developer</p>
+                    </div>
+                    <div class="preview__pictureContainer"></div>
+                    <div class="preview__socialInfo">
+                        <ul class="preview__buttonList">
+                            <li class="preview__buttonList--item"> <a class="preview__socialButton preview__socialButton--phoneNumber" href=""
+                                title="phone number">
+                            <i class=" icon fas fa-mobile-alt"></i>
+                        </a>
+
+                            </li>
+                            <li class="preview__buttonList--item"> <a class="preview__socialButton preview__socialButton--email" href=""
+                                title="email address"><i class=" icon far fa-envelope"></i>
+                        </a>
+
+                            </li>
+                            <li class="preview__buttonList--item"> <a class="preview__socialButton preview__socialButton--linkedin" href=""
+                                title="linkedin profile"><i class=" icon fab fa-linkedin-in"></i>
+                        </a>
+
+                            </li>
+                            <li class="preview__buttonList--item"> <a class="preview__socialButton preview__socialButton--github" href=""
+                                title="github profile">
+                            <i class=" icon fab fa-github-alt"></i>
+                        </a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="form">
+            <form action="" method="POST" id="form__card">
+                <!-- Design section -->
+                <section class="form__sections form__design"></section>
+                <!-- Fill section -->
+                <section class="form__sections form__fill">
+                    <div class="form__closed">
+                         <h2 class="form__title"><i class="form__icon far fa-keyboard"></i>Rellena</h2>
+
+                        <button class="form__arrow" aria-label="Desplegar" onclick="fill_visibility('form__fill--open');"><i class="fas fa-chevron-up"></i>
+
+                        </button>
+                    </div>
+                    <div class="form__open hidden" id="form__fill--open">
+                        <label for="name">Nombre completo <span>*</span>
+
+                        </label>
+                        <input type="text" id="name" name="name" placeholder="Ej. Sally Jill"
+                        required>
+                        <label for="job">Profesión <span>*</span>
+
+                        </label>
+                        <input type="text" id="job" name="job" placeholder="Ej: Front-end unicorn"
+                        required>
+                        <label for="photo">Imagen de perfil <span>*</span>
+
+                        </label>
+                        <input type="file" id="photo" name="photo" class="hidden" required>
+                        <div class="photo__upload">
+                            <button class="photo__upload--btn" id="submit">Añadir imagen</button>
+                            <div class="thumbnail"></div>
+                        </div>
+                        <label for="email">Email <span>*</span>
+
+                        </label>
+                        <input type="email" id="email" name="email" placeholder="Ej: sally-hill@gmail.com"
+                        required>
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Ej: 555-55-55-55">
+                        <label for="linkedin">LinkedIn <span>*</span>
+
+                        </label>
+                        <input type="text" id="linkedin" name="linkedin" placeholder="Ej: linkedin.com/in/sally.hill"
+                        required>
+                        <label for="github">GitHub <span>*</span>
+
+                        </label>
+                        <input type="text" id="github" name="github" placeholder="Ej: @sally-hill"
+                        required>
+                    </div>
+                </section>
+                <!-- Share section -->
+                <section class="form__sections form__share">
+                    <div class="form__closed">
+                         <h2 class="form__title"><i class="form__icon fas fa-share-alt"></i>Comparte</h2>
+
+                        <button class="form__arrow" aria-label="Desplegar" onclick="share_visibility('form__share--open');"><i class="fas fa-chevron-down"></i>
+
+                        </button>
+                    </div>
+                    <div class="form__open hidden" id="form__share--open">
+                        <div class="create-card-button-container">
+                            <button type="button" class="create-card-button"> <a href="#" arial-label="Crear tarjeta"><i class="far fa-address-card"></i>Crear tarjeta</a>
+
+                            </button>
+                        </div>
+                        <div class="form-container created-container">
+                            <p>La tarjeta ha sido creada:</p> <a href="#">http://...</a>
+
+                            <button type="button"
+                            class="share-twitter-button"> <i class="fab fa-twitter"></i>
+Compartir en Twitter</button>
+                        </div>
+                    </div>
+                </section>
+            </form>
+        </section>
+        <footer class="page_footer">
+            <div class="footer-copyright">
+                <p>Awesome profile cards &copy; 2020</p>
+            </div>
+            <div class="footer-logo-container"> <a href="#" alt="go to adalab" aria-label="go to adalab"><img src="./assets/images/logo-adalab.png" alt="logo-adalab"></a>
+
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+</body>
+
+</html>
