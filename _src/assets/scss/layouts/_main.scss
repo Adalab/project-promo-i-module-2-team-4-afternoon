@@ -48,8 +48,10 @@
         font-family: $landingTitle;
         font-weight: 900;
         color: $secondaryColor;
+        margin-bottom: 5px;
+        text-align: center;
         @include forTablet {
-          margin-bottom: 0;
+          margin-bottom: 5px;
           font-size: 24px;
       }
     }
@@ -59,6 +61,7 @@
         color: $formText;
         text-align: center;
         margin-bottom: 20px;
+        line-height: normal;
         @include forTablet {
           margin-top: 0;
           font-size: 16px;
@@ -74,6 +77,7 @@
         width: 268px;
         justify-content: space-around;
         margin-bottom: 30px;
+        padding-bottom: 20px;
         @include forTablet {
           width: 325px;
           height: 70px;
@@ -113,7 +117,7 @@
       .button-container {
         @include forTablet {
            position: relative;
-           top: 150px;
+           top: 170px;
       }
       }
       .button {
