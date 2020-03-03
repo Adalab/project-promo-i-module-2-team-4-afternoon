@@ -44,7 +44,7 @@
       }
     }
       .title {
-        font-size: 19.2px;
+        font-size: $smallLandingTitle;
         font-family: $landingTitle;
         font-weight: 900;
         color: $secondaryColor;
@@ -52,11 +52,11 @@
         text-align: center;
         @include forTablet {
           margin-bottom: 5px;
-          font-size: 24px;
+          font-size: $largeLandingTitle;
       }
     }
       .text {
-        font-size: 12.8px;
+        font-size: $smallLandingText;
         font-family: $mainText;
         color: $formText;
         text-align: center;
@@ -64,7 +64,7 @@
         line-height: normal;
         @include forTablet {
           margin-top: 0;
-          font-size: 16px;
+          font-size: $LargeLandingText;
           width: 330px;
       }
       }
@@ -105,12 +105,12 @@
       }
       }
       .icon1, .icon2, .icon3 {
-        font-size: 12.8px;
+        font-size: $smallLandingText;
         font-family: $mainText;
         color:$primaryColor;
         margin-top: 0;
         @include forTablet {
-          font-size: 16px;
+          font-size: $LargeLandingText;
           text-align: center;
       }
       }
@@ -121,7 +121,7 @@
       }
       }
       .button {
-        font-size: 16px;
+        font-size: $LargeLandingText;
         font-family: $mainText;
         color: white;
         background: #438792;
