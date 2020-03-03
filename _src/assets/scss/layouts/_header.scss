@@ -1,0 +1,18 @@
+.header-image-container {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background: white;
+    display: flex;
+    justify-content: center;
+    @include forTablet {
+    justify-content: flex-start;
+    margin-left: 40px;
+}
+}
+.header-awesome-image {
+    width: 201px;
+    height: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
