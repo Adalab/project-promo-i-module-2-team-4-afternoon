@@ -322,68 +322,77 @@ reset: <i class="far fa-trash-alt"></i>
 
 .form .palettesContainer .paletteChoices {
   grid-column: 2/3;
+  display: grid;
+  grid-template-columns: 30px 30px 30px 30px;
+  grid-template-rows: 25px 20px 25px 20px 25px;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
 }
 
-.form .palettesContainer .paletteChoices .paletteOne {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.form .palettesContainer .paletteChoices .radio_button {
+  grid-column: 1/2;
 }
 
-.form .palettesContainer .paletteChoices .paletteOne .inPaletteOne {
-  margin-right: 10px;
-}
-
-.form .palettesContainer .paletteChoices .colorBox {
-  width: 30px;
-  height: 25px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: -4px;
-  display: inline-block;
-}
-
-.form .palettesContainer .paletteChoices .colorBox.paletteOne.one1 {
+.form .palettesContainer .paletteChoices .palOne_colOne {
+  grid-column: 2/3;
   background-color: #114e4e;
 }
 
-.form .palettesContainer .paletteChoices .colorBox.paletteOne.one2 {
+.form .palettesContainer .paletteChoices .palOne_colTwo {
+  grid-column: 3/4;
   background-color: #438792;
 }
 
-.form .palettesContainer .paletteChoices .colorBox.paletteOne.one3 {
+.form .palettesContainer .paletteChoices .palOne_colThree {
+  grid-column: 4/5;
   background-color: #a2deaf;
 }
 
-.form .palettesContainer .paletteChoices .colorBox.paletteTwo.two1 {
+.form .palettesContainer .paletteChoices .radio_button_two {
+  grid-row: 3;
+  grid-column: 1/2;
+}
+
+.form .palettesContainer .paletteChoices .palTwo_colOne {
+  grid-row: 3;
+  grid-column: 2/3;
   background-color: #420101;
 }
 
-.form .palettesContainer .paletteChoices .colorBox.paletteTwo.two2 {
-  background-color: #bd1010;
+.form .palettesContainer .paletteChoices .palTwo_colTwo {
+  grid-row: 3;
+  grid-column: 3/4;
+  background-color: #BD1010;
 }
 
-.form .palettesContainer .paletteChoices .colorBox.paletteTwo.two3 {
-  background-color: #e17334;
+.form .palettesContainer .paletteChoices .palTwo_colThree {
+  grid-row: 3;
+  grid-column: 4/5;
+  background-color: #E95626;
 }
 
-.form .palettesContainer .paletteChoices .colorBox.paletteThree.three1 {
-  background-color: #3e5b65;
+.form .palettesContainer .paletteChoices .radio_button_tree {
+  grid-row: 5;
+  grid-column: 1/2;
 }
 
-.form .palettesContainer .paletteChoices .colorBox.paletteThree.three2 {
-  background-color: #eab052;
+.form .palettesContainer .paletteChoices .palThree_colOne {
+  grid-row: 5;
+  grid-column: 2/3;
+  background-color: #3E5B65;
 }
 
-.form .palettesContainer .paletteChoices .colorBox.paletteThree.three3 {
-  background-color: #a0c0cf;
+.form .palettesContainer .paletteChoices .palThree_colTwo {
+  grid-row: 5;
+  grid-column: 3/4;
+  background-color: #EAB052;
+}
+
+.form .palettesContainer .paletteChoices .palThree_colThree {
+  grid-row: 5;
+  grid-column: 4/5;
+  background-color: #A0C0CF;
 }
 
 .form .form__fill label {

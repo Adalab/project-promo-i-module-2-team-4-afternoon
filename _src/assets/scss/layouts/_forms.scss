@@ -51,59 +51,76 @@ body {
         }
         .paletteChoices {
             grid-column: 2/3;
-            
-            .paletteOne {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-            
-            .inPaletteOne {
-                margin-right: 10px;
+            display: grid;
+            grid-template-columns: 30px 30px 30px 30px;
+            grid-template-rows: 25px 20px 25px 20px 25px;
+            justify-content: end;
+      
+        
+            .radio_button {
+                grid-column: 1/2;
             }
-        }
-            .colorBox {
-                width: 30px;
-                height: 25px;
-                margin-top: 10px;
-                margin-bottom: 10px;   
-                margin-right: -4px;display: inline-block;
+        
 
+            .palOne_colOne {
+                grid-column: 2/3;
+                background-color: $formText;
+            }
 
-                &.paletteOne.one1 {
-                    background-color: $formText;
-                }
+            .palOne_colTwo {
+                grid-column: 3/4;
+                background-color: $palete1Color2;
+            }
 
-                &.paletteOne.one2 {
-                    background-color: #438792;
-                }
+            .palOne_colThree {
+                grid-column: 4/5;
+                background-color: $borderColor;
+            }
 
-                &.paletteOne.one3 {
-                    background-color: $borderColor;
-                }
+            .radio_button_two {
+                grid-row: 3;
+                grid-column: 1/2;
+            }
 
-                &.paletteTwo.two1 {
-                    background-color: #420101;
-                }
+            .palTwo_colOne {
+                grid-row: 3;
+                grid-column: 2/3;
+                background-color: $palete2Color1;
+            }
 
-                &.paletteTwo.two2 {
-                    background-color: #bd1010;
-                }
+            .palTwo_colTwo {
+                grid-row: 3;
+                grid-column: 3/4;
+                background-color: $palete2Color2;
+            }
 
-                &.paletteTwo.two3 {
-                    background-color: $secondaryColor;
-                }
-                
-                &.paletteThree.three1 {
-                    background-color: #3e5b65;
-                }
+            .palTwo_colThree {
+                grid-row: 3;
+                grid-column: 4/5;
+                background-color: $palete2Color3;
+            }
 
-                &.paletteThree.three2 {
-                    background-color: #eab052;
-                }
+            .radio_button_tree {
+                grid-row: 5;
+                grid-column: 1/2;
+            }
 
-                &.paletteThree.three3 {
-                    background-color: #a0c0cf;
-                }
+            .palThree_colOne {
+                grid-row: 5;
+                grid-column: 2/3;
+                background-color:$palete3Color1;
+            }
+            
+            .palThree_colTwo {
+                grid-row: 5;
+                grid-column: 3/4;
+                background-color:$palete3Color2;
+            }
+
+            .palThree_colThree {
+                grid-row: 5;
+                grid-column: 4/5;
+                background-color:$palete3Color3;
             }
         } 
     }
