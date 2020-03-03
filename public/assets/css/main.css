@@ -323,8 +323,8 @@ reset: <i class="far fa-trash-alt"></i>
 .form .palettesContainer .paletteChoices {
   grid-column: 2/3;
   display: grid;
-  grid-template-columns: 30px 30px 30px 30px;
-  grid-template-rows: 25px 20px 25px 20px 25px;
+  grid-template-columns: repeat(4, 1.875rem);
+  grid-template-rows: 1.5625rem 1.25rem 1.5625rem 1.25rem 1.5625rem;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: end;
@@ -399,80 +399,6 @@ reset: <i class="far fa-trash-alt"></i>
   grid-row: 5;
   grid-column: 4/5;
   background-color: #A0C0CF;
-}
-
-.form .form__fill label {
-  color: #114e4e;
-}
-
-.form .form__fill label span {
-  color: #54585a;
-}
-
-.form .form__fill ::-webkit-input-placeholder {
-  color: #c5c5c5;
-}
-
-.form .form__fill :-ms-input-placeholder {
-  color: #c5c5c5;
-}
-
-.form .form__fill ::-ms-input-placeholder {
-  color: #c5c5c5;
-}
-
-.form .form__fill ::placeholder {
-  color: #c5c5c5;
-}
-
-.form .form__fill input {
-  border: 1px solid #a2deaf;
-  margin: 5px 0 20px 0;
-  height: 30px;
-}
-
-.form .form__fill .form__open {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  font-size: 14px;
-  line-height: 20px;
-}
-
-.form .form__fill .profile--picture__upload {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.form .form__fill .form__fill--btn {
-  width: 140px;
-  height: 30px;
-  background-color: #e17334;
-  color: white;
-  font-family: "Open Sans";
-  font-size: 14px;
-  border-radius: 3px;
-  -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
-  margin-bottom: 18px;
-}
-
-.form .form__fill .thumbnail {
-  width: 30px;
-  height: 30px;
-  border: 1px solid #a2deaf;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin-left: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */
