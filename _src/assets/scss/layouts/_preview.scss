@@ -45,7 +45,10 @@ $palete3Color3: #a0c0cf;
     background: linear-gradient($previewBackground1, $previewBackground2);
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 457px;
+    @include forTablet{
+        height: 100%;
+    }
     .preview__container{
         @include centerAll;
         .preview__resetButton{

@@ -3,6 +3,7 @@
     background: linear-gradient(to bottom, #f5f5f5, #ffffff 9%);
     @include forTablet{
         padding: 20px 40px;
+        min-height: 856px; // Altura mínima para que no salte al desplegar menus
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr;
