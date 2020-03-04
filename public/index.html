@@ -12,89 +12,38 @@
 </head>
 <body>
     <div class="page">
-        <header class="page__header">Header</header>
-        <main class="page__main">Main</main>
-        <section class="form">
-            <form action="" method="POST" id="form__card">
-                <!-- Design section -->
-                <section class="form__sections form__design"></section>
-                <!-- Fill section -->
-                <section class="form__sections form__fill">
-                    <div class="form__closed">
-                         <h2 class="form__title"><i class="far fa-keyboard"></i></i>Rellena</h2>
+        <main class="page_main">
+            <div class="wrapper_main">
+                <div class="content-container">
+                    <div class="awesome-image-container">
+                        <img class="awesome-image" src="./assets/images/awesome_logo.svg" alt="Awesome profile-cards"
+                        title="Awesome profile-cards">
+                    </div>
+                     <h1 class="title">Crea tu tarjeta de visita</h1>
 
-                        <div class="form__arrow"><i class="fas fa-chevron-up"></i>
+                    <p class="text">Crea mejores contactos profesionales de forma fácil y cómoda</p>
+                    <div class="icon-container">
+                        <div class="design-icon"> <i class="far fa-object-ungroup"></i>
 
+                            <p class="icon1">Diseña</p>
+                        </div>
+                        <div class="fill-icon"> <i class="far fa-keyboard"></i>
+
+                            <p class="icon2">Rellena</p>
+                        </div>
+                        <div class="share-icon"> <i class="fas fa-share-alt"></i>
+
+                            <p class="icon3">Comparte</p>
                         </div>
                     </div>
-                    <div class="form__open">
-                        <label for="name">Nombre completo <span>*</span>
+                </div>
+                <div class="button-container"> <a href="./card.html">
+        <button type="button" class="button" title="Botón: Comenzar">comenzar</button>
+        </a>
 
-                        </label>
-                        <input type="text" id="name" name="name" placeholder="Ej. Sally Jill"
-                        required>
-                        <label for="job">Profesión <span>*</span>
-
-                        </label>
-                        <input type="text" id="job" name="job" placeholder="Ej: Front-end unicorn"
-                        required>
-                        <label for="photo">Imagen de perfil <span>*</span>
-
-                        </label>
-                        <input type="file" id="photo" name="photo" required>
-                        <div class="photo__upload">
-                            <button class="photo__upload--btn">Añadir imagen</button>
-                            <div class="thumbnail"></div>
-                        </div>
-                        <label for="email">Email <span>*</span>
-
-                        </label>
-                        <input type="email" id="email" name="email" placeholder="Ej: sally-hill@gmail.com"
-                        required>
-                        <label for="phone">Teléfono</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Ej: 555-55-55-55">
-                        <label for="linkedin">LinkedIn <span>*</span>
-
-                        </label>
-                        <input type="text" id="linkedin" name="linkedin" placeholder="Ej: linkedin.com/in/sally.hill"
-                        required>
-                        <label for="github">GitHub <span>*</span>
-
-                        </label>
-                        <input type="text" id="github" name="github" placeholder="Ej: @sally-hill"
-                        required>
-                    </div>
-                </section>
-                <!-- Share section -->
-                <section class="forms_share">
-                    <div class=" form-container share-container">
-                        <header class="share-header">
-                            <div class="share-title">
-                                 <h3><i class="fas fa-share-alt"></i>Comparte</h3>
-
-                            </div>
-                            <div class="share-button">
-                                <button type="button" class="button arrow-down"> <i class="fas fa-chevron-down"></i>
-
-                                </button>
-                            </div>
-                        </header>
-                        <div class="create-card-button-container">
-                            <button type="button" class="create-card-button"> <a href="#" arial-label="Crear tarjeta"><i class="far fa-address-card"></i>crear tarjeta</a>
-
-                            </button>
-                        </div>
-                    </div>
-                    <div class="form-container created-container">
-                        <p>La tarjeta ha sido creada:</p> <a href="#">http://...</a>
-
-                        <button type="button"
-                        class="share-twitter-button"> <i class="fab fa-twitter"></i>
-Compartir en Twitter</button>
-                    </div>
-                </section>
-            </form>
-        </section>
+                </div>
+            </div>
+        </main>
         <footer class="page_footer">
             <div class="footer-copyright">
                 <p>Awesome profile cards &copy; 2020</p>

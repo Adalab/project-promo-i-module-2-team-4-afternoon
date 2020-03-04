@@ -1,91 +1,113 @@
 .form {
     font-family: $mainText;
     background: linear-gradient(to bottom, #f5f5f5, #ffffff 9%);
+    padding: 30px 27px;
 
-    .far {
+    a {
+        font-family: $mainText;
+        text-decoration: none;
+    }
+
+    .form__icon {
         color: $secondaryColor;
-        margin-right: 5px;
+        margin-right: 10px;
     }
 
     .form__arrow {
         color: $primaryColor;
+        border: none;
+
+        // &:visited, &:focus, &:active {
+        //     transform: rotate(180deg);
+        // }
+    }
+
+    .form__arrow--collapse {
+        transform: rotate(180deg);
     }
 
     .form__title {
-        font-family: $formTitle;
+        font-family: $mainText;
         font-weight: 900;
         text-transform: uppercase;
         font-size: 18px;
         color: $primaryColor;
-        margin-bottom: 20px;
+        margin: 20px 0;
     }
 
     .form__closed {
-        margin-top: 10px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        align-items: baseline;
     }
 
     .form__sections {
-        border-bottom: 1px solid #d8d8d8;
+        border-bottom: 1px solid $borderLineColor;
     }
 
 // Section fill 
 
-    .form__fill {
+.form__fill {
+    margin-bottom: 30px;
 
-        label {
-            color: $formText;
+    label {
+        color: $formText;
 
-            span {
-                color: $primaryColor;
-            }
-        }
-    
-        ::placeholder {
-            color: $placeholderText;
-        }
-    
-        input {
-            border: 1px solid $borderColor;
-            margin: 5px 0 20px 0;
-            height: 30px;
-        }
-
-        .form__open {
-            display: flex;
-            flex-direction: column;
-            font-size: 14px;
-            line-height: 20px;
-        }
-
-        .photo__upload {
-            display: flex;
-            flex-direction: row;
-        }
-
-        .photo__upload--btn {
-            width: 140px;
-            height: 30px;
-            background-color: $secondaryColor;
-            color: white;
-            font-family: $mainText;
-            font-size: 14px;
-            border-radius: 3px;
-            box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.20);
-            margin-bottom: 18px;
-        }
-
-        .thumbnail {
-            width: 30px;
-            height: 30px;
-            border: 1px solid $borderColor;
-            box-sizing: border-box;
-            margin-left: 20px;
+        span {
+            color: $primaryColor;
         }
     }
+
+    ::placeholder {
+        color: $placeholderText;
+        padding: 5px;
+    }
+
+    input {
+        border: 1px solid $borderColor;
+        margin: 5px 0 20px 0;
+        height: 30px;
+        width: 100%;
+    }
+
+    .form__open {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .photo__upload {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .photo__upload--btn {
+        width: 140px;
+        height: 30px;
+        background-color: $secondaryColor;
+        color: white;
+        font-family: $mainText;
+        font-size: 14px;
+        line-height: 0;
+        border-radius: 3px;
+        box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.20);
+        margin: 10px 0 20px;
+    }
+
+    .thumbnail {
+        width: 30px;
+        height: 30px;
+        border: 1px solid $borderColor;
+        box-sizing: border-box;
+        margin: 10px 0 0 20px;
+    }
+
+    .hidden {
+        display: none;
+    }
+}
 }
 
 // Section share
@@ -95,9 +117,9 @@
     border-bottom: solid 1px $borderLineColor;
 }
 
-.created-container{
-    border-bottom: solid 1px $borderLineColor;
-}
+// .created-container{
+//     border-bottom: solid 1px $borderLineColor;
+// }
 
 .form-container{
     width: 280px;
@@ -113,35 +135,17 @@
     padding-top: 10px;
 }
 
-.share-title{
-    h3{
-        text-transform: uppercase;
-        font-family: $mainText;
-        font-weight: 500;
-        font-size: 18px;
-            i{
-                color:$secondaryColor;
-                margin-right: 10px;
-            }
-    }
-
-    
-}
-
-
-.button{
-    border-radius: 50%;
-    border: 0;
-    padding: 7px;
-    padding-left: 9px;
-    padding-right: 9px;
-}
+// .button{
+//     border-radius: 50%;
+//     border: 0;
+//     padding: 7px;
+//     padding-left: 9px;
+//     padding-right: 9px;
+// }
 
 .arrow-down{
     background-color: white;
 }
-
-
 
 .create-card-button-container{
     text-align: center;
@@ -160,6 +164,10 @@
         background-color: $secondaryColor;
         color: white;
         border-radius: 12px;
+
+        &:hover {
+            background-color: $hoverColor;
+        }
 
             a{
                 text-transform: uppercase;
@@ -197,6 +205,9 @@
         color:$secondaryColor;
         padding-bottom: 10px;
         padding-top: 5px;
+        font-family: $mainText;
+        font-size: 12px;
+        font-weight: 600;
     }
 
     .share-twitter-button{

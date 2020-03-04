@@ -1,0 +1,134 @@
+.page_main {
+    background: #f5f5f5;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    @include forTablet {
+      height: 963px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+    .wrapper_main {
+      margin-right: 35px;
+      margin-left: 35px;
+      padding-top: 95px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include forTablet {
+      padding-top: 0;
+    }
+    }
+      .content-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include forTablet {
+          margin-top: 150px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .awesome-image {
+        width: 250px;
+        height: 63px;
+        margin-bottom: 20px;
+        @include forTablet {
+          width: 419px;
+          height: 105px;
+      }
+    }
+      .title {
+        font-size: $smallLandingTitle;
+        font-family: $landingTitle;
+        font-weight: 900;
+        color: $secondaryColor;
+        margin-bottom: 5px;
+        text-align: center;
+        @include forTablet {
+          margin-bottom: 5px;
+          font-size: $largeLandingTitle;
+      }
+    }
+      .text {
+        font-size: $smallLandingText;
+        font-family: $mainText;
+        color: $formText;
+        text-align: center;
+        margin-bottom: 20px;
+        line-height: normal;
+        @include forTablet {
+          margin-top: 0;
+          font-size: $LargeLandingText;
+          width: 330px;
+      }
+      }
+      .icon-container {
+        display: flex;
+        flex-direction: row;
+        border: solid 2px;
+        border-color: rgba(225,115,52,0.21);
+        border-radius: 4px;
+        width: 268px;
+        justify-content: space-around;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        @include forTablet {
+          width: 325px;
+          height: 70px;
+      }
+      .design-icon {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $secondaryColor;
+      }
+      .fill-icon {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $secondaryColor;
+      }
+      .share-icon {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $secondaryColor;
+      }
+      }
+      .icon1, .icon2, .icon3 {
+        font-size: $smallLandingText;
+        font-family: $mainText;
+        color:$primaryColor;
+        margin-top: 0;
+        @include forTablet {
+          font-size: $LargeLandingText;
+          text-align: center;
+      }
+      }
+      .button-container {
+        @include forTablet {
+           position: relative;
+           top: 170px;
+      }
+      }
+      .button {
+        font-size: $LargeLandingText;
+        font-family: $mainText;
+        color: white;
+        background: #438792;
+        text-transform: uppercase;
+        border-radius: 21px;
+        width: 129px;
+        height: 42px;
+        margin-bottom: 30px;
+        border-style: solid;
+      }
