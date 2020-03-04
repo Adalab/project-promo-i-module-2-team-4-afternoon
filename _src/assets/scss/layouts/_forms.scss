@@ -1,3 +1,114 @@
+body {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+.far {
+    color:$secondaryColor;
+}
+
+.form__title {
+    font-family: $mainText;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: $primaryColor;
+    margin: 20px 0;
+}
+
+
+//Section design
+
+    .palettesContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+        & h3{
+            text-transform: uppercase;
+            padding: 0;
+            padding-left: 1.3125rem;
+            font-size: 0.875rem;
+            grid-column: 1/2;
+        }
+        .paletteChoices {
+            grid-column: 2/3;
+            display: grid;
+            grid-template-columns: 30px 30px 30px 30px;
+            grid-template-rows: 1.5625rem 1.25rem 1.5625rem 1.25rem 1.5625rem;
+            justify-content: end;
+      
+            .radio_button {
+                justify-self: center;
+                align-self: center;
+            }
+            .rb_one {
+                grid-column: 1/2;
+            }
+
+            .palOne_colOne {
+                grid-column: 2/3;
+                background-color: $formText;
+            }
+
+            .palOne_colTwo {
+                grid-column: 3/4;
+                background-color: $palete1Color2;
+            }
+
+            .palOne_colThree {
+                grid-column: 4/5;
+                background-color: $borderColor;
+            }
+
+            .rb_two {
+                grid-row: 3;
+                grid-column: 1/2;
+            }
+
+            .palTwo_colOne {
+                grid-row: 3;
+                grid-column: 2/3;
+                background-color: $palete2Color1;
+            }
+
+            .palTwo_colTwo {
+                grid-row: 3;
+                grid-column: 3/4;
+                background-color: $palete2Color2;
+            }
+
+            .palTwo_colThree {
+                grid-row: 3;
+                grid-column: 4/5;
+                background-color: $palete2Color3;
+            }
+
+            .rb_three {
+                grid-row: 5;
+                grid-column: 1/2;
+            }
+
+            .palThree_colOne {
+                grid-row: 5;
+                grid-column: 2/3;
+                background-color:$palete3Color1;
+            }
+            
+            .palThree_colTwo {
+                grid-row: 5;
+                grid-column: 3/4;
+                background-color:$palete3Color2;
+            }
+
+            .palThree_colThree {
+                grid-row: 5;
+                grid-column: 4/5;
+                background-color:$palete3Color3;
+            }
+        } 
+    }
+
+
+
 .form {
     font-family: $mainText;
     background: linear-gradient(to bottom, #f5f5f5, #ffffff 9%);
