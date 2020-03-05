@@ -2,8 +2,6 @@
 
 console.log('>> Ready :)');
 
-<<<<<<< HEAD
-=======
 
 // Toggle function 
 
@@ -41,5 +39,4 @@ function fill_visibility(id) {
  else { btnArrow.classList.add('form__arrow--collapse'); }
     }); 
  // ------ Button arrow collapse --------
->>>>>>> master
 //# sourceMappingURL=main.js.map
