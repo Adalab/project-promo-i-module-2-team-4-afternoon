@@ -733,6 +733,10 @@ body {
   padding-left: 20px;
 }
 
+.preview__socialInfo .hidden {
+  display: none;
+}
+
 .preview__socialInfo .preview__buttonList {
   list-style: none;
   display: -webkit-box;

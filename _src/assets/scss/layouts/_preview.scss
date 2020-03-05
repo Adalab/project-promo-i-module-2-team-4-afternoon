@@ -111,6 +111,9 @@ $palete3Color3: #a0c0cf;
 
 .preview__socialInfo{
     padding-left: 20px;
+    .hidden{
+        display: none;
+    }
     .preview__buttonList{
         list-style: none;
         display: flex;

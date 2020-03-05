@@ -33,17 +33,3 @@ function fill_visibility(id) {
 //     document.querySelector('form__arow').style.transform = 'rotate(180deg)';
 //   }
 
-// PREVIEW CARD FUNCTIONS **********************************************************+
-
-const nameInput = document.querySelector('#name');
-const jobInput = document.querySelector('#job');
-const nameBox = document.querySelector('.nameText');
-const jobBox = document.querySelector('.jobText')
-
-const getText = (x) => {
-   nameBox.innerHTML = nameInput.value;
-   jobBox.innerHTML = jobInput.value;
-}
-
-nameInput.addEventListener('keyup', getText);
-jobInput.addEventListener('keyup', getText);
