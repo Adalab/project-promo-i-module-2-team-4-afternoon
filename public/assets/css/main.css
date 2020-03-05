@@ -723,6 +723,9 @@ body {
   width: 100%;
   height: 200px;
   background-color: #dde9ed;
+  background-image: url(./../images/default-avatar.gif);
+  background-position: center;
+  background-size: cover;
   margin-bottom: 10px;
 }
 
