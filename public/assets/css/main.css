@@ -284,6 +284,10 @@ textarea {
   margin-bottom: 30px;
 }
 
+.hidden {
+  display: none;
+}
+
 .form {
   font-family: "Open Sans";
   background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), color-stop(9%, #ffffff));
@@ -301,7 +305,7 @@ textarea {
   margin-right: 10px;
 }
 
-.form .form__arrow {
+.form .form__arrow--design,.form .form__arrow--fill,.form .form__arrow--share {
   color: #54585a;
   border: none;
   background-color: transparent;
@@ -318,7 +322,7 @@ textarea {
   text-transform: uppercase;
   font-size: 18px;
   color: #54585a;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 .form .form__closed {
@@ -335,6 +339,10 @@ textarea {
   -webkit-box-align: baseline;
   -ms-flex-align: baseline;
   align-items: baseline;
+}
+
+.form .form__open {
+  padding-bottom: 20px;
 }
 
 .form .form__sections {
@@ -474,7 +482,7 @@ textarea {
   width: 100%;
 }
 
-.form .form__fill .form__open {
+.form .form__fill .form__flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -484,6 +492,7 @@ textarea {
   flex-direction: column;
   font-size: 14px;
   line-height: 20px;
+  padding-bottom: 20px;
 }
 
 .form .form__fill .photo__upload {
@@ -517,10 +526,6 @@ textarea {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 10px 0 0 20px;
-}
-
-.form .form__fill .hidden {
-  display: none;
 }
 
 .share-container {
