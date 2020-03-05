@@ -1,104 +1,106 @@
 <section class="form grid__element--1">
-
+    
     <form action="" method="POST" id="form__card">
-
+        
         <!-- Design section -->
         <section class="form__sections form__design">
-
+            
             <div class="form__closed">
                 <h2 class="form__title"><i class="form__icon far fa-object-ungroup"></i>Diseña</h2>
                 <button class="form__arrow--design" aria-label="Desplegar"><i class="fas fa-chevron-down"></i></button>
             </div>
-
-            <div class="form__open" id="form__design--open">
-            <div class="palettesContainer">
-                
-                <h3>colores</h3>
-                
-                <div class="paletteChoices">
-
-                    <input type="radio" class="radio_button rb_one" name="input-color">
-                    <div class="palOne_colOne"></div>
-                    <div class="palOne_colTwo"></div>
-                    <div class="palOne_colThree"></div>
-
-                    <input type="radio" class="radio_button rb_two" name="input-color">
-                    <div class="palTwo_colOne"></div>
-                    <div class="palTwo_colTwo"></div>
-                    <div class="palTwo_colThree"></div>
-
-                    <input type="radio" class="radio_button rb_three" name="input-color">
-                    <div class="palThree_colOne"></div>
-                    <div class="palThree_colTwo"></div>
-                    <div class="palThree_colThree"></div>
-                </div>
-            </div>
-                
             
+            <div class="form__open" id="form__design--open">
+                <div class="palettesContainer">
+                    
+                    <h3>colores</h3>
+                    
+                    <div class="paletteChoices">
+                        
+                        <input type="radio" class="radio_button rb_one" name="input-color">
+                        <div class="palOne_colOne"></div>
+                        <div class="palOne_colTwo"></div>
+                        <div class="palOne_colThree"></div>
+                        
+                        <input type="radio" class="radio_button rb_two" name="input-color">
+                        <div class="palTwo_colOne"></div>
+                        <div class="palTwo_colTwo"></div>
+                        <div class="palTwo_colThree"></div>
+                        
+                        <input type="radio" class="radio_button rb_three" name="input-color">
+                        <div class="palThree_colOne"></div>
+                        <div class="palThree_colTwo"></div>
+                        <div class="palThree_colThree"></div>
+                    </div>
+                </div>
+                
+                
             </div>
-        
+            
         </section>
-
+        
         <!-- Fill section -->
         <section class="form__sections form__fill">
             <div class="form__closed">
                 <h2 class="form__title"><i class="form__icon far fa-keyboard"></i>Rellena</h2>
                 <button class="form__arrow--fill" aria-label="Desplegar"><i class="fas fa-chevron-down"></i></button>
             </div>
-
-            <div class="form__open form__flex hidden" id="form__fill--open">
+            
+            <div class="form__open hidden" id="form__fill--open">
+                <div class="form__flex">
                 <label for="name">Nombre completo <span>*</span></label>
                 <input type="text" id="name" name="name" placeholder="Ej. Sally Jill" required>
-
+                
                 <label for="job">Profesión <span>*</span></label>
                 <input type="text" id="job" name="job" placeholder="Ej: Front-end unicorn" required>
-
+                
                 <label for="photo">Imagen de perfil <span>*</span></label>
                 <input type="file" id="photo" name="photo" class="hidden" required>
                 <div class="photo__upload">
                     <button class="photo__upload--btn" id="submit">Añadir imagen</button>
                     <div class="thumbnail"></div>
                 </div>
-
+                
                 <label for="email">Email <span>*</span></label>
                 <input type="email" id="email" name="email" placeholder="Ej: sally-hill@gmail.com" required>
-
+                
                 <label for="phone">Teléfono</label>
                 <input type="tel" id="phone" name="phone" placeholder="Ej: 555-55-55-55">
-
+                
                 <label for="linkedin">LinkedIn <span>*</span></label>
                 <input type="text" id="linkedin" name="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" required>
-
+                
                 <label for="github">GitHub <span>*</span></label>
                 <input type="text" id="github" name="github" placeholder="Ej: @sally-hill" required>
             </div>
+        </div>
         </section>
-
+        
         <!-- Share section -->
-
+        
         <section class="form__sections form__share">
-                <div class="form__closed">
-                    <h2 class="form__title"><i class="form__icon fas fa-share-alt"></i>Comparte</h2>
-                    <button class="form__arrow--share" aria-label="Desplegar"><i class="fas fa-chevron-down"></i></button>
+            <div class="form__closed">
+                <h2 class="form__title"><i class="form__icon fas fa-share-alt"></i>Comparte</h2>
+                <button class="form__arrow--share" aria-label="Desplegar"><i class="fas fa-chevron-down"></i></button>
+            </div>
+            
+            <div class="form__open hidden" id="form__share--open">
+                <div class="create-card-button-container">
+                    <button type="button" class="create-card-button">
+                        <a href="#" arial-label="Crear tarjeta"><i class="far fa-address-card"></i>Crear tarjeta</a>
+                    </button>
                 </div>
                 
-                <div class="form__open hidden">
-                    <div class="create-card-button-container">
-                        <button type="button" class="create-card-button">
-                            <a href="#" arial-label="Crear tarjeta"><i class="far fa-address-card"></i>Crear tarjeta</a>
-                        </button>
+                <div class="form-container created-container">
+                    <p>La tarjeta ha sido creada:</p>
+                    <a href="#">http://...</a>
+                    <button type="button" class="share-twitter-button">
+                        <i class="fab fa-twitter"></i>
+                        Compartir en Twitter
+                    </button>
                 </div>
-        
-        <div class="form-container created-container">
-            <p>La tarjeta ha sido creada:</p>
-            <a href="#">http://...</a>
-            <button type="button" class="share-twitter-button">
-                <i class="fab fa-twitter"></i>
-                Compartir en Twitter
-            </button>
-        </div>
-    </div>
-        
+            </div>
+            
         </section>
     </form>
 </section>
