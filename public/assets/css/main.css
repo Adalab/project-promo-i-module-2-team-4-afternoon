@@ -318,7 +318,7 @@ textarea {
   text-transform: uppercase;
   font-size: 18px;
   color: #54585a;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 .form .form__closed {
@@ -335,6 +335,10 @@ textarea {
   -webkit-box-align: baseline;
   -ms-flex-align: baseline;
   align-items: baseline;
+}
+
+.form .form__open {
+  padding-bottom: 20px;
 }
 
 .form .form__sections {
@@ -474,7 +478,7 @@ textarea {
   width: 100%;
 }
 
-.form .form__fill .form__open {
+.form .form__fill .form__flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -484,6 +488,7 @@ textarea {
   flex-direction: column;
   font-size: 14px;
   line-height: 20px;
+  padding-bottom: 20px;
 }
 
 .form .form__fill .photo__upload {

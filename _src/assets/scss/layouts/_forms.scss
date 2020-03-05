@@ -47,7 +47,7 @@
         text-transform: uppercase;
         font-size: 18px;
         color: $primaryColor;
-        margin: 20px 0;
+        margin: 10px 0;
     }
 
     .form__closed {
@@ -55,6 +55,10 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: baseline;
+    }
+
+    .form__open {
+        padding-bottom: 20px;
     }
 
     .form__sections {
@@ -177,11 +181,12 @@
         width: 100%;
     }
 
-    .form__open {
+    .form__flex {
         display: flex;
         flex-direction: column;
         font-size: 14px;
         line-height: 20px;
+        padding-bottom: 20px;
     }
 
     .photo__upload {

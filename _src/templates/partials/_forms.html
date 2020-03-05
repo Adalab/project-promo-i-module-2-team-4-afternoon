@@ -13,7 +13,7 @@
             
             <div class="palettesContainer">
                 <h3>colores</h3>
-
+                <div class="form__open hidden">
                 <div class="paletteChoices">
 
                     <input type="radio" class="radio_button rb_one" name="input-color">
@@ -31,7 +31,7 @@
                     <div class="palThree_colTwo"></div>
                     <div class="palThree_colThree"></div>
                 </div>
-                
+                </div>
             </div>
         
         </section>
@@ -43,7 +43,7 @@
                 <button class="form__arrow" aria-label="Desplegar" onclick="fill_visibility('form__fill--open');"><i class="fas fa-chevron-down"></i></button>
             </div>
 
-            <div class="form__open hidden" id="form__fill--open">
+            <div class="form__open form__flex hidden" id="form__fill--open">
                 <label for="name">Nombre completo <span>*</span></label>
                 <input type="text" id="name" name="name" placeholder="Ej. Sally Jill" required>
 
