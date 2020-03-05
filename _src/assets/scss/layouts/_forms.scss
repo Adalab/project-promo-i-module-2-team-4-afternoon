@@ -169,6 +169,16 @@
 
     .returnPaletteOne {
 
+        .preview__profileInfo{
+            border-left: 5px solid $formText;
+
+            &--name{
+                color:$palete2Color2;
+            }
+        }
+        .preview__socialInfo .preview__buttonList .preview__socialButton {
+            color: $borderColor;
+        }
     }
 
 

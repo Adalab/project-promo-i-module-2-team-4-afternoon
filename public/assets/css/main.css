@@ -445,6 +445,18 @@ textarea {
   background-color: #A0C0CF;
 }
 
+.form .returnPaletteOne .preview__profileInfo {
+  border-left: 5px solid #114e4e;
+}
+
+.form .returnPaletteOne .preview__profileInfo--name {
+  color: #BD1010;
+}
+
+.form .returnPaletteOne .preview__socialInfo .preview__buttonList .preview__socialButton {
+  color: #a2deaf;
+}
+
 .form .form__fill {
   margin-bottom: 0px;
 }
