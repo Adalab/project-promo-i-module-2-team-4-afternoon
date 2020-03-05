@@ -1,0 +1,32 @@
+.page{
+    &_footer{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 110px;
+        border-top: solid 1px $borderLineColor;
+
+            @include forTablet{
+                height: 60px;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        .footer-copyright{
+            margin:auto;
+            color: $footerColor;
+            font-size: 14px;
+            font-family:$mainText;
+        }
+
+        .footer-logo-container{
+            margin:auto;
+                img{
+                    width:103px;
+                    height: 40px;
+                }
+
+        }
+    }
+}

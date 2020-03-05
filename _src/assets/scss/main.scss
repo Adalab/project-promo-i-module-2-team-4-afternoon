@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import 'base/reset';
 @import 'core/variables';
 @import 'core/mixins';
@@ -5,3 +6,15 @@
 @import 'layouts/header';
 @import 'layouts/forms';
 @import 'layouts/footer';
+=======
+@import 'core/variables';
+@import 'base/reset';
+@import 'core/mixins';
+@import 'core/functions';
+@import 'layouts/structure';
+@import 'layouts/header';
+@import 'layouts/forms';
+@import 'layouts/preview';
+@import 'layouts/footer';
+@import 'layouts/main';
+>>>>>>> master
