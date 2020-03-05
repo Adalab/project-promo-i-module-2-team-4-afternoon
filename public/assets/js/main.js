@@ -41,7 +41,7 @@ function showFillInfo(){
 
 function showDesignInfo(){
   const collapsableDesign = document.querySelector('#form__design--open');
-  ccollapsableDesign.classList.toggle('hidden');
+  collapsableDesign.classList.toggle('hidden');
 
 }
 
