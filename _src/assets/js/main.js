@@ -32,3 +32,13 @@ function fill_visibility(id) {
 //  function btnRotate() {
 //     document.querySelector('form__arow').style.transform = 'rotate(180deg)';
 //   }
+
+// PREVIEW CARD FUNCTIONS **********************************************************+
+
+const nameInput = document.querySelector('#name');
+const jobInput = document.querySelector('#job');
+
+const getText = (x) => {textReceiver.innerHTML = x.currentTarget.value;}
+
+nameInput.addEventListener('keyup', getText);
+jobInput.addEventListener('keyup', getText);
