@@ -15,7 +15,9 @@
 //     color: $primaryColor;
 //     margin: 20px 0;
 // }
-
+.hidden {
+    display: none;
+}
 .form {
     font-family: $mainText;
     background: linear-gradient(to bottom, #f5f5f5, #ffffff 9%);
@@ -31,7 +33,7 @@
         margin-right: 10px;
     }
 
-    .form__arrow {
+    .form__arrow--design, .form__arrow--fill, .form__arrow--share {
         color: $primaryColor;
         border: none;
         background-color: transparent;
@@ -64,6 +66,8 @@
     .form__sections {
         border-bottom: 1px solid $borderLineColor;
     }
+
+    
 
 // --------- Design design ---------
 
@@ -213,10 +217,6 @@
         border: 1px solid $borderColor;
         box-sizing: border-box;
         margin: 10px 0 0 20px;
-    }
-
-    .hidden {
-        display: none;
     }
 }
 }
