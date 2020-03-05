@@ -29,6 +29,13 @@ function fill_visibility(id) {
        e.style.display = 'block';
  }
 
-//  function btnRotate() {
-//     document.querySelector('form__arow').style.transform = 'rotate(180deg)';
-//   }
+
+// ------ Button arrow collapse --------
+ const btnArrow = document.querySelector('.form__arrow');
+
+ btnArrow.addEventListener('click', () => {
+ if (btnArrow.classList.contains('form__arrow--collapse')) {
+    btnArrow.classList.remove('form__arrow--collapse'); } 
+ else { btnArrow.classList.add('form__arrow--collapse'); }
+    }); 
+ // ------ Button arrow collapse --------

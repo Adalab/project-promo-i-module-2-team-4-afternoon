@@ -1,22 +1,67 @@
-body {
-    box-sizing: border-box;
-    font-size: 16px;
-}
-.far {
-    color:$secondaryColor;
-}
+// body {
+//     box-sizing: border-box;
+//     font-size: 16px;
+// }
 
-.form__title {
+// .form__icon {
+//     color:$secondaryColor;
+// }
+
+// .form__title {
+//     font-family: $mainText;
+//     font-weight: 900;
+//     text-transform: uppercase;
+//     font-size: 18px;
+//     color: $primaryColor;
+//     margin: 20px 0;
+// }
+
+.form {
     font-family: $mainText;
-    font-weight: 900;
-    text-transform: uppercase;
-    font-size: 18px;
-    color: $primaryColor;
-    margin: 20px 0;
-}
+    background: linear-gradient(to bottom, #f5f5f5, #ffffff 9%);
+    padding: 30px 27px;
 
+    a {
+        font-family: $mainText;
+        text-decoration: none;
+    }
 
-//Section design
+    .form__icon {
+        color: $secondaryColor;
+        margin-right: 10px;
+    }
+
+    .form__arrow {
+        color: $primaryColor;
+        border: none;
+        background-color: transparent;
+    }
+
+    .form__arrow--collapse {
+        transform: rotate(180deg);
+    }
+
+    .form__title {
+        font-family: $mainText;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 18px;
+        color: $primaryColor;
+        margin: 20px 0;
+    }
+
+    .form__closed {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .form__sections {
+        border-bottom: 1px solid $borderLineColor;
+    }
+
+// --------- Design design ---------
 
     .palettesContainer {
         display: grid;
@@ -107,60 +152,10 @@ body {
         } 
     }
 
-
-
-.form {
-    font-family: $mainText;
-    background: linear-gradient(to bottom, #f5f5f5, #ffffff 9%);
-    padding: 30px 27px;
-
-    a {
-        font-family: $mainText;
-        text-decoration: none;
-    }
-
-    .form__icon {
-        color: $secondaryColor;
-        margin-right: 10px;
-    }
-
-    .form__arrow {
-        color: $primaryColor;
-        border: none;
-
-        // &:visited, &:focus, &:active {
-        //     transform: rotate(180deg);
-        // }
-    }
-
-    .form__arrow--collapse {
-        transform: rotate(180deg);
-    }
-
-    .form__title {
-        font-family: $mainText;
-        font-weight: 900;
-        text-transform: uppercase;
-        font-size: 18px;
-        color: $primaryColor;
-        margin: 20px 0;
-    }
-
-    .form__closed {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: baseline;
-    }
-
-    .form__sections {
-        border-bottom: 1px solid $borderLineColor;
-    }
-
-// Section fill 
+// --------- Section fill ---------
 
 .form__fill {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 
     label {
         color: $formText;
@@ -221,7 +216,7 @@ body {
 }
 }
 
-// Section share
+// --------- Section share ---------
 
 
 .share-container{
