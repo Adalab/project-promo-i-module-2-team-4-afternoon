@@ -357,6 +357,7 @@ textarea {
 .form .palettesContainer h3 {
   text-transform: uppercase;
   padding: 0;
+  padding-top: 0.75rem;
   padding-left: 1.3125rem;
   font-size: 0.875rem;
   grid-column: 1/2;
@@ -370,6 +371,7 @@ textarea {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: end;
+  padding-top: 0.9375rem;
 }
 
 .form .palettesContainer .paletteChoices .radio_button {
@@ -964,6 +966,10 @@ textarea {
     -ms-flex-pack: start;
     justify-content: flex-start;
     margin-left: 40px;
+  }
+
+  .form .palettesContainer h3 {
+    padding-left: 0;
   }
 
   .page_footer {

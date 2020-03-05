@@ -78,9 +78,14 @@
         & h3{
             text-transform: uppercase;
             padding: 0;
+            padding-top: 0.75rem;
             padding-left: 1.3125rem;
             font-size: 0.875rem;
             grid-column: 1/2;
+        
+            @media all and (min-width:$tablet) {
+                padding-left: 0;
+            }
         }
         .paletteChoices {
             grid-column: 2/3;
@@ -88,6 +93,7 @@
             grid-template-columns: 30px 30px 30px 30px;
             grid-template-rows: 1.5625rem 1.25rem 1.5625rem 1.25rem 1.5625rem;
             justify-content: end;
+            padding-top: 0.9375rem;
       
             .radio_button {
                 justify-self: center;
