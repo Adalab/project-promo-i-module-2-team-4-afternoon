@@ -1,6 +1,6 @@
 'use strict';
 
-console.log('>> Ready :)');
+// console.log('>> Ready :)');
 
 // ------ Button arrow collapse --------
 const btnArrowDesign = document.querySelector('.form__arrow--design');
@@ -62,4 +62,14 @@ function showShareInfo(){
 fillShow.addEventListener('click', showFillInfo);
 designShow.addEventListener('click', showDesignInfo);
 shareShow.addEventListener('click', showShareInfo);
+'use strict';
+
+const palette2 = document.querySelector('.paletteStyle');
+
+function changePalette2(){
+
+
+}
+
+
 //# sourceMappingURL=main.js.map

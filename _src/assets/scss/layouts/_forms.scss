@@ -90,7 +90,7 @@
         .paletteChoices {
             grid-column: 2/3;
             display: grid;
-            grid-template-columns: 30px 30px 30px 30px;
+            grid-template-columns: 30px 90px;
             grid-template-rows: 1.5625rem 1.25rem 1.5625rem 1.25rem 1.5625rem;
             justify-content: end;
             padding-top: 0.9375rem;
@@ -103,42 +103,9 @@
                 grid-column: 1/2;
             }
 
-            .palOne_colOne {
-                grid-column: 2/3;
-                background-color: $formText;
-            }
-
-            .palOne_colTwo {
-                grid-column: 3/4;
-                background-color: $palete1Color2;
-            }
-
-            .palOne_colThree {
-                grid-column: 4/5;
-                background-color: $borderColor;
-            }
-
             .rb_two {
                 grid-row: 3;
                 grid-column: 1/2;
-            }
-
-            .palTwo_colOne {
-                grid-row: 3;
-                grid-column: 2/3;
-                background-color: $palete2Color1;
-            }
-
-            .palTwo_colTwo {
-                grid-row: 3;
-                grid-column: 3/4;
-                background-color: $palete2Color2;
-            }
-
-            .palTwo_colThree {
-                grid-row: 3;
-                grid-column: 4/5;
-                background-color: $palete2Color3;
             }
 
             .rb_three {
@@ -146,40 +113,95 @@
                 grid-column: 1/2;
             }
 
-            .palThree_colOne {
-                grid-row: 5;
+            .palette-grid{
+                display: grid;
+                grid-template-columns: repeat(3,30px);
+                grid-template-rows: auto;
+                justify-content: end;
                 grid-column: 2/3;
-                background-color:$palete3Color1;
+            }
+
+            .grid-one{
+                grid-row: 1;
+                
+                    .palOne_colOne {
+                        background-color: $formText;
+                    }
+
+                    .palOne_colTwo {
+                        background-color: $palete1Color2;
+                    }
+
+                    .palOne_colThree {
+                        background-color: $borderColor;
+                    }
             }
             
-            .palThree_colTwo {
-                grid-row: 5;
-                grid-column: 3/4;
-                background-color:$palete3Color2;
+            .grid-two{
+                grid-row: 3;
+
+                    .palTwo_colOne {
+                        background-color: $palete2Color1;
+                    }
+
+                    .palTwo_colTwo {
+                        background-color: $palete2Color2;
+                    }
+
+                    .palTwo_colThree {
+                        background-color: $palete2Color3;
+                    }
             }
 
-            .palThree_colThree {
-                grid-row: 5;
-                grid-column: 4/5;
-                background-color:$palete3Color3;
-            }
-        } 
-    }
+            .grid-three{
+                    grid-row: 5;
+                    
+                    .palThree_colOne {  
+                        background-color:$palete3Color1;
+                    }
+            
+                    .palThree_colTwo {
+                        background-color:$palete3Color2;
+                    }
 
-
-    .returnPaletteOne {
-
-        .preview__profileInfo{
-            border-left: 5px solid $formText;
-
-            &--name{
-                color:$palete2Color2;
+                    .palThree_colThree {
+                        background-color:$palete3Color3;
+                    }   
             }
         }
-        .preview__socialInfo .preview__buttonList .preview__socialButton {
-            color: $borderColor;
+    } 
+    
+
+    .paletteStyle2{
+        .infoStyle{
+            border-left: 5px solid $palete2Color1;
+
+                &--name{
+                    color:$palete2Color2;
+                }
+        }
+    
+        .buttonStyle{ 
+            color: $palete2Color3;
+            border: 2px solid $palete2Color3;
         }
     }
+
+    .paletteStyle3{
+        .infoStyle{
+            border-left: 5px solid $palete3Color2;
+
+                &--name{
+                    color:$palete3Color1;
+                }
+        }
+    
+        .buttonStyle{ 
+            color: $palete3Color3;
+            border: 2px solid $palete3Color3;
+        }
+    }
+}
 
 
 // --------- Section fill ---------
@@ -241,7 +263,7 @@
         margin: 10px 0 0 20px;
     }
 }
-}
+
 
 // --------- Section share ---------
 

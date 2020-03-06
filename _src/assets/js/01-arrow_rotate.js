@@ -1,6 +1,6 @@
 'use strict';
 
-console.log('>> Ready :)');
+// console.log('>> Ready :)');
 
 // ------ Button arrow collapse --------
 const btnArrowDesign = document.querySelector('.form__arrow--design');

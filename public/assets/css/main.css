@@ -366,7 +366,7 @@ textarea {
 .form .palettesContainer .paletteChoices {
   grid-column: 2/3;
   display: grid;
-  grid-template-columns: 30px 30px 30px 30px;
+  grid-template-columns: 30px 90px;
   grid-template-rows: 1.5625rem 1.25rem 1.5625rem 1.25rem 1.5625rem;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
@@ -384,42 +384,9 @@ textarea {
   grid-column: 1/2;
 }
 
-.form .palettesContainer .paletteChoices .palOne_colOne {
-  grid-column: 2/3;
-  background-color: #114e4e;
-}
-
-.form .palettesContainer .paletteChoices .palOne_colTwo {
-  grid-column: 3/4;
-  background-color: #438792;
-}
-
-.form .palettesContainer .paletteChoices .palOne_colThree {
-  grid-column: 4/5;
-  background-color: #a2deaf;
-}
-
 .form .palettesContainer .paletteChoices .rb_two {
   grid-row: 3;
   grid-column: 1/2;
-}
-
-.form .palettesContainer .paletteChoices .palTwo_colOne {
-  grid-row: 3;
-  grid-column: 2/3;
-  background-color: #420101;
-}
-
-.form .palettesContainer .paletteChoices .palTwo_colTwo {
-  grid-row: 3;
-  grid-column: 3/4;
-  background-color: #BD1010;
-}
-
-.form .palettesContainer .paletteChoices .palTwo_colThree {
-  grid-row: 3;
-  grid-column: 4/5;
-  background-color: #E95626;
 }
 
 .form .palettesContainer .paletteChoices .rb_three {
@@ -427,76 +394,130 @@ textarea {
   grid-column: 1/2;
 }
 
-.form .palettesContainer .paletteChoices .palThree_colOne {
-  grid-row: 5;
+.form .palettesContainer .paletteChoices .palette-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 30px);
+  grid-template-rows: auto;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
   grid-column: 2/3;
+}
+
+.form .palettesContainer .paletteChoices .grid-one {
+  grid-row: 1;
+}
+
+.form .palettesContainer .paletteChoices .grid-one .palOne_colOne {
+  background-color: #114e4e;
+}
+
+.form .palettesContainer .paletteChoices .grid-one .palOne_colTwo {
+  background-color: #438792;
+}
+
+.form .palettesContainer .paletteChoices .grid-one .palOne_colThree {
+  background-color: #a2deaf;
+}
+
+.form .palettesContainer .paletteChoices .grid-two {
+  grid-row: 3;
+}
+
+.form .palettesContainer .paletteChoices .grid-two .palTwo_colOne {
+  background-color: #420101;
+}
+
+.form .palettesContainer .paletteChoices .grid-two .palTwo_colTwo {
+  background-color: #BD1010;
+}
+
+.form .palettesContainer .paletteChoices .grid-two .palTwo_colThree {
+  background-color: #E95626;
+}
+
+.form .palettesContainer .paletteChoices .grid-three {
+  grid-row: 5;
+}
+
+.form .palettesContainer .paletteChoices .grid-three .palThree_colOne {
   background-color: #3E5B65;
 }
 
-.form .palettesContainer .paletteChoices .palThree_colTwo {
-  grid-row: 5;
-  grid-column: 3/4;
+.form .palettesContainer .paletteChoices .grid-three .palThree_colTwo {
   background-color: #EAB052;
 }
 
-.form .palettesContainer .paletteChoices .palThree_colThree {
-  grid-row: 5;
-  grid-column: 4/5;
+.form .palettesContainer .paletteChoices .grid-three .palThree_colThree {
   background-color: #A0C0CF;
 }
 
-.form .returnPaletteOne .preview__profileInfo {
-  border-left: 5px solid #114e4e;
+.form .paletteStyle2 .infoStyle {
+  border-left: 5px solid #420101;
 }
 
-.form .returnPaletteOne .preview__profileInfo--name {
+.form .paletteStyle2 .infoStyle--name {
   color: #BD1010;
 }
 
-.form .returnPaletteOne .preview__socialInfo .preview__buttonList .preview__socialButton {
-  color: #a2deaf;
+.form .paletteStyle2 .buttonStyle {
+  color: #E95626;
+  border: 2px solid #E95626;
 }
 
-.form .form__fill {
+.form .paletteStyle3 .infoStyle {
+  border-left: 5px solid #EAB052;
+}
+
+.form .paletteStyle3 .infoStyle--name {
+  color: #3E5B65;
+}
+
+.form .paletteStyle3 .buttonStyle {
+  color: #A0C0CF;
+  border: 2px solid #A0C0CF;
+}
+
+.form__fill {
   margin-bottom: 0px;
 }
 
-.form .form__fill label {
+.form__fill label {
   color: #114e4e;
 }
 
-.form .form__fill label span {
+.form__fill label span {
   color: #54585a;
 }
 
-.form .form__fill ::-webkit-input-placeholder {
+.form__fill ::-webkit-input-placeholder {
   color: #c5c5c5;
   padding: 5px;
 }
 
-.form .form__fill :-ms-input-placeholder {
+.form__fill :-ms-input-placeholder {
   color: #c5c5c5;
   padding: 5px;
 }
 
-.form .form__fill ::-ms-input-placeholder {
+.form__fill ::-ms-input-placeholder {
   color: #c5c5c5;
   padding: 5px;
 }
 
-.form .form__fill ::placeholder {
+.form__fill ::placeholder {
   color: #c5c5c5;
   padding: 5px;
 }
 
-.form .form__fill input {
+.form__fill input {
   border: 1px solid #a2deaf;
   margin: 5px 0 20px 0;
   height: 30px;
   width: 100%;
 }
 
-.form .form__fill .form__flex {
+.form__fill .form__flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -509,7 +530,7 @@ textarea {
   padding-bottom: 20px;
 }
 
-.form .form__fill .photo__upload {
+.form__fill .photo__upload {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -519,7 +540,7 @@ textarea {
   flex-direction: row;
 }
 
-.form .form__fill .photo__upload--btn {
+.form__fill .photo__upload--btn {
   width: 140px;
   height: 30px;
   background-color: #e17334;
@@ -533,7 +554,7 @@ textarea {
   margin: 10px 0 20px;
 }
 
-.form .form__fill .thumbnail {
+.form__fill .thumbnail {
   width: 30px;
   height: 30px;
   border: 1px solid #a2deaf;
