@@ -13,9 +13,11 @@
 <body>
     <div class="page">
         <header class="page_header">
-            <div class="header-image-container">
-                <img class="header-awesome-image" src="./assets/images/awesome_logo.svg"
-                alt="Awesome profile-cards" title="Awesome profile-cards">
+            <div class="header-image-container"> <a href="./index.html#wrapper-main" class="link-logo" title="Awesome profile-cards">
+        <img class="header-awesome-image" src="./assets/images/awesome_logo.svg" alt="Awesome profile-cards"
+            title="Awesome profile-cards">
+        </a>
+
             </div>
         </header>
         <div class="grid__container">
@@ -104,12 +106,12 @@
 
                                 </label>
                                 <input type="text" id="name" name="name" placeholder="Ej. Sally Jill"
-                                required>
+                                maxlength="20" required>
                                 <label for="job">Profesión <span>*</span>
 
                                 </label>
                                 <input type="text" id="job" name="job" placeholder="Ej: Front-end unicorn"
-                                required>
+                                maxlength="25" required>
                                 <label for="photo">Imagen de perfil <span>*</span>
 
                                 </label>
@@ -149,7 +151,7 @@
                         </div>
                         <div class="form__open hidden" id="form__share--open">
                             <div class="create-card-button-container">
-                                <button id="createCardButton" type="button" class="create-card-button"> <a href="#" arial-label="Crear tarjeta"><i class="far fa-address-card"></i>Crear tarjeta</a>
+                                <button type="button" class="create-card-button"> <a href="#" arial-label="Crear tarjeta"><i class="far fa-address-card"></i>Crear tarjeta</a>
 
                                 </button>
                             </div>
