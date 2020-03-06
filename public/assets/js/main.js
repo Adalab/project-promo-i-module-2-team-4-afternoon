@@ -59,8 +59,16 @@ const resetButton = document.querySelector('.preview__resetButton');
 
 const formReset = () => { document.getElementById('form__card').reset();
 }
+const resetHandler = () => {
+   formReset();
+   getText();
+   showEmailButton();
+   showPhoneButton();
+   showLinkedinButton();
+   showGithubButton();
+}
 
-resetButton.addEventListener('click', formReset);
+resetButton.addEventListener('click', resetHandler);
 // Color Palette ----------------------------------------------------------------------
 
 
