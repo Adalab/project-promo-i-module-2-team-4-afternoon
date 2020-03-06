@@ -46,6 +46,11 @@ function showFillInfo(){
 
 }
 
+function showDesignInfo(){
+  const collapsableDesign = document.querySelector('#form__design--open');
+  collapsableDesign.classList.toggle('hidden');
+
+}
 
 function showShareInfo(){
   const collapsableShare = document.querySelector('#form__share--open');
