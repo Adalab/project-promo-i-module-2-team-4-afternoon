@@ -66,6 +66,8 @@ const resetHandler = () => {
    showPhoneButton();
    showLinkedinButton();
    showGithubButton();
+   document.querySelector('.nameText').innerHTML = 'Nombre Apellido';
+   document.querySelector('.jobText').innerHTML = 'Front-End developer';
 }
 
 resetButton.addEventListener('click', resetHandler);
