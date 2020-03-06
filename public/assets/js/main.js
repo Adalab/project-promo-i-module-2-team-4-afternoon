@@ -54,6 +54,16 @@ designShow.addEventListener('click', showDesignInfo);
 shareShow.addEventListener('click', showShareInfo);
 // PREVIEW CARD FUNCTIONS **********************************************************+
 
+// RESET ------------------------------------------------------------------------------
+const resetButton = document.querySelector('.preview__resetButton');
+
+const formReset = () => { document.getElementById('form__card').reset();
+}
+
+resetButton.addEventListener('click', formReset);
+// Color Palette ----------------------------------------------------------------------
+
+
 // Text info --------------------------------------------------------------------------
 
 const nameInput = document.querySelector('#name');
