@@ -21,34 +21,34 @@
         <div class="grid__container">
             <section class="page__preview grid__element--2">
                 <div class="preview__container">
-                    <button class="preview__resetButton"> <i class="far fa-trash-alt"></i> reset</button>
+                    <button class="preview__resetButton" href="#"> <i class="far fa-trash-alt"></i> reset</button>
                     <div class="preview__cardcontainer">
                         <div class="preview__profileInfo">
-                            <p class="preview__profileInfo--name">Nombre Apellido</p>
-                            <p class="preview__profileInfo--job">Front-End developer</p>
+                            <p class="preview__profileInfo--name nameText">Nombre Apellido</p>
+                            <p class="preview__profileInfo--job jobText">Front-End developer</p>
                         </div>
                         <div class="preview__pictureContainer"></div>
                         <div class="preview__socialInfo">
                             <ul class="preview__buttonList">
-                                <li class="preview__buttonList--item"> <a class="preview__socialButton preview__socialButton--phoneNumber" href=""
-                                    title="phone number">
-                            <i class=" icon fas fa-mobile-alt"></i>
+                                <li id="emailButton" class="preview__buttonList--item hidden"> <a id="emailButtonLink" class="preview__socialButton preview__socialButton--email"
+                                    href="" target="_blank" title="email address"><i class="icon far fa-envelope"></i>
                         </a>
 
                                 </li>
-                                <li class="preview__buttonList--item"> <a class="preview__socialButton preview__socialButton--email" href=""
-                                    title="email address"><i class=" icon far fa-envelope"></i>
+                                <li id="phoneButton" class="preview__buttonList--item hidden"> <a id="phoneButtonLink" class="preview__socialButton preview__socialButton--phoneNumber"
+                                    href="" target="_blank" title="phone number">
+                            <i class="icon fas fa-mobile-alt"></i>
                         </a>
 
                                 </li>
-                                <li class="preview__buttonList--item"> <a class="preview__socialButton preview__socialButton--linkedin" href=""
-                                    title="linkedin profile"><i class=" icon fab fa-linkedin-in"></i>
+                                <li id="linkedinButton" class="preview__buttonList--item hidden"> <a id="linkedinButtonLink" class="preview__socialButton preview__socialButton--linkedin"
+                                    href="" target="_blank" title="linkedin profile"><i class="icon fab fa-linkedin-in"></i>
                         </a>
 
                                 </li>
-                                <li class="preview__buttonList--item"> <a class="preview__socialButton preview__socialButton--github" href=""
-                                    title="github profile">
-                            <i class=" icon fab fa-github-alt"></i>
+                                <li id="githubButton" class="preview__buttonList--item hidden"> <a id="githubButtonLink" class="preview__socialButton preview__socialButton--github"
+                                    href="" target="_blank" title="github profile">
+                            <i class="icon fab fa-github-alt"></i>
                         </a>
 
                                 </li>
@@ -149,7 +149,7 @@
                         </div>
                         <div class="form__open hidden" id="form__share--open">
                             <div class="create-card-button-container">
-                                <button type="button" class="create-card-button"> <a href="#" arial-label="Crear tarjeta"><i class="far fa-address-card"></i>Crear tarjeta</a>
+                                <button id="createCardButton" type="button" class="create-card-button"> <a href="#" arial-label="Crear tarjeta"><i class="far fa-address-card"></i>Crear tarjeta</a>
 
                                 </button>
                             </div>

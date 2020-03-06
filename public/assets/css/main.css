@@ -260,8 +260,8 @@ textarea {
 
 .grid__container {
   width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), color-stop(9%, #ffffff));
-  background: linear-gradient(to bottom, #f5f5f5, #ffffff 9%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), color-stop(11%, #ffffff));
+  background: linear-gradient(to bottom, #f5f5f5, #ffffff 11%);
 }
 
 .header-image-container {
@@ -645,7 +645,7 @@ textarea {
   background: linear-gradient(#bfcdd0, #dde9ed);
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 457px;
 }
 
 .page__preview .preview__container {
@@ -659,7 +659,7 @@ textarea {
 .page__preview .preview__container .preview__resetButton {
   width: 75px;
   height: 30px;
-  background-color: #bfcdd0;
+  background-color: transparent;
   border: 1px solid white;
   border-radius: 15px;
   font-family: "Open Sans";
@@ -710,11 +710,18 @@ textarea {
   width: 100%;
   height: 200px;
   background-color: #dde9ed;
+  background-image: url(./../images/default-avatar.gif);
+  background-position: center;
+  background-size: cover;
   margin-bottom: 10px;
 }
 
 .preview__socialInfo {
   padding-left: 20px;
+}
+
+.preview__socialInfo .hidden {
+  display: none;
 }
 
 .preview__socialInfo .preview__buttonList {
@@ -942,6 +949,7 @@ textarea {
 @media all and (min-width: 768px) {
   .grid__container {
     padding: 20px 40px;
+    min-height: 856px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
@@ -949,6 +957,7 @@ textarea {
   }
 
   .grid__container .grid__element--1 {
+    background: transparent;
     grid-column: 1/2;
     grid-row: 1/2;
   }
@@ -964,6 +973,10 @@ textarea {
     -ms-flex-pack: start;
     justify-content: flex-start;
     margin-left: 40px;
+  }
+
+  .page__preview {
+    height: 100%;
   }
 
   .page_footer {
