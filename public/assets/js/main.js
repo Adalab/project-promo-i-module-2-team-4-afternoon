@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use strict';
 
 console.log('>> Ready :)');
@@ -56,8 +55,6 @@ function showShareInfo(){
 fillShow.addEventListener('click', showFillInfo);
 designShow.addEventListener('click', showDesignInfo);
 shareShow.addEventListener('click', showShareInfo);
-//# sourceMappingURL=main.js.map
-=======
 // PREVIEW CARD FUNCTIONS **********************************************************+
 
 // Text info --------------------------------------------------------------------------
@@ -140,41 +137,4 @@ const createCard = () => {
    console.log('a new card has been created'); // AÑADIR EN ESTA FUNCIÓN acciones para crear tarjeta
 }
 createCardButton.addEventListener('click', createCard);
-'use strict';
-
-console.log('>> Ready :)');
-
-
-// Toggle function 
-
-function fill_visibility(id) {
-   const e = document.getElementById('form__design--open');
-   if(e.style.display == 'block')
-      e.style.display = 'none';
-   else
-      e.style.display = 'block';
-}
-
-function fill_visibility(id) {
-    const e = document.getElementById('form__fill--open');
-    if(e.style.display == 'block')
-       e.style.display = 'none';
-    else
-       e.style.display = 'block';
- }
-
- function share_visibility(id) {
-    const e = document.getElementById('form__share--open');
-    if(e.style.display == 'block')
-       e.style.display = 'none';
-    else
-       e.style.display = 'block';
- }
-
-//  function btnRotate() {
-//     document.querySelector('form__arow').style.transform = 'rotate(180deg)';
-//   }
-
-
 //# sourceMappingURL=main.js.map
->>>>>>> cardPreview
