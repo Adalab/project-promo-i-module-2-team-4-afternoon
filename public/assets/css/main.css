@@ -972,7 +972,7 @@ textarea {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    margin-left: 40px;
+    padding-left: 40px;
   }
 
   .page__preview {
@@ -1039,13 +1039,13 @@ textarea {
 
 @media all and (min-width: 1280px) {
   .content-container {
-    margin-top: 150px;
+    margin-top: 80px;
   }
 
   .icon-container {
     width: 325px;
     height: 70px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
   }
 }
 
