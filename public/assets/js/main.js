@@ -163,9 +163,9 @@ createCardButton.addEventListener('click', createCard);
 'use strict';
 
 
-const palette1 = document.querySelector('#radioButtonOne');
-const palette2 = document.querySelector('#radioButtonTwo');
-const palette3 = document.querySelector('#radioButtonThree');
+const palette1 = document.querySelector('#paletteOne');
+const palette2 = document.querySelector('#paletteTwo');
+const palette3 = document.querySelector('#paletteThree');
 const palettePreview = document.querySelector('#changePreviewStyle');
 //using for of loop
 // const socialButton = document.querySelectorAll('.preview__buttonList--item')
