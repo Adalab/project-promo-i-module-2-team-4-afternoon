@@ -45,13 +45,16 @@ $palete3Color3: #a0c0cf;
     background: linear-gradient($previewBackground1, $previewBackground2);
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 457px;
+    @include forTablet{
+        height: 100%;
+    }
     .preview__container{
         @include centerAll;
         .preview__resetButton{
             width: 75px;
             height: 30px;
-            background-color: $previewBackground1;
+            background-color: transparent;
             border: 1px solid $whiteColor;
             border-radius: 15px;
             font-family: $buttonFont;
@@ -74,7 +77,7 @@ $palete3Color3: #a0c0cf;
 }
 
 .preview__profileInfo{
-    border-left: 5px solid $palete1Color2;
+    border-left: 5px solid $palete1Color2; // A MODIFICAR SEGÚN PALETA
     width: 100%;
     height: 42px;
     padding-left: 15px;
@@ -84,7 +87,7 @@ $palete3Color3: #a0c0cf;
         font-weight: 700;
         font-size: 18px;
         line-height: 20px;
-        color: $palete1Color1;
+        color: $palete1Color1; // A MODIFICAR SEGÚN PALETA
         margin-bottom: 2px;
     }
     &--job{
@@ -100,11 +103,17 @@ $palete3Color3: #a0c0cf;
     width: 100%;
     height: 200px;
     background-color: $previewBackground2;
+    background-image: url(./../images/default-avatar.gif);
+    background-position: center;
+    background-size: cover;
     margin-bottom: 10px;
 }
 
 .preview__socialInfo{
     padding-left: 20px;
+    .hidden{
+        display: none;
+    }
     .preview__buttonList{
         list-style: none;
         display: flex;
@@ -119,10 +128,10 @@ $palete3Color3: #a0c0cf;
             position: relative;
             width: 32px;
             height: 32px;
-            border: 2px solid $palete1Color3;
+            border: 2px solid $palete1Color3; // A MODIFICAR SEGÚN PALETA
             border-radius: 50%;
             margin-right: 10px;
-            color: $palete1Color1;
+            color: $palete1Color1; // A MODIFICAR SEGÚN PALETA
             .icon{
                 @include centerAll;
                 font-size: 18px;
@@ -130,3 +139,115 @@ $palete3Color3: #a0c0cf;
         }
     }    
 }
+
+//CLASSES TO BE CALLED
+
+
+.infoStyle1{
+    .preview__profileInfo {
+        border-left: 5px solid $palete1Color2;
+
+    .nameText{
+        color: $formText;
+        }
+    }
+    .preview__socialInfo{
+        .preview__buttonList{
+            #emailButton{
+                #emailButtonLink{
+                    border: 2px solid $borderColor;
+                }
+            }
+            #phoneButton{
+                #phoneButtonLink{
+                    border: 2px solid $borderColor;
+                }
+            }
+            #linkedinButton{
+                #linkedinButtonLink{
+                    border: 2px solid $borderColor;
+                }
+            }
+            #githubButton{
+                #githubButtonLink{
+                    border: 2px solid $borderColor;
+                }
+            }
+        }
+    }
+}
+
+
+
+.infoStyle2{
+    .preview__profileInfo {
+    border-left: 5px solid $palete2Color2;
+
+    .nameText{
+        color:$palete2Color1;
+    }
+    }
+    .preview__socialInfo{
+        .preview__buttonList{
+            #emailButton{
+                #emailButtonLink{
+                    border: 2px solid $palete2Color3;
+                }
+            }
+            #phoneButton{
+                #phoneButtonLink{
+                    border: 2px solid $palete2Color3;
+                }
+            }
+            #linkedinButton{
+                #linkedinButtonLink{
+                    border: 2px solid $palete2Color3;
+                }
+            }
+            #githubButton{
+                #githubButtonLink{
+                    border: 2px solid $palete2Color3;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+.infoStyle3{
+    .preview__profileInfo {
+        border-left: 5px solid $palete3Color2;
+
+        .nameText{
+            color:$palete3Color1;
+        }
+    }
+    .preview__socialInfo{
+        .preview__buttonList{
+            #emailButton{
+                #emailButtonLink{
+                    border: 2px solid $palete3Color3;
+                }
+            }
+            #phoneButton{
+                #phoneButtonLink{
+                    border: 2px solid $palete3Color3;
+                }
+            }
+            #linkedinButton{
+                #linkedinButtonLink{
+                    border: 2px solid $palete3Color3;
+                }
+            }
+            #githubButton{
+                #githubButtonLink{
+                    border: 2px solid $palete3Color3;
+                }
+            }
+        }
+    }
+}
+    
+

@@ -2,39 +2,38 @@
 
     <div class="preview__container">
 
-        <button class="preview__resetButton">
+        <button class="preview__resetButton" href="#">
             <i class="far fa-trash-alt"></i> reset
         </button>
 
-        <div class="preview__cardcontainer paletteStyle">
+        <div id="changePreviewStyle" class="preview__cardcontainer infoStyle1"> <!-- Modificar clase según paletas: paletteStyle -->
 
-            <div class="preview__profileInfo infoStyle">
-                <p class="preview__profileInfo--name ">Nombre Apellido</p>
-                <p class="preview__profileInfo--job">Front-End developer</p>
+            <div class="preview__profileInfo">
+                <p class="preview__profileInfo--name nameText">Nombre Apellido</p>
+                <p class="preview__profileInfo--job jobText">Front-End developer</p>
             </div>
 
             <div class="preview__pictureContainer">
-
             </div>
 
-            <div class="preview__socialInfo">
+            <div class="preview__socialInfo infoStyle">
                 <ul class="preview__buttonList">
-                    <li class="preview__buttonList--item buttonStyle">
-                        <a class="preview__socialButton preview__socialButton--phoneNumber" href="" title="phone number">
-                            <i class=" icon fas fa-mobile-alt buttonStyle"></i>
+                    <li id="emailButton" class="preview__buttonList--item hidden buttonStyle">
+                        <a id="emailButtonLink" class="preview__socialButton preview__socialButton--email buttonStyle" href="" target="_blank" title="email address"><i class="icon far fa-envelope"></i>
                         </a>
                     </li>
-                    <li class="preview__buttonList--item buttonStyle">
-                        <a class="preview__socialButton preview__socialButton--email" href="" title="email address"><i class=" icon far fa-envelope buttonStyle"></i>
+                    <li id="phoneButton" class="preview__buttonList--item hidden buttonStyle">
+                        <a id="phoneButtonLink" class="preview__socialButton preview__socialButton--phoneNumber buttonStyle" href="" target="_blank" title="phone number">
+                            <i class="icon fas fa-mobile-alt"></i>
                         </a>
                     </li>
-                    <li class="preview__buttonList--item buttonStyle">
-                        <a class="preview__socialButton preview__socialButton--linkedin" href="" title="linkedin profile"><i class=" icon fab fa-linkedin-in buttonStyle"></i>
+                    <li id="linkedinButton" class="preview__buttonList--item hidden buttonStyle">
+                        <a id="linkedinButtonLink" class="preview__socialButton preview__socialButton--linkedin buttonStyle" href="" target="_blank" title="linkedin profile"><i class="icon fab fa-linkedin-in"></i>
                         </a>
                     </li>
-                    <li class="preview__buttonList--item buttonStyle">
-                        <a class="preview__socialButton preview__socialButton--github" href="" title="github profile">
-                            <i class=" icon fab fa-github-alt buttonStyle"></i>
+                    <li id="githubButton" class="preview__buttonList--item hidden buttonStyle">
+                        <a id="githubButtonLink" class="preview__socialButton preview__socialButton--github buttonStyle" href="" target="_blank" title="github profile">
+                            <i class="icon fab fa-github-alt"></i>
                         </a>
                     </li>
                 </ul>

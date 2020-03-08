@@ -7,7 +7,7 @@
     justify-content: center;
     @include forTablet {
     justify-content: flex-start;
-    margin-left: 40px;
+    padding-left: 40px;
 }
 }
 .header-awesome-image {

@@ -260,8 +260,8 @@ textarea {
 
 .grid__container {
   width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), color-stop(9%, #ffffff));
-  background: linear-gradient(to bottom, #f5f5f5, #ffffff 9%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), color-stop(11%, #ffffff));
+  background: linear-gradient(to bottom, #f5f5f5, #ffffff 11%);
 }
 
 .header-image-container {
@@ -450,32 +450,6 @@ textarea {
 
 .form .palettesContainer .paletteChoices .grid-three .palThree_colThree {
   background-color: #A0C0CF;
-}
-
-.form .paletteStyle2 .infoStyle {
-  border-left: 5px solid #420101;
-}
-
-.form .paletteStyle2 .infoStyle--name {
-  color: #BD1010;
-}
-
-.form .paletteStyle2 .buttonStyle {
-  color: #E95626;
-  border: 2px solid #E95626;
-}
-
-.form .paletteStyle3 .infoStyle {
-  border-left: 5px solid #EAB052;
-}
-
-.form .paletteStyle3 .infoStyle--name {
-  color: #3E5B65;
-}
-
-.form .paletteStyle3 .buttonStyle {
-  color: #A0C0CF;
-  border: 2px solid #A0C0CF;
 }
 
 .form__fill {
@@ -680,7 +654,7 @@ textarea {
   background: linear-gradient(#bfcdd0, #dde9ed);
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 457px;
 }
 
 .page__preview .preview__container {
@@ -694,7 +668,7 @@ textarea {
 .page__preview .preview__container .preview__resetButton {
   width: 75px;
   height: 30px;
-  background-color: #bfcdd0;
+  background-color: transparent;
   border: 1px solid white;
   border-radius: 15px;
   font-family: "Open Sans";
@@ -745,11 +719,18 @@ textarea {
   width: 100%;
   height: 200px;
   background-color: #dde9ed;
+  background-image: url(./../images/default-avatar.gif);
+  background-position: center;
+  background-size: cover;
   margin-bottom: 10px;
 }
 
 .preview__socialInfo {
   padding-left: 20px;
+}
+
+.preview__socialInfo .hidden {
+  display: none;
 }
 
 .preview__socialInfo .preview__buttonList {
@@ -791,6 +772,78 @@ textarea {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-size: 18px;
+}
+
+.infoStyle1 .preview__profileInfo {
+  border-left: 5px solid #438792;
+}
+
+.infoStyle1 .preview__profileInfo .nameText {
+  color: #114e4e;
+}
+
+.infoStyle1 .preview__socialInfo .preview__buttonList #emailButton #emailButtonLink {
+  border: 2px solid #a2deaf;
+}
+
+.infoStyle1 .preview__socialInfo .preview__buttonList #phoneButton #phoneButtonLink {
+  border: 2px solid #a2deaf;
+}
+
+.infoStyle1 .preview__socialInfo .preview__buttonList #linkedinButton #linkedinButtonLink {
+  border: 2px solid #a2deaf;
+}
+
+.infoStyle1 .preview__socialInfo .preview__buttonList #githubButton #githubButtonLink {
+  border: 2px solid #a2deaf;
+}
+
+.infoStyle2 .preview__profileInfo {
+  border-left: 5px solid #bd1010;
+}
+
+.infoStyle2 .preview__profileInfo .nameText {
+  color: #420101;
+}
+
+.infoStyle2 .preview__socialInfo .preview__buttonList #emailButton #emailButtonLink {
+  border: 2px solid #e95626;
+}
+
+.infoStyle2 .preview__socialInfo .preview__buttonList #phoneButton #phoneButtonLink {
+  border: 2px solid #e95626;
+}
+
+.infoStyle2 .preview__socialInfo .preview__buttonList #linkedinButton #linkedinButtonLink {
+  border: 2px solid #e95626;
+}
+
+.infoStyle2 .preview__socialInfo .preview__buttonList #githubButton #githubButtonLink {
+  border: 2px solid #e95626;
+}
+
+.infoStyle3 .preview__profileInfo {
+  border-left: 5px solid #eab052;
+}
+
+.infoStyle3 .preview__profileInfo .nameText {
+  color: #3e5b65;
+}
+
+.infoStyle3 .preview__socialInfo .preview__buttonList #emailButton #emailButtonLink {
+  border: 2px solid #a0c0cf;
+}
+
+.infoStyle3 .preview__socialInfo .preview__buttonList #phoneButton #phoneButtonLink {
+  border: 2px solid #a0c0cf;
+}
+
+.infoStyle3 .preview__socialInfo .preview__buttonList #linkedinButton #linkedinButtonLink {
+  border: 2px solid #a0c0cf;
+}
+
+.infoStyle3 .preview__socialInfo .preview__buttonList #githubButton #githubButtonLink {
+  border: 2px solid #a0c0cf;
 }
 
 .page_footer {
@@ -977,6 +1030,7 @@ textarea {
 @media all and (min-width: 768px) {
   .grid__container {
     padding: 20px 40px;
+    min-height: 856px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
@@ -984,6 +1038,7 @@ textarea {
   }
 
   .grid__container .grid__element--1 {
+    background: transparent;
     grid-column: 1/2;
     grid-row: 1/2;
   }
@@ -998,11 +1053,15 @@ textarea {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    margin-left: 40px;
+    padding-left: 40px;
   }
 
   .form .palettesContainer h3 {
     padding-left: 0;
+  }
+
+  .page__preview {
+    height: 100%;
   }
 
   .page_footer {
@@ -1065,13 +1124,13 @@ textarea {
 
 @media all and (min-width: 1280px) {
   .content-container {
-    margin-top: 150px;
+    margin-top: 80px;
   }
 
   .icon-container {
     width: 325px;
     height: 70px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
   }
 }
 

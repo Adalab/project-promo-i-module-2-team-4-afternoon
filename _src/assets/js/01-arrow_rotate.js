@@ -1,27 +1,24 @@
 'use strict';
 
-// console.log('>> Ready :)');
-
-// ------ Button arrow collapse --------
+// Button arrow collapse design
 const btnArrowDesign = document.querySelector('.form__arrow--design');
- btnArrowDesign.addEventListener('click', () => {
-   if (btnArrowDesign.classList.contains('form__arrow--collapse')) {
-      btnArrowDesign.classList.remove('form__arrow--collapse'); } 
-   else { btnArrowDesign.classList.add('form__arrow--collapse'); }
-   });
+function btnToggleDesign() {
+  btnArrowDesign.classList.toggle('form__arrow--collapse');
+}
+btnArrowDesign.addEventListener('click', btnToggleDesign);
 
+// Button arrow collapse fill
 
-   const btnArrowFill = document.querySelector('.form__arrow--fill');
- btnArrowFill.addEventListener('click', () => {
-   if (btnArrowFill.classList.contains('form__arrow--collapse')) {
-      btnArrowFill.classList.remove('form__arrow--collapse'); } 
-   else { btnArrowFill.classList.add('form__arrow--collapse'); }
-   });
+const btnArrowFill = document.querySelector('.form__arrow--fill');
+function btnToggleFill() {
+  btnArrowFill.classList.toggle('form__arrow--collapse');
+}
+btnArrowFill.addEventListener('click', btnToggleFill);
 
-   const btnArrowShare = document.querySelector('.form__arrow--share');
- btnArrowShare.addEventListener('click', () => {
-   if (btnArrowShare.classList.contains('form__arrow--collapse')) {
-      btnArrowShare.classList.remove('form__arrow--collapse'); } 
-   else { btnArrowShare.classList.add('form__arrow--collapse'); }
-   });
- // ------ Button arrow collapse --------
+// Button arrow collapse share
+
+const btnArrowShare = document.querySelector('.form__arrow--share');
+function btnToggleShare() {
+  btnArrowShare.classList.toggle('form__arrow--collapse');
+}
+btnArrowShare.addEventListener('click', btnToggleShare);
