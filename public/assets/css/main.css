@@ -603,6 +603,10 @@ textarea {
   margin-right: 10px;
 }
 
+.create-card-button-container .off {
+  background-color: #d5d5d5;
+}
+
 .created-container {
   margin-left: auto;
   margin-right: auto;
