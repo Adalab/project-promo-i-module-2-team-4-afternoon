@@ -1038,7 +1038,7 @@ textarea {
     padding: 20px 40px;
     min-height: 856px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 329px 1fr;
     grid-template-rows: 1fr;
     grid-gap: 30px;
   }
