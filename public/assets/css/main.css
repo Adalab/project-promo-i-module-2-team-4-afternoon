@@ -897,7 +897,7 @@ textarea {
 .wrapper_main {
   margin-right: 35px;
   margin-left: 35px;
-  padding-top: 150px;
+  padding-top: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -948,6 +948,7 @@ textarea {
   text-align: center;
   margin-bottom: 20px;
   line-height: normal;
+  width: 265px;
 }
 
 .icon-container {
@@ -964,11 +965,11 @@ textarea {
   width: 268px;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   padding-bottom: 20px;
 }
 
-.icon-container .design-icon {
+.design-icon {
   margin-top: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -981,9 +982,10 @@ textarea {
   -ms-flex-align: center;
   align-items: center;
   color: #e17334;
+  size: 22.4px;
 }
 
-.icon-container .fill-icon {
+.fill-icon {
   margin-top: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -996,9 +998,10 @@ textarea {
   -ms-flex-align: center;
   align-items: center;
   color: #e17334;
+  size: 22.4px;
 }
 
-.icon-container .share-icon {
+.share-icon {
   margin-top: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1018,6 +1021,20 @@ textarea {
   font-family: "Open Sans";
   color: #54585a;
   margin-top: 0;
+}
+
+.button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding-top: 10px;
 }
 
 .button {
@@ -1099,7 +1116,7 @@ textarea {
   }
 
   .content-container {
-    margin-top: 300px;
+    margin-top: 100px;
   }
 
   .awesome-image {
@@ -1118,13 +1135,13 @@ textarea {
     width: 330px;
   }
 
-  .icon-container {
-    margin-bottom: 200px;
-  }
-
   .icon1,.icon2,.icon3 {
     font-size: 16px;
     text-align: center;
+  }
+
+  .button-container {
+    padding-top: 120px;
   }
 }
 
@@ -1140,7 +1157,10 @@ textarea {
   .icon-container {
     width: 325px;
     height: 70px;
-    margin-bottom: 60px;
+  }
+
+  .button-container {
+    padding-top: 30px;
   }
 }
 
