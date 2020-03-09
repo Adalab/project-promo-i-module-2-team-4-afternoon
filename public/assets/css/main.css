@@ -650,7 +650,7 @@ textarea {
 
 .created-container .share-twitter-button .fab {
   margin-right: 5px;
-}/*--VARIABLES-------------------------*//*--MIXINS----------------------------*//*--ESTILOS GENERALES-----------------*/* {
+}/*--VARIABLES-------------------------*//*--ESTILOS GENERALES-----------------*/* {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
@@ -805,7 +805,7 @@ textarea {
 }
 
 .infoStyle2 .preview__profileInfo {
-  border-left: 5px solid #bd1010;
+  border-left: 5px solid #BD1010;
 }
 
 .infoStyle2 .preview__profileInfo .nameText {
@@ -813,43 +813,43 @@ textarea {
 }
 
 .infoStyle2 .preview__socialInfo .preview__buttonList #emailButton #emailButtonLink {
-  border: 2px solid #e95626;
+  border: 2px solid #E95626;
 }
 
 .infoStyle2 .preview__socialInfo .preview__buttonList #phoneButton #phoneButtonLink {
-  border: 2px solid #e95626;
+  border: 2px solid #E95626;
 }
 
 .infoStyle2 .preview__socialInfo .preview__buttonList #linkedinButton #linkedinButtonLink {
-  border: 2px solid #e95626;
+  border: 2px solid #E95626;
 }
 
 .infoStyle2 .preview__socialInfo .preview__buttonList #githubButton #githubButtonLink {
-  border: 2px solid #e95626;
+  border: 2px solid #E95626;
 }
 
 .infoStyle3 .preview__profileInfo {
-  border-left: 5px solid #eab052;
+  border-left: 5px solid #EAB052;
 }
 
 .infoStyle3 .preview__profileInfo .nameText {
-  color: #3e5b65;
+  color: #3E5B65;
 }
 
 .infoStyle3 .preview__socialInfo .preview__buttonList #emailButton #emailButtonLink {
-  border: 2px solid #a0c0cf;
+  border: 2px solid #A0C0CF;
 }
 
 .infoStyle3 .preview__socialInfo .preview__buttonList #phoneButton #phoneButtonLink {
-  border: 2px solid #a0c0cf;
+  border: 2px solid #A0C0CF;
 }
 
 .infoStyle3 .preview__socialInfo .preview__buttonList #linkedinButton #linkedinButtonLink {
-  border: 2px solid #a0c0cf;
+  border: 2px solid #A0C0CF;
 }
 
 .infoStyle3 .preview__socialInfo .preview__buttonList #githubButton #githubButtonLink {
-  border: 2px solid #a0c0cf;
+  border: 2px solid #A0C0CF;
 }
 
 .page_footer {
