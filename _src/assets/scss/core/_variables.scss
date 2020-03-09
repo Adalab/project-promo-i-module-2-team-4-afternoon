@@ -8,13 +8,22 @@ $footerColor:#6b6b6b;
 $borderLineColor: #D8D8D8;
 $hoverColor: #d5d5d5;
 
-//Colors by Bea
-// $palete1Color1: #114E4E;
+//Colors for preview
+$previewBackground1: #bfcdd0;
+$previewBackground2: #dde9ed;
+$whiteColor: hsl(0, 0%, 100%);
+$shadowColor: rgba(0, 0, 0, 0.2);
+$previewTextColor: $primaryColor;
+
+// $palete1Color1: 
+$palete1Color1: #114e4e;
 $palete1Color2: #438792;
-// $palete1Color3: #A2DEAF;
+$palete1Color3: #a2deaf;
+// $palete1Color2: 
 $palete2Color1: #420101;
 $palete2Color2: #BD1010;
 $palete2Color3: #E95626;
+// $palete1Color3: 
 $palete3Color1: #3E5B65;
 $palete3Color2: #EAB052;
 $palete3Color3: #A0C0CF;

@@ -1,36 +1,8 @@
 /*--VARIABLES-------------------------*/
-$whiteColor: hsl(0, 0%, 100%);
-$previewTextColor: #54585a;
-
-$buttonFont: 'Open Sans';
-$nameFont: 'Montserrat';
+$buttonFont: $mainText;
+$nameFont: $previewText;
 
 
-$previewBackground1: #bfcdd0;
-$previewBackground2: #dde9ed;
-$shadowColor: rgba(0, 0, 0, 0.2);
-
-
-$palete1Color1: #114e4e;
-$palete1Color2: #438792;
-$palete1Color3: #a2deaf;
-
-$palete2Color1: #420101;
-$palete2Color2: #bd1010;
-$palete2Color3: #e95626;
-
-$palete3Color1: #3e5b65;
-$palete3Color2: #eab052;
-$palete3Color3: #a0c0cf;
-
-/*--MIXINS----------------------------*/
-// ABSOLUTE CENTERING
-@mixin centerAll {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
 
 /*--ESTILOS GENERALES-----------------*/
 *{
