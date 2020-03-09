@@ -535,6 +535,8 @@ textarea {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 10px 0 0 20px;
+  background: url(./../images/default-avatar.gif) no-repeat;
+  background-size: contain;
 }
 
 .share-container {
