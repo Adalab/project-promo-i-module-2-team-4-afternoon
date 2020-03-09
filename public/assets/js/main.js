@@ -84,6 +84,7 @@ const jobBox = document.querySelector('.jobText');
 const getText = (x) => {
    nameBox.innerHTML = nameInput.value;
    jobBox.innerHTML = jobInput.value;
+   enableCreateButton();
 }
 
 nameInput.addEventListener('keyup', getText);
@@ -99,6 +100,7 @@ const getEmailLink = () => { emailButton.querySelector('#emailButtonLink').href 
 const emailHandler = () => {
    showEmailButton();
    getEmailLink();
+   enableCreateButton();
 }
 
 emailBox.addEventListener('keyup', emailHandler);
@@ -113,6 +115,7 @@ const getPhoneLink = () => { phoneButton.querySelector('#phoneButtonLink').href 
 const phoneHandler = () => {
    showPhoneButton();
    getPhoneLink();
+   enableCreateButton();
 }
 
 phoneBox.addEventListener('keyup', phoneHandler);
@@ -127,6 +130,7 @@ const getLinkedinLink = () => { linkedinButton.querySelector('#linkedinButtonLin
 const linkedinHandler = () => {
    showLinkedinButton();
    getLinkedinLink();
+   enableCreateButton();
 }
 
 linkedinBox.addEventListener('keyup', linkedinHandler);
@@ -141,6 +145,7 @@ const getGithubLink = () => { githubButton.querySelector('#githubButtonLink').hr
 const githubHandler = () => {
    showGithubButton();
    getGithubLink();
+   enableCreateButton();
 }
 
 
@@ -149,9 +154,19 @@ githubBox.addEventListener('keyup', githubHandler);
 // SHARE - create and share buttons ----------------------------------------------------------------
 
 const createCardButton = document.querySelector('#createCardButton');
+
+function enableCreateButton () {
+   if (nameInput.value.lenght !== 0 && jobInput.value !== 0 && emailBox.value.length !== 0 && linkedinBox.value.length !== 0 && githubBox.value.length !== 0) {
+      createCardButton.classList.remove('off');
+    } else {
+      createCardButton.classList.add('off');
+    }
+};
+
+
 const createCard = () => {
    event.preventDefault();
    console.log('a new card has been created'); // AÑADIR EN ESTA FUNCIÓN acciones para crear tarjeta
-}
+};
 createCardButton.addEventListener('click', createCard);
 //# sourceMappingURL=main.js.map
