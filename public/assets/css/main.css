@@ -1129,6 +1129,10 @@ textarea {
 }
 
 @media all and (min-width: 1280px) {
+  .grid__container {
+    grid-template-columns: 30vw 1fr;
+  }
+
   .content-container {
     margin-top: 80px;
   }

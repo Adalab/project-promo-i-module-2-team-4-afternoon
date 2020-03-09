@@ -19,5 +19,8 @@
             border-radius: 5px;  
         }
     }
+    @include forPc{
+        grid-template-columns: 30vw 1fr;
+    }
 }
 
