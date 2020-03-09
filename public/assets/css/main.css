@@ -367,7 +367,7 @@ textarea {
   grid-column: 2/3;
   display: grid;
   grid-template-columns: 30px 90px;
-  grid-template-rows: 1.5625rem 1.25rem 1.5625rem 1.25rem 1.5625rem;
+  grid-template-rows: repeat(4, 1.5625rem 1.25rem);
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: end;
@@ -391,6 +391,11 @@ textarea {
 
 .form .palettesContainer .paletteChoices .rb_three {
   grid-row: 5;
+  grid-column: 1/2;
+}
+
+.form .palettesContainer .paletteChoices .rb_four {
+  grid-row: 7;
   grid-column: 1/2;
 }
 
@@ -450,6 +455,22 @@ textarea {
 
 .form .palettesContainer .paletteChoices .grid-three .palThree_colThree {
   background-color: #A0C0CF;
+}
+
+.form .palettesContainer .paletteChoices .grid-four {
+  grid-row: 7;
+}
+
+.form .palettesContainer .paletteChoices .grid-four .palFour_colOne {
+  background-color: #b90082;
+}
+
+.form .palettesContainer .paletteChoices .grid-four .palFour_colTwo {
+  background-color: #ff95df;
+}
+
+.form .palettesContainer .paletteChoices .grid-four .palFour_colThree {
+  background-color: #71d7ff;
 }
 
 .form__fill {
@@ -848,6 +869,30 @@ textarea {
 
 .infoStyle3 .preview__socialInfo .preview__buttonList #githubButton #githubButtonLink {
   border: 2px solid #a0c0cf;
+}
+
+.infoStyle4 .preview__profileInfo {
+  border-left: 5px solid #ff95df;
+}
+
+.infoStyle4 .preview__profileInfo .nameText {
+  color: #b90082;
+}
+
+.infoStyle4 .preview__socialInfo .preview__buttonList #emailButton #emailButtonLink {
+  border: 2px solid #71d7ff;
+}
+
+.infoStyle4 .preview__socialInfo .preview__buttonList #phoneButton #phoneButtonLink {
+  border: 2px solid #71d7ff;
+}
+
+.infoStyle4 .preview__socialInfo .preview__buttonList #linkedinButton #linkedinButtonLink {
+  border: 2px solid #71d7ff;
+}
+
+.infoStyle4 .preview__socialInfo .preview__buttonList #githubButton #githubButtonLink {
+  border: 2px solid #71d7ff;
 }
 
 .page_footer {

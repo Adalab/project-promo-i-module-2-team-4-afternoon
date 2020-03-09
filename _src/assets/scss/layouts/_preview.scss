@@ -251,3 +251,37 @@ $palete3Color3: #a0c0cf;
 }
     
 
+.infoStyle4{
+    .preview__profileInfo {
+        border-left: 5px solid $palete4Color2;
+
+        .nameText{
+            color:$palete4Color1;
+        }
+    }
+    .preview__socialInfo{
+        .preview__buttonList{
+            #emailButton{
+                #emailButtonLink{
+                    border: 2px solid $palete4Color3;
+                }
+            }
+            #phoneButton{
+                #phoneButtonLink{
+                    border: 2px solid $palete4Color3;
+                }
+            }
+            #linkedinButton{
+                #linkedinButtonLink{
+                    border: 2px solid $palete4Color3;
+                }
+            }
+            #githubButton{
+                #githubButtonLink{
+                    border: 2px solid $palete4Color3;
+                }
+            }
+        }
+    }
+}
+    

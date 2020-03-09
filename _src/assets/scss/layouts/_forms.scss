@@ -91,7 +91,7 @@
         grid-column: 2/3;
         display: grid;
         grid-template-columns: 30px 90px;
-        grid-template-rows: 1.5625rem 1.25rem 1.5625rem 1.25rem 1.5625rem;
+        grid-template-rows: repeat(4, 1.5625rem 1.25rem);
         justify-content: end;
         padding-top: 0.9375rem;
   
@@ -110,6 +110,11 @@
 
         .rb_three {
             grid-row: 5;
+            grid-column: 1/2;
+        }
+
+        .rb_four {
+            grid-row: 7;
             grid-column: 1/2;
         }
 
@@ -167,6 +172,22 @@
                 .palThree_colThree {
                     background-color:$palete3Color3;
                 }   
+        }
+        
+        .grid-four{
+            grid-row: 7;
+            
+            .palFour_colOne {  
+                background-color:$palete4Color1;
+            }
+    
+            .palFour_colTwo {
+                background-color:$palete4Color2;
+            }
+
+            .palFour_colThree {
+                background-color:$palete4Color3;
+            }   
         }
     }
 } 
