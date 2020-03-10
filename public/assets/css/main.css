@@ -309,6 +309,8 @@ textarea {
   color: #54585a;
   border: none;
   background-color: transparent;
+  font-weight: lighter;
+  font-size: 18px;
 }
 
 .form .form__arrow--collapse {
@@ -318,7 +320,7 @@ textarea {
 
 .form .form__title {
   font-family: "Open Sans";
-  font-weight: 900;
+  font-weight: 600;
   text-transform: uppercase;
   font-size: 18px;
   color: #54585a;
