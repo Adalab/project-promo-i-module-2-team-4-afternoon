@@ -81,35 +81,24 @@
   margin-bottom: 40px;
   padding-bottom: 20px;
   
-  @include forPc {
+  @include forTablet {
     width: 325px;
     height: 70px;
+    padding-bottom: 80px;
   }
 }
-  .design-icon {
+  .design-icon, .fill-icon, .share-icon {
     margin-top: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: $secondaryColor;
-    
-    }
+    font-size: $smallIconsLanding;
 
-  .fill-icon {
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: $secondaryColor;
-  }
-  .share-icon {
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: $secondaryColor;
-   
-}
+      @include forTablet {
+      font-size: $largeIconsLanding;
+      }
+    }
 
 .icon1,
 .icon2,
@@ -118,6 +107,7 @@
   font-family: $mainText;
   color: $primaryColor;
   margin-top: 0;
+  padding-top: 2%;
   @include forTablet {
     font-size: $LargeLandingText;
     text-align: center;
