@@ -4,35 +4,36 @@
   width: 100%;
   height: calc(100vh - 110px);
   margin: auto;
-  @include forTablet {
-    height: calc(100vh - 60px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-.wrapper_main {
-  margin-right: 35px;
-  margin-left: 35px;
-  padding-top: 120px;
+  padding-right: 35px;
+  padding-left: 35px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+
   @include forTablet {
-    padding-top: 0;
+    padding-top: 150px;
+    height: calc(100vh - 60px);
   }
+ 
 }
+
 .content-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   @include forTablet {
-    margin-top: 100px;
+  flex-grow: 2;
   }
+  
+}
+.awesome-image-container {
+  padding-top: 100px;
+
   @include forPc {
-    margin-top: 80px;
-  }
+  padding-top: 0;
+   }
 }
 .awesome-image {
   width: 250px;
@@ -91,7 +92,7 @@
     flex-direction: column;
     align-items: center;
     color: $secondaryColor;
-    size: $smallIconsLanding;
+    
     }
 
   .fill-icon {
@@ -100,7 +101,6 @@
     flex-direction: column;
     align-items: center;
     color: $secondaryColor;
-    size: $smallIconsLanding;
   }
   .share-icon {
     margin-top: 15px;
@@ -124,18 +124,12 @@
   }
 }
 .button-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding-top: 10px;
+  padding-top: 20px;
 
   @include forTablet {
-    padding-top: 120px;
+    padding-bottom: 60px;
   }
-  @include forPc {
   
-  padding-top: 30px;
-  }
 }
 .button {
   font-size: $LargeLandingText;

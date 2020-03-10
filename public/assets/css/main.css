@@ -937,12 +937,8 @@ textarea {
   width: 100%;
   height: calc(100vh - 110px);
   margin: auto;
-}
-
-.wrapper_main {
-  margin-right: 35px;
-  margin-left: 35px;
-  padding-top: 120px;
+  padding-right: 35px;
+  padding-left: 35px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -950,6 +946,9 @@ textarea {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -969,6 +968,10 @@ textarea {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.awesome-image-container {
+  padding-top: 100px;
 }
 
 .awesome-image {
@@ -1027,7 +1030,6 @@ textarea {
   -ms-flex-align: center;
   align-items: center;
   color: #e17334;
-  size: 22.4px;
 }
 
 .fill-icon {
@@ -1043,7 +1045,6 @@ textarea {
   -ms-flex-align: center;
   align-items: center;
   color: #e17334;
-  size: 22.4px;
 }
 
 .share-icon {
@@ -1069,17 +1070,7 @@ textarea {
 }
 
 .button-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 .button {
@@ -1144,24 +1135,14 @@ textarea {
   }
 
   .page_main {
+    padding-top: 150px;
     height: calc(100vh - 60px);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  .wrapper_main {
-    padding-top: 0;
   }
 
   .content-container {
-    margin-top: 100px;
+    -webkit-box-flex: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
   }
 
   .awesome-image {
@@ -1186,7 +1167,7 @@ textarea {
   }
 
   .button-container {
-    padding-top: 120px;
+    padding-bottom: 60px;
   }
 }
 
@@ -1195,17 +1176,13 @@ textarea {
     grid-template-columns: 30vw 1fr;
   }
 
-  .content-container {
-    margin-top: 80px;
+  .awesome-image-container {
+    padding-top: 0;
   }
 
   .icon-container {
     width: 325px;
     height: 70px;
-  }
-
-  .button-container {
-    padding-top: 30px;
   }
 }
 
