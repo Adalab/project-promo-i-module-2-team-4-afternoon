@@ -15,12 +15,15 @@
     .form__icon {
         color: $secondaryColor;
         margin-right: 10px;
+       
     }
 
     .form__arrow--design, .form__arrow--fill, .form__arrow--share {
         color: $primaryColor;
         border: none;
         background-color: transparent;
+        font-weight: lighter;
+        font-size: $mainTitleSize;
     }
 
     .form__arrow--collapse {
@@ -29,7 +32,7 @@
 
     .form__title {
         font-family: $mainText;
-        font-weight: 900;
+        font-weight: 600;
         text-transform: uppercase;
         font-size: 18px;
         color: $primaryColor;
@@ -61,6 +64,7 @@
     
     & h3{
         text-transform: uppercase;
+        color: $primaryColor;
         padding: 0;
         padding-top: 0.75rem;
         padding-left: 1.3125rem;

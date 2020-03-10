@@ -309,6 +309,8 @@ textarea {
   color: #54585a;
   border: none;
   background-color: transparent;
+  font-weight: lighter;
+  font-size: 18px;
 }
 
 .form .form__arrow--collapse {
@@ -318,7 +320,7 @@ textarea {
 
 .form .form__title {
   font-family: "Open Sans";
-  font-weight: 900;
+  font-weight: 600;
   text-transform: uppercase;
   font-size: 18px;
   color: #54585a;
@@ -356,6 +358,7 @@ textarea {
 
 .form .palettesContainer h3 {
   text-transform: uppercase;
+  color: #54585a;
   padding: 0;
   padding-top: 0.75rem;
   padding-left: 1.3125rem;
@@ -937,12 +940,8 @@ textarea {
   width: 100%;
   height: calc(100vh - 110px);
   margin: auto;
-}
-
-.wrapper_main {
-  margin-right: 35px;
-  margin-left: 35px;
-  padding-top: 120px;
+  padding-right: 35px;
+  padding-left: 35px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -950,6 +949,9 @@ textarea {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -969,6 +971,10 @@ textarea {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.awesome-image-container {
+  padding-top: 100px;
 }
 
 .awesome-image {
@@ -1014,7 +1020,7 @@ textarea {
   padding-bottom: 20px;
 }
 
-.design-icon {
+.design-icon,.fill-icon,.share-icon {
   margin-top: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1027,38 +1033,7 @@ textarea {
   -ms-flex-align: center;
   align-items: center;
   color: #e17334;
-  size: 22.4px;
-}
-
-.fill-icon {
-  margin-top: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #e17334;
-  size: 22.4px;
-}
-
-.share-icon {
-  margin-top: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #e17334;
+  font-size: 22.4px;
 }
 
 .icon1,.icon2,.icon3 {
@@ -1066,20 +1041,11 @@ textarea {
   font-family: "Open Sans";
   color: #54585a;
   margin-top: 0;
+  padding-top: 2%;
 }
 
 .button-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 .button {
@@ -1144,24 +1110,14 @@ textarea {
   }
 
   .page_main {
+    padding-top: 150px;
     height: calc(100vh - 60px);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  .wrapper_main {
-    padding-top: 0;
   }
 
   .content-container {
-    margin-top: 100px;
+    -webkit-box-flex: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
   }
 
   .awesome-image {
@@ -1180,13 +1136,23 @@ textarea {
     width: 330px;
   }
 
+  .icon-container {
+    width: 325px;
+    height: 70px;
+    padding-bottom: 80px;
+  }
+
+  .design-icon,.fill-icon,.share-icon {
+    font-size: 28px;
+  }
+
   .icon1,.icon2,.icon3 {
     font-size: 16px;
     text-align: center;
   }
 
   .button-container {
-    padding-top: 120px;
+    padding-bottom: 60px;
   }
 }
 
@@ -1195,17 +1161,8 @@ textarea {
     grid-template-columns: 30vw 1fr;
   }
 
-  .content-container {
-    margin-top: 80px;
-  }
-
-  .icon-container {
-    width: 325px;
-    height: 70px;
-  }
-
-  .button-container {
-    padding-top: 30px;
+  .awesome-image-container {
+    padding-top: 0;
   }
 }
 
