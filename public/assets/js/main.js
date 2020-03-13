@@ -1,6 +1,6 @@
 
+// togle hide-share method + rotating arrows
 
-// togle hide-share method
 
 const designShow = document.querySelector('.form__arrow--design');
 const fillShow = document.querySelector('.form__arrow--fill');
@@ -22,7 +22,6 @@ function hideShare () {
   shareShow.classList.remove('form__arrow--collapse');
   collapsableShare.classList.add('hidden');
 }
-
 
 function showDesignInfo(){
   if (designShow.classList.contains('form__arrow--collapse')){
@@ -62,7 +61,6 @@ function showShareInfo(){
     hideFill();
   }
 }
-
 
 fillShow.addEventListener('click', showFillInfo);
 designShow.addEventListener('click', showDesignInfo);
