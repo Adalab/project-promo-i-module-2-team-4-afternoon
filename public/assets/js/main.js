@@ -76,6 +76,8 @@ const resetHandler = () => {
    showGithubButton();
    document.querySelector('.nameText').innerHTML = 'Nombre Apellido';
    document.querySelector('.jobText').innerHTML = 'Front-End developer';
+   photoPreview.style.backgroundImage = '';
+   photoThumbnail.style.backgroundImage = '';
 }
 
 resetButton.addEventListener('click', resetHandler);
@@ -258,20 +260,20 @@ const photoThumbnail = document.querySelector('.js__photo--thumbnail');
 const photoPreview = document.querySelector('.js__photo--preview');
 
 function getPhoto(evt) {
-    const myFile = evt.currentTarget.files[0];
-    reader.addEventListener('load', printPhoto);
-    reader.readAsDataURL(myFile);
-  }
+  const myFile = evt.currentTarget.files[0];
+  reader.addEventListener('load', addPhoto);
+  reader.readAsDataURL(myFile);
+}
 
-function printPhoto() {
-    photoPreview.style.backgroundImage = `url(${reader.result})`;
-    photoThumbnail.style.backgroundImage = `url(${reader.result})`;
+function addPhoto() {
+  photoPreview.style.backgroundImage = `url(${reader.result})`;
+  photoThumbnail.style.backgroundImage = `url(${reader.result})`;
 }
 
 function hiddenPhotoField() {
-    photoFile.click(); 
-   }
+  photoFile.click(); 
+}
 
-   photoUploadBtn.addEventListener('click', hiddenPhotoField);
-   photoFile.addEventListener('change', getPhoto);
+photoUploadBtn.addEventListener('click', hiddenPhotoField);
+photoFile.addEventListener('change', getPhoto);
 //# sourceMappingURL=main.js.map
