@@ -1,60 +1,66 @@
-'use strict';
 
-// Button arrow collapse design
-const btnArrowDesign = document.querySelector('.form__arrow--design');
-function btnToggleDesign() {
-  btnArrowDesign.classList.toggle('form__arrow--collapse');
-}
-btnArrowDesign.addEventListener('click', btnToggleDesign);
+// togle hide-share method + rotating arrows
 
-// Button arrow collapse fill
-
-const btnArrowFill = document.querySelector('.form__arrow--fill');
-function btnToggleFill() {
-  btnArrowFill.classList.toggle('form__arrow--collapse');
-}
-btnArrowFill.addEventListener('click', btnToggleFill);
-
-// Button arrow collapse share
-
-const btnArrowShare = document.querySelector('.form__arrow--share');
-function btnToggleShare() {
-  btnArrowShare.classList.toggle('form__arrow--collapse');
-}
-btnArrowShare.addEventListener('click', btnToggleShare);
-
-
-// togle hide-share method
 
 const designShow = document.querySelector('.form__arrow--design');
 const fillShow = document.querySelector('.form__arrow--fill');
 const shareShow = document.querySelector('.form__arrow--share');
 
-function showDesignInfo(){
-  const collapsableDesign = document.querySelector('#form__design--open');
-  collapsableDesign.classList.toggle('hidden');
+const collapsableDesign = document.querySelector('#form__design--open');
+const collapsableFill = document.querySelector('#form__fill--open');
+const collapsableShare = document.querySelector('#form__share--open');
 
+function hideDesign () {
+  designShow.classList.remove('form__arrow--collapse');
+  collapsableDesign.classList.add('hidden');
+}
+function hideFill () {
+  fillShow.classList.remove('form__arrow--collapse');
+  collapsableFill.classList.add('hidden');
+}
+function hideShare () {
+  shareShow.classList.remove('form__arrow--collapse');
+  collapsableShare.classList.add('hidden');
 }
 
+function showDesignInfo(){
+  if (designShow.classList.contains('form__arrow--collapse')){
+    hideDesign();
+    hideFill();
+    hideShare();
+  } else {
+    designShow.classList.add('form__arrow--collapse');
+    collapsableDesign.classList.remove('hidden');
+    hideFill();
+    hideShare();
+  }
+}
 
 function showFillInfo(){
-  const collapsableFill = document.querySelector('#form__fill--open');
-  collapsableFill.classList.toggle('hidden');
-
-}
-
-function showDesignInfo(){
-  const collapsableDesign = document.querySelector('#form__design--open');
-  collapsableDesign.classList.toggle('hidden');
-
+  if (fillShow.classList.contains('form__arrow--collapse')){
+    hideDesign();
+    hideFill();
+    hideShare();
+  } else {
+    fillShow.classList.add('form__arrow--collapse');
+    collapsableFill.classList.remove('hidden');
+    hideDesign();
+    hideShare();
+  }
 }
 
 function showShareInfo(){
-  const collapsableShare = document.querySelector('#form__share--open');
-  collapsableShare.classList.toggle('hidden');
-
+  if (shareShow.classList.contains('form__arrow--collapse')){
+    hideDesign();
+    hideFill();
+    hideShare();
+  } else {
+    shareShow.classList.add('form__arrow--collapse')
+    collapsableShare.classList.remove('hidden');  
+    hideDesign();
+    hideFill();
+  }
 }
-
 
 fillShow.addEventListener('click', showFillInfo);
 designShow.addEventListener('click', showDesignInfo);
