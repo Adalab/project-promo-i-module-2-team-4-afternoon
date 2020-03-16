@@ -82,6 +82,8 @@ const resetHandler = () => {
    showGithubButton();
    document.querySelector('.nameText').innerHTML = 'Nombre Apellido';
    document.querySelector('.jobText').innerHTML = 'Front-End developer';
+   photoPreview.style.backgroundImage = '';
+   photoThumbnail.style.backgroundImage = '';
 }
 
 resetButton.addEventListener('click', resetHandler);
@@ -238,4 +240,29 @@ palette1.addEventListener('click', selectPalette1);
 palette2.addEventListener('click', selectPalette2);
 palette3.addEventListener('click', selectPalette3);
 palette4.addEventListener('click', selectPalette4);
+'use strict';
+
+const reader = new FileReader();
+const photoFile = document.querySelector('.js__photo--file');
+const photoUploadBtn = document.querySelector('.js__photo--btn');
+const photoThumbnail = document.querySelector('.js__photo--thumbnail');
+const photoPreview = document.querySelector('.js__photo--preview');
+
+function getPhoto(evt) {
+  const myFile = evt.currentTarget.files[0];
+  reader.addEventListener('load', addPhoto);
+  reader.readAsDataURL(myFile);
+}
+
+function addPhoto() {
+  photoPreview.style.backgroundImage = `url(${reader.result})`;
+  photoThumbnail.style.backgroundImage = `url(${reader.result})`;
+}
+
+function hiddenPhotoField() {
+  photoFile.click(); 
+}
+
+photoUploadBtn.addEventListener('click', hiddenPhotoField);
+photoFile.addEventListener('change', getPhoto);
 //# sourceMappingURL=main.js.map

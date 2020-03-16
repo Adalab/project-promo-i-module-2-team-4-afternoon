@@ -15,6 +15,8 @@ const resetHandler = () => {
    showGithubButton();
    document.querySelector('.nameText').innerHTML = 'Nombre Apellido';
    document.querySelector('.jobText').innerHTML = 'Front-End developer';
+   photoPreview.style.backgroundImage = '';
+   photoThumbnail.style.backgroundImage = '';
 }
 
 resetButton.addEventListener('click', resetHandler);
