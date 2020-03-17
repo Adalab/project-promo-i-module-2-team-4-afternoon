@@ -75,6 +75,7 @@ const formReset = () => { document.getElementById('form__card').reset();
 }
 const resetHandler = () => {
    formReset();
+   selectPalette1()
    getText();
    showEmailButton();
    showPhoneButton();
