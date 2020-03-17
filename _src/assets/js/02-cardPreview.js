@@ -8,6 +8,7 @@ const formReset = () => { document.getElementById('form__card').reset();
 }
 const resetHandler = () => {
    formReset();
+   selectPalette1()
    getText();
    showEmailButton();
    showPhoneButton();
@@ -21,6 +22,7 @@ const resetHandler = () => {
 
 resetButton.addEventListener('click', resetHandler);
 // Color Palette ----------------------------------------------------------------------
+
 
 
 // Text info --------------------------------------------------------------------------
