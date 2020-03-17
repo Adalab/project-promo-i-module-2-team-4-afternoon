@@ -35,7 +35,7 @@
                                 <p class="preview__profileInfo--name nameText">Nombre Apellido</p>
                                 <p class="preview__profileInfo--job jobText">Front-End developer</p>
                             </div>
-                            <div class="preview__pictureContainer"></div>
+                            <div class="preview__pictureContainer js__photo--preview"></div>
                             <div class="preview__socialInfo infoStyle">
                                 <ul class="preview__buttonList">
                                     <li id="emailButton" class="preview__buttonList--item hidden buttonStyle"> <a id="emailButtonLink" class="preview__socialButton preview__socialButton--email buttonStyle"
@@ -72,7 +72,7 @@
                             <div class="form__closed">
                                  <h2 class="form__title"><i class="form__icon far fa-object-ungroup"></i>Diseña</h2>
 
-                                <button class="form__arrow--design" aria-label="Desplegar"><i class="fas fa-chevron-up"></i>
+                                <button class="form__arrow--design form__arrow--collapse" aria-label="Desplegar"><i class="fas fa-chevron-down"></i>
 
                                 </button>
                             </div>
@@ -137,10 +137,11 @@
                                     <label for="photo">Imagen de perfil <span>*</span>
 
                                     </label>
-                                    <input type="file" id="photo" name="photo" class="hidden" required>
+                                    <input type="file" id="photo" name="photo" class="hidden js__photo--file"
+                                    required>
                                     <div class="photo__upload">
-                                        <button class="photo__upload--btn" id="submit">Añadir imagen</button>
-                                        <div class="thumbnail"></div>
+                                        <button class="photo__upload--btn js__photo--btn" id="submit">Añadir imagen</button>
+                                        <div class="thumbnail js__photo--thumbnail"></div>
                                     </div>
                                     <label for="email">Email <span>*</span>
 

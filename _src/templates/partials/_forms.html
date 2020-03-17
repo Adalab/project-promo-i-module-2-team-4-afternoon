@@ -7,7 +7,7 @@
             
             <div class="form__closed">
                 <h2 class="form__title"><i class="form__icon far fa-object-ungroup"></i>Diseña</h2>
-                <button class="form__arrow--design" aria-label="Desplegar"><i class="fas fa-chevron-up"></i></button>
+                <button class="form__arrow--design form__arrow--collapse" aria-label="Desplegar"><i class="fas fa-chevron-down"></i></button>
             </div>
             
             <div class="form__open" id="form__design--open">
@@ -71,10 +71,10 @@
                 <input type="text" id="job" name="job" placeholder="Ej: Front-end unicorn" maxlength="25" required>
                 
                 <label for="photo">Imagen de perfil <span>*</span></label>
-                <input type="file" id="photo" name="photo" class="hidden" required>
+                <input type="file" id="photo" name="photo" class="hidden js__photo--file" required>
                 <div class="photo__upload">
-                    <button class="photo__upload--btn" id="submit">Añadir imagen</button>
-                    <div class="thumbnail"></div>
+                    <button class="photo__upload--btn js__photo--btn" id="submit">Añadir imagen</button>
+                    <div class="thumbnail js__photo--thumbnail"></div>
                 </div>
                 
                 <label for="email">Email <span>*</span></label>
