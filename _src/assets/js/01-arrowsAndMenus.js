@@ -24,6 +24,7 @@ function hideShare () {
 }
 
 function showDesignInfo(){
+  event.preventDefault();
   if (designShow.classList.contains('form__arrow--collapse')){
     hideDesign();
     hideFill();
@@ -37,6 +38,7 @@ function showDesignInfo(){
 }
 
 function showFillInfo(){
+  event.preventDefault();
   if (fillShow.classList.contains('form__arrow--collapse')){
     hideDesign();
     hideFill();
@@ -49,7 +51,8 @@ function showFillInfo(){
   }
 }
 
-function showShareInfo(){
+function showShareInfo(event){
+  event.preventDefault();
   if (shareShow.classList.contains('form__arrow--collapse')){
     hideDesign();
     hideFill();
