@@ -1,1 +1,3 @@
-# project-promo-i-module-2-team-4-afternoon
+# Awesome cards - Equipo 4 tarde.
+
+Proyecto del segundo módulo de Adalab.
