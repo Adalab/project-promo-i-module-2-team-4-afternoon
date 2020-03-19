@@ -1,7 +1,6 @@
 
 // togle hide-share method + rotating arrows
 
-
 const designShow = document.querySelector('.form__arrow--design');
 const fillShow = document.querySelector('.form__arrow--fill');
 const shareShow = document.querySelector('.form__arrow--share');
