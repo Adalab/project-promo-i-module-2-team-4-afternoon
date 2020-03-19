@@ -30,31 +30,30 @@
                         <button class="preview__resetButton" href="#"> <i class="far fa-trash-alt"></i> reset</button>
                         <div id="changePreviewStyle"
                         class="preview__cardcontainer infoStyle1">
-                            <!-- Modificar clase según paletas: paletteStyle -->
                             <div class="preview__profileInfo">
                                 <p class="preview__profileInfo--name nameText">Nombre Apellido</p>
                                 <p class="preview__profileInfo--job jobText">Front-End developer</p>
                             </div>
-                            <div class="preview__pictureContainer"></div>
-                            <div class="preview__socialInfo infoStyle">
+                            <div class="preview__pictureContainer js__photo--preview"></div>
+                            <div class="preview__socialInfo">
                                 <ul class="preview__buttonList">
-                                    <li id="emailButton" class="preview__buttonList--item hidden buttonStyle"> <a id="emailButtonLink" class="preview__socialButton preview__socialButton--email buttonStyle"
+                                    <li id="emailButton" class="preview__buttonList--item hidden"> <a id="emailButtonLink" class="preview__socialButton preview__socialButton--email buttonStyle1"
                                         href="" target="_blank" title="email address"><i class="icon far fa-envelope"></i>
                         </a>
 
                                     </li>
-                                    <li id="phoneButton" class="preview__buttonList--item hidden buttonStyle"> <a id="phoneButtonLink" class="preview__socialButton preview__socialButton--phoneNumber buttonStyle"
+                                    <li id="phoneButton" class="preview__buttonList--item hidden"> <a id="phoneButtonLink" class="preview__socialButton preview__socialButton--phoneNumber buttonStyle1"
                                         href="" target="_blank" title="phone number">
                             <i class="icon fas fa-mobile-alt"></i>
                         </a>
 
                                     </li>
-                                    <li id="linkedinButton" class="preview__buttonList--item hidden buttonStyle"> <a id="linkedinButtonLink" class="preview__socialButton preview__socialButton--linkedin buttonStyle"
+                                    <li id="linkedinButton" class="preview__buttonList--item hidden"> <a id="linkedinButtonLink" class="preview__socialButton preview__socialButton--linkedin buttonStyle1"
                                         href="" target="_blank" title="linkedin profile"><i class="icon fab fa-linkedin-in"></i>
                         </a>
 
                                     </li>
-                                    <li id="githubButton" class="preview__buttonList--item hidden buttonStyle"> <a id="githubButtonLink" class="preview__socialButton preview__socialButton--github buttonStyle"
+                                    <li id="githubButton" class="preview__buttonList--item hidden"> <a id="githubButtonLink" class="preview__socialButton preview__socialButton--github buttonStyle1"
                                         href="" target="_blank" title="github profile">
                             <i class="icon fab fa-github-alt"></i>
                         </a>
@@ -72,7 +71,7 @@
                             <div class="form__closed">
                                  <h2 class="form__title"><i class="form__icon far fa-object-ungroup"></i>Diseña</h2>
 
-                                <button class="form__arrow--design" aria-label="Desplegar"><i class="fas fa-chevron-up"></i>
+                                <button class="form__arrow--design form__arrow--collapse" aria-label="Desplegar"><i class="fas fa-chevron-down"></i>
 
                                 </button>
                             </div>
@@ -137,10 +136,11 @@
                                     <label for="photo">Imagen de perfil <span>*</span>
 
                                     </label>
-                                    <input type="file" id="photo" name="photo" class="hidden" required>
+                                    <input type="file" id="photo" name="photo" class="hidden js__photo--file"
+                                    required>
                                     <div class="photo__upload">
-                                        <button class="photo__upload--btn" id="submit">Añadir imagen</button>
-                                        <div class="thumbnail"></div>
+                                        <button class="photo__upload--btn js__photo--btn" id="submit">Añadir imagen</button>
+                                        <div class="thumbnail js__photo--thumbnail"></div>
                                     </div>
                                     <label for="email">Email <span>*</span>
 
