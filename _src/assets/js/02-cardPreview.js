@@ -24,6 +24,7 @@ resetButton.addEventListener('click', resetHandler);
 // Color Palette ----------------------------------------------------------------------
 
 
+
 // Text info --------------------------------------------------------------------------
 
 const nameInput = document.querySelector('#name');

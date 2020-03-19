@@ -24,6 +24,7 @@ function hideShare () {
 }
 
 function showDesignInfo(){
+  event.preventDefault();
   if (designShow.classList.contains('form__arrow--collapse')){
     hideDesign();
     hideFill();
@@ -37,6 +38,7 @@ function showDesignInfo(){
 }
 
 function showFillInfo(){
+  event.preventDefault();
   if (fillShow.classList.contains('form__arrow--collapse')){
     hideDesign();
     hideFill();
@@ -49,7 +51,8 @@ function showFillInfo(){
   }
 }
 
-function showShareInfo(){
+function showShareInfo(event){
+  event.preventDefault();
   if (shareShow.classList.contains('form__arrow--collapse')){
     hideDesign();
     hideFill();
@@ -89,6 +92,7 @@ const resetHandler = () => {
 
 resetButton.addEventListener('click', resetHandler);
 // Color Palette ----------------------------------------------------------------------
+
 
 
 // Text info --------------------------------------------------------------------------
@@ -188,59 +192,79 @@ const createCard = () => {
 createCardButton.addEventListener('click', createCard);
 'use strict';
 
-
 const palette1 = document.querySelector('#paletteOne');
 const palette2 = document.querySelector('#paletteTwo');
 const palette3 = document.querySelector('#paletteThree');
 const palette4 = document.querySelector('#paletteFour');
+
 const palettePreview = document.querySelector('#changePreviewStyle');
-//using for of loop
-// const socialButton = document.querySelectorAll('.preview__buttonList--item')
+const socialButtons = document.querySelectorAll('.preview__socialButton');
 
-function selectPalette1(){
-    palettePreview.classList.add('infoStyle1');
-    palettePreview.classList.remove('infoStyle2');palettePreview.classList.remove('infoStyle3');
-    palettePreview.classList.remove('infoStyle4');
+function selectPalette1() {
+  palettePreview.classList.add('infoStyle1');
+  palettePreview.classList.remove('infoStyle2');
+  palettePreview.classList.remove('infoStyle3');
+  palettePreview.classList.remove('infoStyle4');
 
-    // for (let preview of socialButton) {
-    //  socialButton.classList.add('')<--create style
-    // }
-    console.log('hey');
+  for (let button of socialButtons) {
+    button.classList.add('buttonStyle1');
+    button.classList.remove('buttonStyle2');
+    button.classList.remove('buttonStyle3');
+    button.classList.remove('buttonStyle4');
+  }
+  console.log('hey');
 }
 
-function selectPalette2(){
-    palettePreview.classList.remove('infoStyle1');
-    palettePreview.classList.add('infoStyle2');
-    palettePreview.classList.remove('infoStyle3');
-    palettePreview.classList.remove('infoStyle4');
-    
-    console.log('not working!!');
+function selectPalette2() {
+  palettePreview.classList.remove('infoStyle1');
+  palettePreview.classList.add('infoStyle2');
+  palettePreview.classList.remove('infoStyle3');
+  palettePreview.classList.remove('infoStyle4');
+
+  for (let button of socialButtons) {
+    button.classList.remove('buttonStyle1');
+    button.classList.add('buttonStyle2');
+    button.classList.remove('buttonStyle3');
+    button.classList.remove('buttonStyle4');
+  }
+  console.log('not working!!');
 }
 
-function selectPalette3(){
-    palettePreview.classList.remove('infoStyle1');
-    palettePreview.classList.remove('infoStyle2');
-    palettePreview.classList.add('infoStyle3');
-    palettePreview.classList.remove('infoStyle4');
+function selectPalette3() {
+  palettePreview.classList.remove('infoStyle1');
+  palettePreview.classList.remove('infoStyle2');
+  palettePreview.classList.add('infoStyle3');
+  palettePreview.classList.remove('infoStyle4');
 
-    console.log('fffff....');
+  for (let button of socialButtons) {
+    button.classList.remove('buttonStyle1');
+    button.classList.remove('buttonStyle2');
+    button.classList.add('buttonStyle3');
+    button.classList.remove('buttonStyle4');
+  }
+  console.log('fffff....');
 }
 
+function selectPalette4() {
+  palettePreview.classList.remove('infoStyle1');
+  palettePreview.classList.remove('infoStyle2');
+  palettePreview.classList.remove('infoStyle3');
+  palettePreview.classList.add('infoStyle4');
 
-function selectPalette4(){
-    palettePreview.classList.remove('infoStyle1');
-    palettePreview.classList.remove('infoStyle2');
-    palettePreview.classList.remove('infoStyle3');
-    palettePreview.classList.add('infoStyle4');
-
-    console.log('fffff....');
+  for (let button of socialButtons) {
+    button.classList.remove('buttonStyle1');
+    button.classList.remove('buttonStyle2');
+    button.classList.remove('buttonStyle3');
+    button.classList.add('buttonStyle4');
+  }
+  console.log('fffff....');
 }
-
 
 palette1.addEventListener('click', selectPalette1);
 palette2.addEventListener('click', selectPalette2);
 palette3.addEventListener('click', selectPalette3);
 palette4.addEventListener('click', selectPalette4);
+
 'use strict';
 
 const reader = new FileReader();
@@ -266,4 +290,66 @@ function hiddenPhotoField() {
 
 photoUploadBtn.addEventListener('click', hiddenPhotoField);
 photoFile.addEventListener('change', getPhoto);
+'use strict';
+
+
+const inputName = document.querySelector('#name');
+const inputJob = document.querySelector('#job');
+
+const inputEmail = document.querySelector('#email');
+const inputPhone = document.querySelector('#phone');
+const inputLinkedin= document.querySelector('#linkedin');
+const inputGithub = document.querySelector('#github');
+
+
+const localInfo = readLocalInfo()
+console.log(localInfo)
+
+
+function saveLocalInfo(evt){
+  localInfo[evt.currentTarget.name] = evt.currentTarget.value;
+  console.log(localInfo);
+  setLocalInfo(localInfo);
+}
+
+
+function setLocalInfo(userInfo){
+  
+  localStorage.setItem('userInfo',JSON.stringify(userInfo));
+}
+
+
+function readLocalInfo(){
+  let localInfo = JSON.parse(localStorage.getItem('userInfo'));
+  if(localInfo !== null){
+    return localInfo;
+  } else {
+    return localInfo = {};
+  }
+}
+
+
+function fillFormfromLocal(localInfo){
+  const inputArray = document.querySelectorAll('input');
+  
+  for(let inputName of inputArray){
+    if(localInfo[inputName.name] !== undefined){
+      inputName.value = localInfo[inputName.name]
+    } else {
+      inputName.value = ''
+    }
+  }
+}
+
+fillFormfromLocal(localInfo);
+
+
+inputName.addEventListener('keyup',saveLocalInfo);
+inputJob.addEventListener('keyup',saveLocalInfo);
+inputEmail.addEventListener('keyup',saveLocalInfo);
+inputPhone.addEventListener('keyup',saveLocalInfo);
+inputLinkedin.addEventListener('keyup',saveLocalInfo);
+inputGithub.addEventListener('keyup',saveLocalInfo);
+userPhoto.addEventListener('keyup',saveLocalInfo);
+
 //# sourceMappingURL=main.js.map
