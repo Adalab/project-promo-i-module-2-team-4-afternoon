@@ -265,6 +265,48 @@ palette2.addEventListener('click', selectPalette2);
 palette3.addEventListener('click', selectPalette3);
 palette4.addEventListener('click', selectPalette4);
 
+palette1.addEventListener('click', savePalette);
+palette2.addEventListener('click', savePalette);
+palette3.addEventListener('click', savePalette);
+palette4.addEventListener('click', savePalette);
+
+// localStorage
+
+
+function savePalette(event) {	
+    const selectedPaletteId = event.currentTarget.id;
+    localStorage.setItem("checkboxId", selectedPaletteId);
+    
+}
+
+function getLocalPalette(){
+
+let myId = localStorage.getItem("checkboxId");
+
+
+    const myPalette = document.getElementById(`${myId}`);
+    myPalette.setAttribute('checked', 'true');
+
+    if (myPalette === palette1){
+      selectPalette1();
+    }
+
+    if (myPalette === palette2){
+      selectPalette2();
+    }
+
+    if (myPalette === palette3){
+      selectPalette3();
+    }
+
+    if (myPalette === palette4){
+      selectPalette4();
+    }
+
+
+}
+
+getLocalPalette();
 'use strict';
 
 const reader = new FileReader();
