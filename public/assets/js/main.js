@@ -303,10 +303,7 @@ console.log(savedAvatar);
 if (savedAvatar !== null ) { 
   photoPreview.style.backgroundImage = `url(${savedAvatar})`;
   photoThumbnail.style.backgroundImage = `url(${savedAvatar})`;
-} /*else {
-  photoPreview.style.backgroundImage = '';
-  photoThumbnail.style.backgroundImage = '';
-}*/
+}
 
 function getPhoto(evt) {
   let myFile = evt.currentTarget.files[0];
