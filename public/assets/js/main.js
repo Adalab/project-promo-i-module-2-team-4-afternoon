@@ -297,8 +297,14 @@ const photoUploadBtn = document.querySelector('.js__photo--btn');
 const photoThumbnail = document.querySelector('.js__photo--thumbnail');
 const photoPreview = document.querySelector('.js__photo--preview');
 
+const savedAvatar = localStorage.getItem('avatar');
+if (savedAvatar !== 0) {
+  photoPreview.style.backgroundImage = `url(${savedAvatar})`;
+  photoThumbnail.style.backgroundImage = `url(${savedAvatar})`;
+}
+
 function getPhoto(evt) {
-  const myFile = evt.currentTarget.files[0];
+  let myFile = evt.currentTarget.files[0];
   reader.addEventListener('load', addPhoto);
   reader.readAsDataURL(myFile);
 }
@@ -306,6 +312,7 @@ function getPhoto(evt) {
 function addPhoto() {
   photoPreview.style.backgroundImage = `url(${reader.result})`;
   photoThumbnail.style.backgroundImage = `url(${reader.result})`;
+  localStorage.setItem('avatar', reader.result);
 }
 
 function hiddenPhotoField() {
@@ -316,19 +323,15 @@ photoUploadBtn.addEventListener('click', hiddenPhotoField);
 photoFile.addEventListener('change', getPhoto);
 'use strict';
 
-
 const inputName = document.querySelector('#name');
 const inputJob = document.querySelector('#job');
-
 const inputEmail = document.querySelector('#email');
 const inputPhone = document.querySelector('#phone');
 const inputLinkedin= document.querySelector('#linkedin');
 const inputGithub = document.querySelector('#github');
 
-
 const localInfo = readLocalInfo()
 console.log(localInfo)
-
 
 function saveLocalInfo(evt){
   localInfo[evt.currentTarget.name] = evt.currentTarget.value;
@@ -336,12 +339,10 @@ function saveLocalInfo(evt){
   setLocalInfo(localInfo);
 }
 
-
 function setLocalInfo(userInfo){
   
   localStorage.setItem('userInfo',JSON.stringify(userInfo));
 }
-
 
 function readLocalInfo(){
   let localInfo = JSON.parse(localStorage.getItem('userInfo'));
@@ -351,7 +352,6 @@ function readLocalInfo(){
     return localInfo = {};
   }
 }
-
 
 function fillFormfromLocal(localInfo){
   const inputArray = document.querySelectorAll('input');
@@ -374,6 +374,5 @@ inputEmail.addEventListener('keyup',saveLocalInfo);
 inputPhone.addEventListener('keyup',saveLocalInfo);
 inputLinkedin.addEventListener('keyup',saveLocalInfo);
 inputGithub.addEventListener('keyup',saveLocalInfo);
-//userPhoto.addEventListener('keyup',saveLocalInfo);
 
 //# sourceMappingURL=main.js.map
