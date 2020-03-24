@@ -8,7 +8,6 @@ const inputLinkedin= document.querySelector('#linkedin');
 const inputGithub = document.querySelector('#github');
 
 const localInfo = readLocalInfo()
-console.log(localInfo)
 
 function saveLocalInfo(evt){
   localInfo[evt.currentTarget.name] = evt.currentTarget.value;
@@ -36,6 +35,13 @@ function fillFormfromLocal(localInfo){
   for(let inputName of inputArray){
     if(localInfo[inputName.name] !== undefined){
       inputName.value = localInfo[inputName.name]
+      nameBox.innerHTML = nameInput.value;
+      jobBox.innerHTML = jobInput.value;
+      showEmailButton();
+      showPhoneButton();
+      showLinkedinButton();
+      showGithubButton()
+      enableCreateButton()
     } else {
       inputName.value = ''
     }
