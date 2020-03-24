@@ -78,6 +78,7 @@ const formReset = () => { document.getElementById('form__card').reset();
 }
 const resetHandler = () => {
    localStorage.removeItem('userInfo');
+   localStorage.removeItem('avatar');
    localStorage.removeItem('checkboxId');
    formReset();
    selectPalette1()
@@ -298,10 +299,14 @@ const photoThumbnail = document.querySelector('.js__photo--thumbnail');
 const photoPreview = document.querySelector('.js__photo--preview');
 
 const savedAvatar = localStorage.getItem('avatar');
-if (savedAvatar !== 0) {
+console.log(savedAvatar);
+if (savedAvatar !== null ) { 
   photoPreview.style.backgroundImage = `url(${savedAvatar})`;
   photoThumbnail.style.backgroundImage = `url(${savedAvatar})`;
-}
+} /*else {
+  photoPreview.style.backgroundImage = '';
+  photoThumbnail.style.backgroundImage = '';
+}*/
 
 function getPhoto(evt) {
   let myFile = evt.currentTarget.files[0];

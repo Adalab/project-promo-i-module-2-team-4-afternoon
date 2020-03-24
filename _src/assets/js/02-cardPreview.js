@@ -8,6 +8,7 @@ const formReset = () => { document.getElementById('form__card').reset();
 }
 const resetHandler = () => {
    localStorage.removeItem('userInfo');
+   localStorage.removeItem('avatar');
    localStorage.removeItem('checkboxId');
    formReset();
    selectPalette1()
