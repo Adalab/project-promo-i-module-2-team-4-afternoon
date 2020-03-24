@@ -23,3 +23,75 @@ function hiddenPhotoField() {
 
 photoUploadBtn.addEventListener('click', hiddenPhotoField);
 photoFile.addEventListener('change', getPhoto);
+
+function savePalette(event) {	
+  const selectedPaletteId = event.currentTarget.id;
+  localStorage.setItem("checkboxId", selectedPaletteId);
+  
+}
+
+//Local storage //
+
+// function setImage(){
+//   if (storedData.photo !== ''){
+//       profileImage.style.backgroundImage = `url(${storedData.photo})`;
+//       profilePreview.style.backgroundImage = `url(${storedData.photo})`;
+//   }
+
+  
+// }
+
+// const imageInput = document.querySelector('#image-input');
+// function validateImage() {
+//     const imageError = document.querySelector('#error-image');
+//     const localStoredData = JSON.parse(localStorage.getItem('Details'));
+//     if (/.(gif|jpeg|jpg|png)$/i.test(imageInput.value) || localStoredData.photo !== '') {
+//         imageError.classList.add('hidden');
+//         return (true);
+//     } else {
+//         imageError.classList.remove('hidden');
+//         return (false);
+//     }
+
+const userPhoto = document.querySelector('#photo');
+
+const localPhoto = readLocalPhoto()
+
+function saveLocalPhoto(evt){
+  localPhoto[evt.currentTarget.name] = evt.currentTarget.value;
+
+  setLocalPhoto(localPhoto);
+}
+
+
+
+function setLocalPhoto(localPhoto){
+  
+  localStorage.setItem('localPhoto',JSON.stringify(localPhoto));
+}
+
+
+function readLocalPhoto(){
+  let localPhoto = JSON.parse(localStorage.getItem('localPhoto'));
+  if(localPhoto !== null){
+    return localPhoto;
+  } else {
+    return localPhoto = {};
+  }
+}
+
+function fillFormfromLocalPhoto(localPhoto){
+  if(localPhoto !== null){
+    photoPreview.style.backgroundImage = `url(${storedData.photo})`;
+    photoThumbnail.style.backgroundImage = document.querySelector('#photo').files[0];
+  } else {
+    localPhoto[inputName.value] = '';
+  }
+}
+
+   
+userPhoto.addEventListener('change',saveLocalPhoto);
+
+    
+fillFormfromLocalPhoto(localPhoto);
+
