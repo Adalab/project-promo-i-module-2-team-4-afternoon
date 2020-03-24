@@ -7,6 +7,8 @@ const resetButton = document.querySelector('.preview__resetButton');
 const formReset = () => { document.getElementById('form__card').reset();
 }
 const resetHandler = () => {
+   localStorage.removeItem('userInfo');
+   localStorage.removeItem('checkboxId');
    formReset();
    selectPalette1()
    getText();

@@ -77,6 +77,8 @@ const resetButton = document.querySelector('.preview__resetButton');
 const formReset = () => { document.getElementById('form__card').reset();
 }
 const resetHandler = () => {
+   localStorage.removeItem('userInfo');
+   localStorage.removeItem('checkboxId');
    formReset();
    selectPalette1()
    getText();
@@ -212,7 +214,7 @@ function selectPalette1() {
     button.classList.remove('buttonStyle3');
     button.classList.remove('buttonStyle4');
   }
-  console.log('hey');
+  localStorage.setItem('savedPalette', 1);
 }
 
 function selectPalette2() {
@@ -227,7 +229,7 @@ function selectPalette2() {
     button.classList.remove('buttonStyle3');
     button.classList.remove('buttonStyle4');
   }
-  console.log('not working!!');
+  localStorage.setItem('savedPalette', 2);
 }
 
 function selectPalette3() {
@@ -242,7 +244,7 @@ function selectPalette3() {
     button.classList.add('buttonStyle3');
     button.classList.remove('buttonStyle4');
   }
-  console.log('fffff....');
+  localStorage.setItem('savedPalette', 3);
 }
 
 function selectPalette4() {
@@ -257,7 +259,7 @@ function selectPalette4() {
     button.classList.remove('buttonStyle3');
     button.classList.add('buttonStyle4');
   }
-  console.log('fffff....');
+  localStorage.setItem('savedPalette', 4);
 }
 
 palette1.addEventListener('click', selectPalette1);
@@ -265,47 +267,27 @@ palette2.addEventListener('click', selectPalette2);
 palette3.addEventListener('click', selectPalette3);
 palette4.addEventListener('click', selectPalette4);
 
-palette1.addEventListener('click', savePalette);
-palette2.addEventListener('click', savePalette);
-palette3.addEventListener('click', savePalette);
-palette4.addEventListener('click', savePalette);
-
 // localStorage
 
-
-function savePalette(event) {	
-    const selectedPaletteId = event.currentTarget.id;
-    localStorage.setItem("checkboxId", selectedPaletteId);
-    
-}
-
 function getLocalPalette(){
-
-let myId = localStorage.getItem("checkboxId");
-
-
-    const myPalette = document.getElementById(`${myId}`);
-    myPalette.setAttribute('checked', 'true');
-
-    if (myPalette === palette1){
+  const savedPalette = localStorage.getItem('savedPalette');  
+    if (parseInt(savedPalette) === 1){
       selectPalette1();
-    }
-
-    if (myPalette === palette2){
+      palette1.checked = true;
+    } else if (parseInt(savedPalette) === 2){
       selectPalette2();
-    }
-
-    if (myPalette === palette3){
+      palette2.checked = true;
+    } else if (parseInt(savedPalette) === 3){
       selectPalette3();
-    }
-
-    if (myPalette === palette4){
+      palette3.checked = true;
+    } else if (parseInt(savedPalette) === 4){
       selectPalette4();
+      palette4.checked = true;
+    } else {
+      selectPalette1();
+      palette1.checked = true;
     }
-
-
 }
-
 getLocalPalette();
 'use strict';
 
@@ -391,7 +373,7 @@ function readLocalPhoto(){
 
 function fillFormfromLocalPhoto(localPhoto){
   if(localPhoto !== null){
-    photoPreview.style.backgroundImage = `url(${localPhoto})`;
+    photoPreview.style.backgroundImage = `url(${storedData.photo})`;
     photoThumbnail.style.backgroundImage = document.querySelector('#photo').files[0];
   } else {
     localPhoto[inputName.value] = '';
@@ -465,6 +447,6 @@ inputEmail.addEventListener('keyup',saveLocalInfo);
 inputPhone.addEventListener('keyup',saveLocalInfo);
 inputLinkedin.addEventListener('keyup',saveLocalInfo);
 inputGithub.addEventListener('keyup',saveLocalInfo);
-userPhoto.addEventListener('keyup',saveLocalInfo);
+//userPhoto.addEventListener('keyup',saveLocalInfo);
 
 //# sourceMappingURL=main.js.map

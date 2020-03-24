@@ -58,4 +58,4 @@ inputEmail.addEventListener('keyup',saveLocalInfo);
 inputPhone.addEventListener('keyup',saveLocalInfo);
 inputLinkedin.addEventListener('keyup',saveLocalInfo);
 inputGithub.addEventListener('keyup',saveLocalInfo);
-userPhoto.addEventListener('keyup',saveLocalInfo);
+//userPhoto.addEventListener('keyup',saveLocalInfo);
