@@ -6,7 +6,6 @@ const photoUploadBtn = document.querySelector('.js__photo--btn');
 const photoThumbnail = document.querySelector('.js__photo--thumbnail');
 const photoPreview = document.querySelector('.js__photo--preview');
 
-let savedAvatar = localStorage.getItem('avatar');
 if (savedAvatar !== null ) { 
   photoPreview.style.backgroundImage = `url(${savedAvatar})`;
   photoThumbnail.style.backgroundImage = `url(${savedAvatar})`;

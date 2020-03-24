@@ -73,12 +73,14 @@ shareShow.addEventListener('click', showShareInfo);
 
 // RESET ------------------------------------------------------------------------------
 const resetButton = document.querySelector('.preview__resetButton');
+let savedAvatar = localStorage.getItem('avatar');
 
 const formReset = () => { document.getElementById('form__card').reset();
 }
 const resetHandler = () => {
    localStorage.removeItem('userInfo');
    localStorage.removeItem('avatar');
+   savedAvatar = null;
    localStorage.removeItem('checkboxId');
    formReset();
    selectPalette1()
@@ -182,11 +184,11 @@ const createCardButton = document.querySelector('#createCardButton');
 function enableCreateButton() {
    if (savedAvatar !== null && nameInput.value.lenght !== 0 && jobInput.value !== 0 && emailBox.value.length !== 0 && linkedinBox.value.length !== 0 && githubBox.value.length !== 0) {
       createCardButton.classList.remove('off');
+      console.log(savedAvatar);
     } else {
       createCardButton.classList.add('off');
     }
 };
-
 
 const createCard = () => {
    event.preventDefault();
@@ -298,7 +300,6 @@ const photoUploadBtn = document.querySelector('.js__photo--btn');
 const photoThumbnail = document.querySelector('.js__photo--thumbnail');
 const photoPreview = document.querySelector('.js__photo--preview');
 
-let savedAvatar = localStorage.getItem('avatar');
 if (savedAvatar !== null ) { 
   photoPreview.style.backgroundImage = `url(${savedAvatar})`;
   photoThumbnail.style.backgroundImage = `url(${savedAvatar})`;
