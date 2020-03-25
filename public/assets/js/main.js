@@ -73,11 +73,14 @@ shareShow.addEventListener('click', showShareInfo);
 
 // RESET ------------------------------------------------------------------------------
 const resetButton = document.querySelector('.preview__resetButton');
+let savedAvatar = localStorage.getItem('avatar');
 
 const formReset = () => { document.getElementById('form__card').reset();
 }
 const resetHandler = () => {
    localStorage.removeItem('userInfo');
+   localStorage.removeItem('avatar');
+   savedAvatar = null;
    localStorage.removeItem('checkboxId');
    formReset();
    selectPalette1()
@@ -178,14 +181,14 @@ githubBox.addEventListener('keyup', githubHandler);
 
 const createCardButton = document.querySelector('#createCardButton');
 
-function enableCreateButton () {
-   if (nameInput.value.lenght !== 0 && jobInput.value !== 0 && emailBox.value.length !== 0 && linkedinBox.value.length !== 0 && githubBox.value.length !== 0) {
+function enableCreateButton() {
+   if (savedAvatar !== null && nameInput.value.lenght !== 0 && jobInput.value !== 0 && emailBox.value.length !== 0 && linkedinBox.value.length !== 0 && githubBox.value.length !== 0) {
       createCardButton.classList.remove('off');
+      console.log(savedAvatar);
     } else {
       createCardButton.classList.add('off');
     }
 };
-
 
 const createCard = () => {
    event.preventDefault();
@@ -297,8 +300,7 @@ const photoUploadBtn = document.querySelector('.js__photo--btn');
 const photoThumbnail = document.querySelector('.js__photo--thumbnail');
 const photoPreview = document.querySelector('.js__photo--preview');
 
-const savedAvatar = localStorage.getItem('avatar');
-if (savedAvatar !== 0) {
+if (savedAvatar !== null ) { 
   photoPreview.style.backgroundImage = `url(${savedAvatar})`;
   photoThumbnail.style.backgroundImage = `url(${savedAvatar})`;
 }
@@ -313,6 +315,8 @@ function addPhoto() {
   photoPreview.style.backgroundImage = `url(${reader.result})`;
   photoThumbnail.style.backgroundImage = `url(${reader.result})`;
   localStorage.setItem('avatar', reader.result);
+  savedAvatar = localStorage.getItem('avatar');
+  enableCreateButton();
 }
 
 function hiddenPhotoField() {
@@ -331,7 +335,6 @@ const inputLinkedin= document.querySelector('#linkedin');
 const inputGithub = document.querySelector('#github');
 
 const localInfo = readLocalInfo()
-console.log(localInfo)
 
 function saveLocalInfo(evt){
   localInfo[evt.currentTarget.name] = evt.currentTarget.value;
@@ -359,6 +362,13 @@ function fillFormfromLocal(localInfo){
   for(let inputName of inputArray){
     if(localInfo[inputName.name] !== undefined){
       inputName.value = localInfo[inputName.name]
+      nameBox.innerHTML = nameInput.value;
+      jobBox.innerHTML = jobInput.value;
+      showEmailButton();
+      showPhoneButton();
+      showLinkedinButton();
+      showGithubButton()
+      enableCreateButton()
     } else {
       inputName.value = ''
     }
