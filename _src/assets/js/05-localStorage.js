@@ -38,9 +38,13 @@ function fillFormfromLocal(localInfo){
       nameBox.innerHTML = nameInput.value;
       jobBox.innerHTML = jobInput.value;
       showEmailButton();
+      getEmailLink();
       showPhoneButton();
+      getPhoneLink();
       showLinkedinButton();
+      getLinkedinLink();
       showGithubButton()
+      getGithubLink();
       enableCreateButton()
     } else {
       inputName.value = ''
