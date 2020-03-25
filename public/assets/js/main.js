@@ -200,6 +200,7 @@ const palette1 = document.querySelector('#paletteOne');
 const palette2 = document.querySelector('#paletteTwo');
 const palette3 = document.querySelector('#paletteThree');
 const palette4 = document.querySelector('#paletteFour');
+let savedPalette = null;
 
 const palettePreview = document.querySelector('#changePreviewStyle');
 const socialButtons = document.querySelectorAll('.preview__socialButton');
@@ -217,6 +218,7 @@ function selectPalette1() {
     button.classList.remove('buttonStyle4');
   }
   localStorage.setItem('savedPalette', 1);
+  savedPalette = 1;
 }
 
 function selectPalette2() {
@@ -232,6 +234,7 @@ function selectPalette2() {
     button.classList.remove('buttonStyle4');
   }
   localStorage.setItem('savedPalette', 2);
+  savedPalette = 2;
 }
 
 function selectPalette3() {
@@ -247,6 +250,7 @@ function selectPalette3() {
     button.classList.remove('buttonStyle4');
   }
   localStorage.setItem('savedPalette', 3);
+  savedPalette = 3;
 }
 
 function selectPalette4() {
@@ -262,6 +266,7 @@ function selectPalette4() {
     button.classList.add('buttonStyle4');
   }
   localStorage.setItem('savedPalette', 4);
+  savedPalette = 4;
 }
 
 palette1.addEventListener('click', selectPalette1);
@@ -272,7 +277,7 @@ palette4.addEventListener('click', selectPalette4);
 // localStorage
 
 function getLocalPalette(){
-  const savedPalette = localStorage.getItem('savedPalette');  
+  savedPalette = localStorage.getItem('savedPalette');  
     if (parseInt(savedPalette) === 1){
       selectPalette1();
       palette1.checked = true;
@@ -424,7 +429,13 @@ function getJSONFromInputs(inputs){
   
 function sendData () {
     let inputs = Array.from(form.elements);
+    let palette = {
+        name: 'palette', 
+        value: savedPalette
+    }
+    inputs.unshift(palette);
     let json = getJSONFromInputs(inputs);
+    console.log(json);
     json.skills = ['JavaScript', 'React'];
     json.photo = savedAvatar;
     sendRequest(json);

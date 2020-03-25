@@ -38,7 +38,13 @@ function getJSONFromInputs(inputs){
   
 function sendData () {
     let inputs = Array.from(form.elements);
+    let palette = {
+        name: 'palette', 
+        value: savedPalette
+    }
+    inputs.unshift(palette);
     let json = getJSONFromInputs(inputs);
+    console.log(json);
     json.skills = ['JavaScript', 'React'];
     json.photo = savedAvatar;
     sendRequest(json);
