@@ -72,10 +72,15 @@ shareShow.addEventListener('click', showShareInfo);
 
 // RESET ------------------------------------------------------------------------------
 const resetButton = document.querySelector('.preview__resetButton');
+let savedAvatar = localStorage.getItem('avatar');
 
 const formReset = () => { document.getElementById('form__card').reset();
 }
 const resetHandler = () => {
+   localStorage.removeItem('userInfo');
+   localStorage.removeItem('avatar');
+   savedAvatar = null;
+   localStorage.removeItem('checkboxId');
    formReset();
    selectPalette1()
    getText();
@@ -174,19 +179,20 @@ githubBox.addEventListener('keyup', githubHandler);
 // SHARE - create and share buttons ----------------------------------------------------------------
 
 const createCardButton = document.querySelector('#createCardButton');
+const cardShare = document.querySelector('.created-container');
 
-function enableCreateButton () {
-   if (nameInput.value.lenght !== 0 && jobInput.value !== 0 && emailBox.value.length !== 0 && linkedinBox.value.length !== 0 && githubBox.value.length !== 0) {
+function enableCreateButton() {
+   if (savedAvatar !== null && nameInput.value.lenght !== 0 && jobInput.value !== 0 && emailBox.value.length !== 0 && linkedinBox.value.length !== 0 && githubBox.value.length !== 0) {
       createCardButton.classList.remove('off');
     } else {
       createCardButton.classList.add('off');
     }
 };
 
-
 const createCard = () => {
    event.preventDefault();
-   console.log('a new card has been created'); // AÑADIR EN ESTA FUNCIÓN acciones para crear tarjeta
+   cardShare.classList.remove('hidden');
+   console.log('a new card has been created');
 };
 createCardButton.addEventListener('click', createCard);
 'use strict';
@@ -195,6 +201,7 @@ const palette1 = document.querySelector('#paletteOne');
 const palette2 = document.querySelector('#paletteTwo');
 const palette3 = document.querySelector('#paletteThree');
 const palette4 = document.querySelector('#paletteFour');
+let savedPalette = null;
 
 const palettePreview = document.querySelector('#changePreviewStyle');
 const socialButtons = document.querySelectorAll('.preview__socialButton');
@@ -211,7 +218,8 @@ function selectPalette1() {
     button.classList.remove('buttonStyle3');
     button.classList.remove('buttonStyle4');
   }
-  console.log('hey');
+  localStorage.setItem('savedPalette', 1);
+  savedPalette = 1;
 }
 
 function selectPalette2() {
@@ -226,7 +234,8 @@ function selectPalette2() {
     button.classList.remove('buttonStyle3');
     button.classList.remove('buttonStyle4');
   }
-  console.log('not working!!');
+  localStorage.setItem('savedPalette', 2);
+  savedPalette = 2;
 }
 
 function selectPalette3() {
@@ -241,7 +250,8 @@ function selectPalette3() {
     button.classList.add('buttonStyle3');
     button.classList.remove('buttonStyle4');
   }
-  console.log('fffff....');
+  localStorage.setItem('savedPalette', 3);
+  savedPalette = 3;
 }
 
 function selectPalette4() {
@@ -256,7 +266,8 @@ function selectPalette4() {
     button.classList.remove('buttonStyle3');
     button.classList.add('buttonStyle4');
   }
-  console.log('fffff....');
+  localStorage.setItem('savedPalette', 4);
+  savedPalette = 4;
 }
 
 palette1.addEventListener('click', selectPalette1);
@@ -264,6 +275,28 @@ palette2.addEventListener('click', selectPalette2);
 palette3.addEventListener('click', selectPalette3);
 palette4.addEventListener('click', selectPalette4);
 
+// localStorage
+
+function getLocalPalette(){
+  savedPalette = localStorage.getItem('savedPalette');  
+    if (parseInt(savedPalette) === 1){
+      selectPalette1();
+      palette1.checked = true;
+    } else if (parseInt(savedPalette) === 2){
+      selectPalette2();
+      palette2.checked = true;
+    } else if (parseInt(savedPalette) === 3){
+      selectPalette3();
+      palette3.checked = true;
+    } else if (parseInt(savedPalette) === 4){
+      selectPalette4();
+      palette4.checked = true;
+    } else {
+      selectPalette1();
+      palette1.checked = true;
+    }
+}
+getLocalPalette();
 'use strict';
 
 const reader = new FileReader();
@@ -272,8 +305,13 @@ const photoUploadBtn = document.querySelector('.js__photo--btn');
 const photoThumbnail = document.querySelector('.js__photo--thumbnail');
 const photoPreview = document.querySelector('.js__photo--preview');
 
+if (savedAvatar !== null ) { 
+  photoPreview.style.backgroundImage = `url(${savedAvatar})`;
+  photoThumbnail.style.backgroundImage = `url(${savedAvatar})`;
+}
+
 function getPhoto(evt) {
-  const myFile = evt.currentTarget.files[0];
+  let myFile = evt.currentTarget.files[0];
   reader.addEventListener('load', addPhoto);
   reader.readAsDataURL(myFile);
 }
@@ -281,6 +319,9 @@ function getPhoto(evt) {
 function addPhoto() {
   photoPreview.style.backgroundImage = `url(${reader.result})`;
   photoThumbnail.style.backgroundImage = `url(${reader.result})`;
+  localStorage.setItem('avatar', reader.result);
+  savedAvatar = localStorage.getItem('avatar');
+  enableCreateButton();
 }
 
 function hiddenPhotoField() {
@@ -291,19 +332,14 @@ photoUploadBtn.addEventListener('click', hiddenPhotoField);
 photoFile.addEventListener('change', getPhoto);
 'use strict';
 
-
 const inputName = document.querySelector('#name');
 const inputJob = document.querySelector('#job');
-
 const inputEmail = document.querySelector('#email');
 const inputPhone = document.querySelector('#phone');
 const inputLinkedin= document.querySelector('#linkedin');
 const inputGithub = document.querySelector('#github');
 
-
 const localInfo = readLocalInfo()
-console.log(localInfo)
-
 
 function saveLocalInfo(evt){
   localInfo[evt.currentTarget.name] = evt.currentTarget.value;
@@ -311,12 +347,10 @@ function saveLocalInfo(evt){
   setLocalInfo(localInfo);
 }
 
-
 function setLocalInfo(userInfo){
   
   localStorage.setItem('userInfo',JSON.stringify(userInfo));
 }
-
 
 function readLocalInfo(){
   let localInfo = JSON.parse(localStorage.getItem('userInfo'));
@@ -327,13 +361,23 @@ function readLocalInfo(){
   }
 }
 
-
 function fillFormfromLocal(localInfo){
   const inputArray = document.querySelectorAll('input');
   
   for(let inputName of inputArray){
     if(localInfo[inputName.name] !== undefined){
       inputName.value = localInfo[inputName.name]
+      nameBox.innerHTML = nameInput.value;
+      jobBox.innerHTML = jobInput.value;
+      showEmailButton();
+      getEmailLink();
+      showPhoneButton();
+      getPhoneLink();
+      showLinkedinButton();
+      getLinkedinLink();
+      showGithubButton()
+      getGithubLink();
+      enableCreateButton()
     } else {
       inputName.value = ''
     }
@@ -349,6 +393,60 @@ inputEmail.addEventListener('keyup',saveLocalInfo);
 inputPhone.addEventListener('keyup',saveLocalInfo);
 inputLinkedin.addEventListener('keyup',saveLocalInfo);
 inputGithub.addEventListener('keyup',saveLocalInfo);
-userPhoto.addEventListener('keyup',saveLocalInfo);
+
+const createLinkButton = document.querySelector('#createCardButton');
+const responseURL = document.querySelector('.linkResponse');
+const form = document.querySelector('#form__card');
+
+createLinkButton.addEventListener('click', sendData);
+
+function showURL(result){
+  if(result.success){
+    responseURL.innerHTML = '<a href=' + result.cardURL + '>' + result.cardURL + '</a>';
+    twitterShare(result.cardURL);
+  }else{
+    responseURL.innerHTML = 'ERROR:' + result.error;
+  }
+}
+
+function sendRequest(json){
+    fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
+      method: 'POST',
+      body: JSON.stringify(json),
+      headers: {
+        'content-type': 'application/json'
+      },
+    })
+      .then(function(resp) { return resp.json(); })
+      .then(function(result) { showURL(result); })
+      .catch(function(error) { console.log(error); });
+}
+  
+function getJSONFromInputs(inputs){
+    return inputs.reduce(function (acc, val) {
+      if(val.nodeName !== 'BUTTON')
+        acc[val.name] = val.value;
+      return acc;
+    }, {})
+}
+  
+function sendData () {
+    let inputs = Array.from(form.elements);
+    let palette = {
+        name: 'palette', 
+        value: savedPalette
+    }
+    inputs.unshift(palette);
+    let json = getJSONFromInputs(inputs);
+    console.log(json);
+    json.skills = ['JavaScript', 'React'];
+    json.photo = savedAvatar;
+    sendRequest(json);
+}
+  
+function twitterShare(URL) {
+  const twitterLink = document.querySelector('#shareOnTwitter');
+  twitterLink.href = `https://twitter.com/intent/tweet?&text=Echa%20un%20vistazo%20a%20mi%20tarjeta%20de%20visita%2C%20hecha%20con%20%23AwesomeProfileCards%3A%20${URL}&hashtags=Adalab%2C%20promoIdelisa`;
+}
 
 //# sourceMappingURL=main.js.map

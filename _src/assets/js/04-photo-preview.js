@@ -6,8 +6,13 @@ const photoUploadBtn = document.querySelector('.js__photo--btn');
 const photoThumbnail = document.querySelector('.js__photo--thumbnail');
 const photoPreview = document.querySelector('.js__photo--preview');
 
+if (savedAvatar !== null ) { 
+  photoPreview.style.backgroundImage = `url(${savedAvatar})`;
+  photoThumbnail.style.backgroundImage = `url(${savedAvatar})`;
+}
+
 function getPhoto(evt) {
-  const myFile = evt.currentTarget.files[0];
+  let myFile = evt.currentTarget.files[0];
   reader.addEventListener('load', addPhoto);
   reader.readAsDataURL(myFile);
 }
@@ -15,6 +20,9 @@ function getPhoto(evt) {
 function addPhoto() {
   photoPreview.style.backgroundImage = `url(${reader.result})`;
   photoThumbnail.style.backgroundImage = `url(${reader.result})`;
+  localStorage.setItem('avatar', reader.result);
+  savedAvatar = localStorage.getItem('avatar');
+  enableCreateButton();
 }
 
 function hiddenPhotoField() {

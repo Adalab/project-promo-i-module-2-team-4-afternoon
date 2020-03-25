@@ -3,10 +3,15 @@
 
 // RESET ------------------------------------------------------------------------------
 const resetButton = document.querySelector('.preview__resetButton');
+let savedAvatar = localStorage.getItem('avatar');
 
 const formReset = () => { document.getElementById('form__card').reset();
 }
 const resetHandler = () => {
+   localStorage.removeItem('userInfo');
+   localStorage.removeItem('avatar');
+   savedAvatar = null;
+   localStorage.removeItem('checkboxId');
    formReset();
    selectPalette1()
    getText();
@@ -105,18 +110,19 @@ githubBox.addEventListener('keyup', githubHandler);
 // SHARE - create and share buttons ----------------------------------------------------------------
 
 const createCardButton = document.querySelector('#createCardButton');
+const cardShare = document.querySelector('.created-container');
 
-function enableCreateButton () {
-   if (nameInput.value.lenght !== 0 && jobInput.value !== 0 && emailBox.value.length !== 0 && linkedinBox.value.length !== 0 && githubBox.value.length !== 0) {
+function enableCreateButton() {
+   if (savedAvatar !== null && nameInput.value.lenght !== 0 && jobInput.value !== 0 && emailBox.value.length !== 0 && linkedinBox.value.length !== 0 && githubBox.value.length !== 0) {
       createCardButton.classList.remove('off');
     } else {
       createCardButton.classList.add('off');
     }
 };
 
-
 const createCard = () => {
    event.preventDefault();
-   console.log('a new card has been created'); // AÑADIR EN ESTA FUNCIÓN acciones para crear tarjeta
+   cardShare.classList.remove('hidden');
+   console.log('a new card has been created');
 };
 createCardButton.addEventListener('click', createCard);
