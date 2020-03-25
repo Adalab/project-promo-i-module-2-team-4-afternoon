@@ -1,5 +1,5 @@
 'use strict';
-
+let savedPalette = null;
 const palette1 = document.querySelector('#paletteOne');
 const palette2 = document.querySelector('#paletteTwo');
 const palette3 = document.querySelector('#paletteThree');
@@ -21,6 +21,7 @@ function selectPalette1() {
     button.classList.remove('buttonStyle4');
   }
   localStorage.setItem('savedPalette', 1);
+  savedPalette = 1;
 }
 
 function selectPalette2() {
@@ -36,6 +37,7 @@ function selectPalette2() {
     button.classList.remove('buttonStyle4');
   }
   localStorage.setItem('savedPalette', 2);
+  savedPalette = 2;
 }
 
 function selectPalette3() {
@@ -51,6 +53,7 @@ function selectPalette3() {
     button.classList.remove('buttonStyle4');
   }
   localStorage.setItem('savedPalette', 3);
+  savedPalette = 3;
 }
 
 function selectPalette4() {
@@ -66,6 +69,7 @@ function selectPalette4() {
     button.classList.add('buttonStyle4');
   }
   localStorage.setItem('savedPalette', 4);
+  savedPalette = 4;
 }
 
 palette1.addEventListener('click', selectPalette1);
@@ -76,7 +80,7 @@ palette4.addEventListener('click', selectPalette4);
 // localStorage
 
 function getLocalPalette(){
-  const savedPalette = localStorage.getItem('savedPalette');  
+  savedPalette = localStorage.getItem('savedPalette');  
     if (parseInt(savedPalette) === 1){
       selectPalette1();
       palette1.checked = true;
