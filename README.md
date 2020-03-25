@@ -1,8 +1,8 @@
 # Awesome profile-cards (o cómo crear y compartir tarjetas de visita profesionales de forma intercativa)
 
-Esta aplicación sirve para generar tarjetas de visita personalizadas y virtuales que podremos publicar en Twitter. En menos de dos minutos tendremos nuestra tarjeta de presentación lista para compartir, con nuestros datos personales y profesionales, para que consultar nuestro currículum o nuestro perfil de Github sea fácil y rápido para los cazatalentos. :wink:
+Esta aplicación sirve para generar tarjetas de visita personalizadas y virtuales que podrás publicar en Twitter. En menos de dos minutos tendrás tu tarjeta de presentación lista para compartir, con tus datos personales y profesionales, para que consultar tu currículum y perfil de Github sea fácil y rápido para los cazatalentos. :wink:
 
-Además, podremos previsualizar cómo quedará nuestra tarjeta a medida que la rellenamos con nuestros datos y, para no perder el tiempo, toda la información quedará almacenada en el local storage para que generar nuevas tarjetas sea más rápido y eficaz.
+Además, podrás previsualizar cómo quedará tu tarjeta a medida que la rellenas y, para no perder el tiempo, toda tu información quedará almacenada en el local storage para que generar nuevas tarjetas sea más rápido y eficaz.
 
 
 # Cómo lo hemos creado:
@@ -17,12 +17,12 @@ Si quieres descargar y clonar el repositorio, tendrás que instalar [Node.js](ht
 
 # Cómo funciona:
 
-De forma sencilla e intuitiva. La página de inicio sirve de carta de presentación del proyecto, cuyo objetivo es crear contactos profesionales de forma fácil y cómoda. En la landing page también os adelantamos lo que podéis hacer con esta herramienta: diseñar una tarjeta, rellenarla con vuestros datos y compartirla. Clickad en 'Comenzar' y ¡qué empiece la aventura! :nerd_face: :volcano:
+De forma sencilla e intuitiva. La página de inicio sirve de carta de presentación del proyecto, cuyo objetivo es crear contactos profesionales de forma fácil y cómoda. En la landing page también te adelantamos lo que puedes hacer con esta herramienta: diseñar una tarjeta, rellenarla con tus datos y compartirla. Clicka en 'Comenzar' y ¡qué empiece la aventura! :nerd_face: :volcano:
 
 
 # Por qué los animales:
 
-En nuestro primer día en Adalab nos pidieron que compartiéramos con qué animal nos identificábamos. Hemos querido hacer un guiño a ese momento, además de plasmar la diversidad de nuestro grupo, en el que caben la agilidad de la cabra :goat:, la simpatía del panda :panda_face: o la tranquilidad de la tortuga :turtle:.
+En nuestro primer día en Adalab nos pidieron que compartiéramos con qué animal nos identificábamos. Hemos querido hacer un guiño a ese momento, además de plasmar la diversidad de nuestro equipo, en el que caben la agilidad de la cabra :goat:, la simpatía del panda :panda_face: o la tranquilidad de la tortuga :turtle:.
 
 Este gif de animales personificados que encontrarás en la página para crear las tarjetas se puede modificar en el apartado 'Rellena'. Pero vamos a empezar por el principio... 
 
@@ -37,6 +37,8 @@ En esta sección podrás seleccionar la paleta de colores para tu tarjeta: tonos
 Aquí podrás introducir tus datos personales y profesionales básicos. Los necesarios para que puedan acceder a tu información profesional y ponerse en contacto contigo. Así que te recomendamos que revises tus perfiles de LinkedIn y GitHub antes de compartirlos y que escojas una foto apropiada que transmita lo buena profesional que eres. :woman_technologist:
 
 A medida que completes los campos, en la ventana de la derecha podrás ir previsualizando cómo quedará tu tarjeta: se pintarán tu nombre y profesión, y se imprimirán los iconos de correo electrónico :envelope:, teléfono :vibration_mode:, LinkedIn y GitHub. Exceptuando el número de teléfono, el resto de campos a rellenar son obligatorios para poder crear la tarjeta.
+
+Todos estos datos quedarán almacenados en el local storage para que crear nuevas tarjetas sea más rápido incluso. Cada vez que abras el generador de tarjetas todos tus datos reaparecerán y solo tendrás que modificar el campo que te interese. 
 
 
 # Comparte :loudspeaker::
