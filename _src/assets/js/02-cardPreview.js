@@ -114,7 +114,6 @@ const createCardButton = document.querySelector('#createCardButton');
 function enableCreateButton() {
    if (savedAvatar !== null && nameInput.value.lenght !== 0 && jobInput.value !== 0 && emailBox.value.length !== 0 && linkedinBox.value.length !== 0 && githubBox.value.length !== 0) {
       createCardButton.classList.remove('off');
-      console.log(savedAvatar);
     } else {
       createCardButton.classList.add('off');
     }
