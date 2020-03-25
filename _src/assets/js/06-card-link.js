@@ -4,12 +4,10 @@ const form = document.querySelector('#form__card');
 
 createLinkButton.addEventListener('click', sendData);
 
-
-
-
 function showURL(result){
   if(result.success){
     responseURL.innerHTML = '<a href=' + result.cardURL + '>' + result.cardURL + '</a>';
+    twitterShare(result.cardURL);
   }else{
     responseURL.innerHTML = 'ERROR:' + result.error;
   }
@@ -44,3 +42,7 @@ function sendData () {
     sendRequest(json);
 }
   
+function twitterShare(URL) {
+  const twitterLink = document.querySelector('#shareOnTwitter');
+  twitterLink.href = `https://twitter.com/intent/tweet?&text=Echa%20un%20vistazo%20a%20mi%20tarjeta%20de%20visita%2C%20hecha%20con%20%23AwesomeProfileCards%3A%20${URL}&hashtags=Adalab%2C%20promoIdelisa`;
+}
