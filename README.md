@@ -24,6 +24,8 @@ De forma sencilla e intuitiva. La página de inicio sirve de carta de presentaci
 
 En nuestro primer día en Adalab nos pidieron que compartiéramos con qué animal nos identificábamos. Hemos querido hacer un guiño a ese momento, además de plasmar la diversidad de nuestro equipo, en el que caben la agilidad de la cabra :goat:, la simpatía del panda :panda_face: o la tranquilidad de la tortuga :turtle:.
 
+Pero, si hay un animal que nos identifica como grupo, ese es el unicornio :unicorn:. Por imposible y por fantástico, y porque recoge las mejores cualidades de varios animales en perfecta armonía. Por eso hemos hecho del unicornio nuestra mascota y seña de identidad.Además de retratarlo en un favicon, hemos adoptado 'localUnicorns' como nombre del equipo, por el "apego" que le hemos cogido al local storage :skull:. 
+
 Este gif de animales personificados que encontrarás en la página para crear las tarjetas se puede modificar en el apartado 'Rellena'. Pero vamos a empezar por el principio... 
 
 
