@@ -13,15 +13,25 @@
                 flex-direction: row;
                 justify-content: space-between;
             }
+            
         .footer-copyright{
             margin:auto;
             color: $footerColor;
             font-size: 14px;
             font-family:$mainText;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            img {
+                width: 30px;
+                padding: 0 5px 0 0;
+            }
         }
 
         .footer-logo-container{
             margin:auto;
+
                 img{
                     width:103px;
                     height: 40px;
