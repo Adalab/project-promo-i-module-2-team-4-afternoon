@@ -1,13 +1,13 @@
 # Awesome profile-cards (o cómo crear y compartir tarjetas de visita profesionales de forma intercativa)
 
-Esta aplicación sirve para generar tarjetas de visita personalizadas y virtuales que podrás publicar en Twitter. En menos de dos minutos tendrás tu tarjeta de presentación lista para compartir, con tus datos personales y profesionales, para que consultar tu currículum y perfil de Github sea fácil y rápido para los cazatalentos. :wink:
+Esta aplicación sirve para generar tarjetas de visita personalizadas y virtuales que podrás publicar en Twitter. En menos de dos minutos tendrás tu tarjeta de presentación lista para compartir, con tus datos personales y profesionales, para que consultar tu currículum en LinkedIn y tu perfil de GitHub sea fácil y rápido para los cazatalentos. :wink:
 
 Además, podrás previsualizar cómo quedará tu tarjeta a medida que la rellenas y, para no perder el tiempo, toda tu información quedará almacenada en el local storage para que generar nuevas tarjetas sea más rápido y eficaz.
 
 
 # Cómo lo hemos creado:
 
-Con una equilibrada mezcla de HTML, CSS y JAVASCRIPT. Gracias al Starter Kit de Adalab, hemos trabajado con `gulp`, que nos ha permitido convertir el Sass sobre el que hemos trabajado en CSS, además de estar pendiente de nuestros archivos, compilarlos y recargar el servidor cada vez que hacemos un cambio. :tada:
+Con una equilibrada mezcla de HTML, CSS y JAVASCRIPT. Gracias al Starter Kit de Adalab, nos hemos valido de `gulp`, que nos ha permitido convertir el Sass sobre el que hemos trabajado en CSS, además de estar pendiente de nuestros archivos, compilarlos y recargar el servidor cada vez que hacíamos un cambio. :tada:
 
 
 # Descárgate el repositorio :inbox_tray::
@@ -38,7 +38,7 @@ Aquí podrás introducir tus datos personales y profesionales básicos. Los nece
 
 A medida que completes los campos, en la ventana de la derecha podrás ir previsualizando cómo quedará tu tarjeta: se pintarán tu nombre y profesión, y se imprimirán los iconos de correo electrónico :envelope:, teléfono :vibration_mode:, LinkedIn y GitHub. Exceptuando el número de teléfono, el resto de campos a rellenar son obligatorios para poder crear la tarjeta.
 
-Todos estos datos quedarán almacenados en el local storage para que crear nuevas tarjetas sea más rápido incluso. Cada vez que abras el generador de tarjetas todos tus datos reaparecerán y solo tendrás que modificar el campo que te interese. 
+Todos estos datos quedarán almacenados en el local storage para que crear nuevas tarjetas sea más rápido incluso. Cada vez que abras el generador de tarjetas, toda tu información personal reaparecerá y solo tendrás que modificar el campo que te interese. 
 
 
 # Comparte :loudspeaker::
