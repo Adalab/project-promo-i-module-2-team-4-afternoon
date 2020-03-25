@@ -22,19 +22,20 @@ De forma sencilla e intuitiva. La página de inicio sirve de carta de presentaci
 
 # Por qué los animales:
 
-En nuestro primer día en Adalab nos pidieron que compartiéramos con qué animal nos identificábamos. Hemos querido hacer un guiño a ese momento, además de plasmar la diversidad de nuestro equipo, en el que caben la agilidad de la cabra :goat:, la simpatía del panda :panda_face: o la tranquilidad de la tortuga :turtle:.
+En nuestro primer día en Adalab nos pidieron que compartiéramos con qué animal nos identificábamos. Hemos querido hacer un guiño a ese momento, además de plasmar la diversidad de nuestro equipo, en el que caben la agilidad de la cabra :goat:, la simpatía del panda :panda_face: o la tranquilidad de la tortuga :turtle:. Por ello, al abrir la página para crear tarjetas te encontrarás con un gif de animales personificados que podrás modificar en el apartado 'Rellena'. 
 
-Pero, si hay un animal que nos identifica como grupo, ese es el unicornio :unicorn:. Por imposible y por fantástico, y porque recoge las mejores cualidades de varios animales en perfecta armonía. Por eso hemos hecho del unicornio nuestra mascota y seña de identidad.Además de retratarlo en un favicon, hemos adoptado 'localUnicorns' como nombre del equipo, por el "apego" que le hemos cogido al local storage :skull:. 
+Pero, nuestra historia con los animales no termina ahí. Si hay un animal que nos identifica como grupo, ese es el unicornio :unicorn:. Por imposible y por fantástico, y porque recoge las mejores cualidades de varias criaturas en perfecta armonía. Por eso hemos hecho del unicornio nuestra mascota y seña de identidad. Además de retratarlo en un favicon, hemos adoptado 'localUnicorns' como nombre del equipo, por el "apego" que le hemos cogido al local storage durante el proceso de creación de la aplicación :skull:. 
 
-Este gif de animales personificados que encontrarás en la página para crear las tarjetas se puede modificar en el apartado 'Rellena'. Pero vamos a empezar por el principio... 
+# ¿Por dónde empezar?
 
+Ahora que conoces todos los detalles, puedes empezar a crear tu tarjeta de visita personalizada paso a paso.
 
-# Diseña :art::
+## Diseña :art::
 
 En esta sección podrás seleccionar la paleta de colores para tu tarjeta: tonos azules, rojos, amarillos o rosas. ¿Te has preguntado alguna vez cuál es el color que mejor te representa?
 
 
-# Rellena :pencil::
+## Rellena :pencil::
 
 Aquí podrás introducir tus datos personales y profesionales básicos. Los necesarios para que puedan acceder a tu información profesional y ponerse en contacto contigo. Así que te recomendamos que revises tus perfiles de LinkedIn y GitHub antes de compartirlos y que escojas una foto apropiada que transmita lo buena profesional que eres. :woman_technologist:
 
@@ -43,7 +44,7 @@ A medida que completes los campos, en la ventana de la derecha podrás ir previs
 Todos estos datos quedarán almacenados en el local storage para que crear nuevas tarjetas sea más rápido incluso. Cada vez que abras el generador de tarjetas, toda tu información personal reaparecerá y solo tendrás que modificar el campo que te interese. 
 
 
-# Comparte :loudspeaker::
+## Comparte :loudspeaker::
 
 ¿Ya has rellenado todos tus datos? ¡A qué esperas para compartir! Pincha sobre el botón 'Crear tarjeta', recibe el link de tu tarjeta personalizada y compártela fácilmente y de forma inmediata a través de tu perfil de Twitter. De nada. :sunglasses: 
 
