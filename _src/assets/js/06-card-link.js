@@ -35,6 +35,7 @@ function getJSONFromInputs(inputs){
 }
   
 function sendData () {
+  if (savedAvatar !== null && nameInput.value.lenght !== 0 && jobInput.value !== 0 && emailBox.value.length !== 0 && linkedinBox.value.length !== 0 && githubBox.value.length !== 0){
     let inputs = Array.from(form.elements);
     let palette = {
         name: 'palette', 
@@ -46,6 +47,7 @@ function sendData () {
     json.skills = ['JavaScript', 'React'];
     json.photo = savedAvatar;
     sendRequest(json);
+  }
 }
   
 function twitterShare(URL) {

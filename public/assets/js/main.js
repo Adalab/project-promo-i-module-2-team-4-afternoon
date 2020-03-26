@@ -72,6 +72,7 @@ shareShow.addEventListener('click', showShareInfo);
 
 // RESET ------------------------------------------------------------------------------
 const resetButton = document.querySelector('.preview__resetButton');
+const cardShare = document.querySelector('.created-container');
 let savedAvatar = localStorage.getItem('avatar');
 
 const formReset = () => { document.getElementById('form__card').reset();
@@ -82,6 +83,7 @@ const resetHandler = () => {
    savedAvatar = null;
    localStorage.removeItem('checkboxId');
    formReset();
+   cardShare.classList.add('hidden');
    selectPalette1()
    getText();
    showEmailButton();
@@ -179,7 +181,6 @@ githubBox.addEventListener('keyup', githubHandler);
 // SHARE - create and share buttons ----------------------------------------------------------------
 
 const createCardButton = document.querySelector('#createCardButton');
-const cardShare = document.querySelector('.created-container');
 
 function enableCreateButton() {
    if (savedAvatar !== null && nameInput.value.lenght !== 0 && jobInput.value !== 0 && emailBox.value.length !== 0 && linkedinBox.value.length !== 0 && githubBox.value.length !== 0) {
@@ -190,9 +191,11 @@ function enableCreateButton() {
 };
 
 const createCard = () => {
+   if (savedAvatar !== null && nameInput.value.lenght !== 0 && jobInput.value !== 0 && emailBox.value.length !== 0 && linkedinBox.value.length !== 0 && githubBox.value.length !== 0){
    event.preventDefault();
    cardShare.classList.remove('hidden');
    console.log('a new card has been created');
+   }
 };
 createCardButton.addEventListener('click', createCard);
 'use strict';
@@ -431,6 +434,7 @@ function getJSONFromInputs(inputs){
 }
   
 function sendData () {
+  if (savedAvatar !== null && nameInput.value.lenght !== 0 && jobInput.value !== 0 && emailBox.value.length !== 0 && linkedinBox.value.length !== 0 && githubBox.value.length !== 0){
     let inputs = Array.from(form.elements);
     let palette = {
         name: 'palette', 
@@ -442,6 +446,7 @@ function sendData () {
     json.skills = ['JavaScript', 'React'];
     json.photo = savedAvatar;
     sendRequest(json);
+  }
 }
   
 function twitterShare(URL) {
